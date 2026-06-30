@@ -1,0 +1,38 @@
+{
+  "version": "27.0.0",
+  "status": "passed",
+  "automated_tests": "all passed",
+  "javascript_syntax": "passed",
+  "browser_load": "passed",
+  "browser_page_errors": 0,
+  "safe_exports": {
+    "game_file": {
+      "retained_live_data": true,
+      "post_export_dialog": true
+    },
+    "excel": {
+      "retained_live_data": true,
+      "post_export_dialog": true
+    },
+    "pdf": {
+      "retained_live_data": true,
+      "post_export_dialog": true
+    }
+  },
+  "baseball_rules": {
+    "middle_ninth_home_lead": true,
+    "bottom_ninth_away_lead": true,
+    "walk_off": true,
+    "tie_enters_extras": true,
+    "automatic_runner_preceding_batter": true,
+    "automatic_runner_unearned": true,
+    "postseason_empty_bases": true
+  },
+  "continuation_pdf": {
+    "pages": 2,
+    "page_size": "US Letter portrait",
+    "page_1_innings": "1-10",
+    "page_2_innings": "11-20",
+    "render_verified": true
+  }
+}

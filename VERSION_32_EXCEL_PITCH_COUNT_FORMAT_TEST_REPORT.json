@@ -1,0 +1,14 @@
+{
+  "version": "32",
+  "status": "passed",
+  "issue": "Microsoft Excel could automatically interpret Pitch Log Count Before and Count After values such as 0-1 or 1-2 as dates.",
+  "correction": "Both count columns are exported as Excel-safe text formulas and the CSV includes a UTF-8 byte-order mark.",
+  "examples": [
+    {"sourceCount": "0-1", "csvValue": "=\"0-1\"", "excelDisplay": "0-1"},
+    {"sourceCount": "1-2", "csvValue": "=\"1-2\"", "excelDisplay": "1-2"},
+    {"sourceCount": "2-1", "csvValue": "=\"2-1\"", "excelDisplay": "2-1"}
+  ],
+  "regressionTestFilesPassed": 45,
+  "javascriptSyntax": "passed",
+  "versionNumberChanged": false
+}

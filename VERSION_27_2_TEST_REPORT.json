@@ -1,0 +1,21 @@
+{
+  "version": "27.2",
+  "status": "pass",
+  "pitcherExport": {
+    "actualAppearancesOnly": true,
+    "appearanceOrder": true,
+    "unusedRosterPitchersExcluded": true,
+    "fullPitcherDataPreserved": true,
+    "pregameStarterFallback": true,
+    "pdfAndExcelShareOrdering": true
+  },
+  "testSuite": "pass",
+  "javascriptSyntax": "pass",
+  "quickCodes": {
+    "sharedFontFamily": true,
+    "sharedFontSizeAndWeight": true,
+    "standardKGlyphMirrored": true,
+    "unicodeReverseKExcluded": true,
+    "cacheRefreshed": true
+  }
+}

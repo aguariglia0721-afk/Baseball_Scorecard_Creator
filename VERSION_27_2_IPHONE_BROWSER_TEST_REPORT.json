@@ -1,0 +1,9 @@
+{
+  "device": "iPhone 13 emulation",
+  "team_fields_restored": true,
+  "lineup_fields_restored": true,
+  "pitcher_fields_restored": true,
+  "damaged_snapshot_repaired_from_roster_mirror": true,
+  "intentional_clear_respected": true,
+  "storage": "browser localStorage mock with document lifecycle recreation"
+}

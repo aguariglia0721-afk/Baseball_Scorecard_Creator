@@ -1,0 +1,46 @@
+{
+  "audit_date": "2026-06-25",
+  "version": "32.0.0",
+  "version_retained": true,
+  "browser": "Chromium headless",
+  "status": "PASS",
+  "node_test_files": 43,
+  "browser_scenarios": 11,
+  "game_based_scenarios": [
+    {
+      "game": "Milwaukee Brewers at Cincinnati Reds",
+      "date": "2026-06-24",
+      "scope": "First inning, 29 pitches, 9 plate appearances",
+      "status": "PASS"
+    },
+    {
+      "game": "Baltimore Orioles at Los Angeles Angels",
+      "date": "2026-06-24",
+      "scope": "Full-count ABS batter-challenge reversal",
+      "status": "PASS"
+    },
+    {
+      "game": "Kansas City Royals at Tampa Bay Rays",
+      "date": "2026-06-24",
+      "scope": "Steal and multi-steal runner-event stress scenarios",
+      "status": "PASS"
+    }
+  ],
+  "defects_corrected": [
+    "Overturned ABS challenge did not recalculate linked pitch or live count",
+    "Terminal ABS reversal did not always replace the invalid BB or KL result and restore half-inning state",
+    "Deleting an upheld terminal challenge could resurrect a completed 4-0 count",
+    "Third strike not caught displayed K+ WP/PB instead of K WP/PB"
+  ],
+  "validated_areas": [
+    "pitch buttons and pitch count",
+    "ABS batter/pitcher/catcher challenges",
+    "manager replay",
+    "runner events and pickoff outcomes",
+    "third strike not caught",
+    "result-only plate-appearance notation",
+    "autosave and saved games",
+    "PDF, Excel, and CSV exports"
+  ],
+  "known_unresolved_defects": []
+}

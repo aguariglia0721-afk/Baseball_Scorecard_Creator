@@ -1,0 +1,19 @@
+{
+  "version": 19,
+  "issue": "Refresh Schedule button overlapped adjacent controls at reduced desktop widths",
+  "resolution": {
+    "wideCard": "three columns",
+    "constrainedCard": "two controls on first row; refresh button full width on second row",
+    "phone": "single-column stack",
+    "containerBreakpointPx": 700
+  },
+  "checks": {
+    "buttonMaxWidth": true,
+    "buttonMinWidthZero": true,
+    "cardContainerQuery": true,
+    "phoneStackRule": true,
+    "automatedTestsPassed": true,
+    "javascriptSyntaxPassed": true,
+    "cssSyntaxErrors": 0
+  }
+}

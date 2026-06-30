@@ -1,0 +1,17 @@
+{
+  "version": "28.0.0",
+  "feature": "ABS challenge tracker consolidated into Live Game Center",
+  "status": "passed",
+  "checks": {
+    "full_inherited_test_suite": "passed",
+    "javascript_syntax": "passed",
+    "single_abs_tracker": "passed",
+    "abs_inside_broadcast_scorebox": "passed",
+    "away_and_home_controls_preserved": "passed",
+    "challenge_dialog_and_editing_preserved": "passed",
+    "compact_expandable_log": "passed",
+    "mobile_css_rules": "passed",
+    "unique_html_ids": "passed",
+    "service_worker_cache_bumped": "passed"
+  }
+}

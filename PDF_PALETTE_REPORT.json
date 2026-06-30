@@ -1,0 +1,23 @@
+{
+  "version": "21",
+  "revision": "PDF palette alignment",
+  "layout_changed": false,
+  "palette": {
+    "burnt_orange": "#9B4D1F",
+    "dark_brown": "#3D2519",
+    "gold": "#D9A441",
+    "pale_yellow": "#FBE9B8",
+    "cream": "#FFF8E9",
+    "warm_cream": "#F6EAD0",
+    "paper": "#FFFDF7",
+    "ink": "#2F241E"
+  },
+  "background_dimensions": [
+    1275,
+    1650
+  ],
+  "pdf_page_points": [
+    612,
+    792
+  ]
+}

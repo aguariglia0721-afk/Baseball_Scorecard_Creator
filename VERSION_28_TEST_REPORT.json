@@ -1,0 +1,27 @@
+{
+  "version": "28.0.0",
+  "feature": "Broadcast-style Live Game Center",
+  "checks": {
+    "complete_inherited_test_suite": "PASS",
+    "javascript_syntax": "PASS",
+    "scorebox_inside_pitch_console": "PASS",
+    "dynamic_team_abbreviations": "PASS",
+    "inning_direction_indicator": "PASS",
+    "base_state_display": "PASS",
+    "compact_ball_strike_count": "PASS",
+    "current_batter_and_pitcher": "PASS",
+    "on_deck_and_in_the_hole": "PASS",
+    "desktop_standalone_render": "PASS",
+    "iphone_standalone_render": "PASS",
+    "version_27_2_autosave_migration": "PASS"
+  },
+  "tested_on": "2026-06-24",
+  "visual_validation": {
+    "desktop_viewport": "1440x1200",
+    "iphone_viewport": "390x844",
+    "desktop_horizontal_overflow": false,
+    "iphone_horizontal_overflow": false,
+    "desktop_preview": "preview/version28-live-game-center-desktop.png",
+    "iphone_preview": "preview/version28-live-game-center-iphone.png"
+  }
+}

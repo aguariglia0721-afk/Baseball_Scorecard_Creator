@@ -1,0 +1,72 @@
+{
+  "version": "27.2",
+  "auditDate": "2026-06-24",
+  "result": "PASS",
+  "summary": {
+    "staticButtons": 64,
+    "namedButtons": 46,
+    "generatedButtonsAtStartup": 25,
+    "initialRuntimeButtonTotal": 89,
+    "additionalDynamicControls": [
+      "Remove Error",
+      "Edit Challenge"
+    ],
+    "allButtonsHaveExplicitTypes": true,
+    "allNamedButtonIdsAreUnique": true,
+    "allDirectHandlersVerified": true,
+    "allDelegatedHandlersVerified": true,
+    "allFormSubmitHandlersVerified": true,
+    "browserInteractionScenariosPassed": 70,
+    "fullAutomatedTestSuite": "PASS",
+    "javascriptSyntax": "PASS",
+    "defectsFound": []
+  },
+  "coverage": [
+    {
+      "category": "Section navigation",
+      "controls": ["Setup", "Lineups", "Pitching", "Live Scoring", "Pitch Tracking", "Summary", "Settings", "Next: Lineups", "Next: Pitching", "Start Live Scoring"],
+      "result": "PASS"
+    },
+    {
+      "category": "Schedule and setup",
+      "controls": ["Reset Card / Refresh Schedule List", "Scheduled game selection", "Fill App from Selected Game", "Start a Blank Game"],
+      "result": "PASS"
+    },
+    {
+      "category": "Pitcher management",
+      "controls": ["Away Add Pitcher", "Home Add Pitcher", "Add Custom Pitcher", "Custom Pitcher Cancel", "Custom Pitcher Close"],
+      "result": "PASS"
+    },
+    {
+      "category": "Pitch console",
+      "controls": ["Ball", "Swinging Strike", "Called Strike", "Foul", "In Play", "Undo Pitch", "Reset Count", "Record Error", "Show/Hide Codes", "K+ Third Strike Not Caught", "Caught — Keep Strikeout"],
+      "result": "PASS"
+    },
+    {
+      "category": "Quick Codes",
+      "controls": ["1B", "2B", "3B", "HR", "BB", "HBP", "K", "Backward K", "GO", "FO", "LO", "PO", "E", "FC", "SF", "SAC", "DP", "IBB", "Other / Details"],
+      "result": "PASS"
+    },
+    {
+      "category": "Plate appearance dialog",
+      "controls": ["Key Play", "Record Error", "Add Second Error", "Remove Error", "Close Error Panel", "Save Play", "Delete Play", "Cancel", "Close"],
+      "result": "PASS"
+    },
+    {
+      "category": "Substitutions and ABS challenges",
+      "controls": ["Confirm Substitution", "Substitution Cancel", "Substitution Close", "Away Challenge", "Home Challenge", "Challenge Tokens", "Save Challenge", "Edit Challenge", "Delete Challenge", "Challenge Cancel", "Challenge Close"],
+      "result": "PASS"
+    },
+    {
+      "category": "Game management",
+      "controls": ["Undo Last Play", "Change Half-Inning", "Reset Entire Game"],
+      "result": "PASS"
+    },
+    {
+      "category": "Files and exports",
+      "controls": ["Save Game File — header", "Save Game File — settings", "Open Game File — header", "Open Game File — settings", "Download Excel — header", "Download Excel — summary", "Download PDF — header", "Download PDF — summary", "Download Pitch Log CSV", "Download Blank Excel", "Download Blank PDF", "Traditional Guides", "Clean Boxes", "Upload Excel Template", "Keep Game Open", "Clear Card", "Post-export Close", "Install App"],
+      "result": "PASS"
+    }
+  ],
+  "permanentRegressionTest": "tests/version27-2-comprehensive-button-audit.test.js"
+}

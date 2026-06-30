@@ -1,0 +1,57 @@
+{
+  "version": 24,
+  "status": "PASS",
+  "pdf_page_points": {
+    "width": 612,
+    "height": 792,
+    "orientation": "portrait",
+    "pages": 1
+  },
+  "background_resolution": {
+    "version23": [
+      1275,
+      1650
+    ],
+    "version24": [
+      2550,
+      3300
+    ],
+    "effective_dpi": 300
+  },
+  "guide_removal": {
+    "completed_pdf_plus_signs_removed": true,
+    "completed_pdf_2x3_counters_removed": true,
+    "residual_counter_fragments_removed": true,
+    "scoring_grids_rebuilt": 2,
+    "scoring_cells_checked": 180,
+    "blank_pdf_traditional_guides_still_available": true
+  },
+  "geometry_preserved": {
+    "page_size": true,
+    "line_score": true,
+    "two_lineups": true,
+    "pitching_sections": true,
+    "game_notes_box": true,
+    "field_coordinates": true
+  },
+  "edge_detail_laplacian_variance": {
+    "top_headers": {
+      "version23": 108.28,
+      "version24": 349.75
+    },
+    "score_grids": {
+      "version23": 79.46,
+      "version24": 236.81
+    },
+    "bottom_pitching": {
+      "version23": 100.3,
+      "version24": 352.09
+    }
+  },
+  "visual_inspection": [
+    "top headers",
+    "all 180 scoring boxes",
+    "bottom pitching sections",
+    "Game Notes box"
+  ]
+}

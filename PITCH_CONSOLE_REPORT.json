@@ -1,0 +1,60 @@
+{
+  "count_3_2": {
+    "b": "3",
+    "s": "2",
+    "p": "5 pitches this plate appearance"
+  },
+  "foul_at_two_strikes": {
+    "b": "3",
+    "s": "2",
+    "p": "6 pitches this plate appearance"
+  },
+  "undo_pitch": {
+    "b": "3",
+    "s": "2",
+    "p": "5 pitches this plate appearance"
+  },
+  "automatic_walk": {
+    "b": "0",
+    "s": "0",
+    "batter": "Batter Two",
+    "plays": 1,
+    "outcome": "BB",
+    "finalCount": {
+      "balls": 4,
+      "strikes": 2,
+      "pitches": 6,
+      "history": [
+        "ball",
+        "ball",
+        "ball",
+        "strike",
+        "strike",
+        "ball"
+      ]
+    }
+  },
+  "strike_three_chooser": {
+    "hidden": false,
+    "b": "0",
+    "s": "3"
+  },
+  "strikeout_recorded": {
+    "plays": 2,
+    "outcome": "K",
+    "outs": 1,
+    "b": "0",
+    "s": "0"
+  },
+  "keyboard_shortcuts": {
+    "b": "1",
+    "s": "1"
+  },
+  "keyboard_with_button_focus": {
+    "b": "2",
+    "s": "1",
+    "active": "ballBtn"
+  },
+  "desktop_horizontal_overflow_px": 0,
+  "iphone_horizontal_overflow_px": 0
+}

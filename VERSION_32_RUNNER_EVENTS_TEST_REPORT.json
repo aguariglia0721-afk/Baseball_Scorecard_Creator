@@ -1,0 +1,22 @@
+{
+  "version": "32",
+  "date": "2026-06-25",
+  "status": "PASS",
+  "feature": "Runner events and WP pitching column",
+  "checks": {
+    "stolen_base_and_caught_stealing": "PASS",
+    "pickoff_attempt_results": "PASS",
+    "wild_pitch_and_passed_ball": "PASS",
+    "defensive_indifference": "PASS",
+    "uncaught_third_strike_wp_pb_classification": "PASS",
+    "plate_appearance_and_count_preservation": "PASS",
+    "team_attribution": "PASS",
+    "pitcher_tracking": "PASS",
+    "pdf_wp_column": "PASS",
+    "excel_wp_column": "PASS",
+    "autosave_undo_edit_and_exports": "PASS",
+    "javascript_syntax": "PASS",
+    "full_inherited_test_suite": "PASS",
+    "version_number_remains_32": "PASS"
+  }
+}

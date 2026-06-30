@@ -1,0 +1,16 @@
+{
+  "version": "30.0.0",
+  "generated": "2026-06-25",
+  "status": "passed",
+  "scope": [
+    "all inherited Version 29 tests",
+    "interference control inventory and wiring",
+    "nine interference categories and seven ruling choices",
+    "non-plate-appearance count and batting-order preservation",
+    "official at-bat and hit overrides",
+    "play notation, Game Notes, Excel and PDF integration",
+    "Version 29 autosave migration",
+    "JavaScript syntax validation"
+  ],
+  "notes": "A container browser navigation restriction prevented a full hosted-site browser run; the complete automated app suite and syntax checks passed."
+}

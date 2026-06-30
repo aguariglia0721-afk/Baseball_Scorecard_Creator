@@ -1,0 +1,23 @@
+{
+  "version": "27.1",
+  "status": "passed",
+  "focus": "Active bullpen roster and reliever dropdown correction",
+  "checks": {
+    "existing_test_suite": "passed",
+    "version_27_1_bullpen_tests": "passed",
+    "app_javascript_syntax": "passed",
+    "baseball_data_javascript_syntax": "passed",
+    "service_worker_javascript_syntax": "passed",
+    "netlify_function_typescript_transpile_syntax": "passed",
+    "active_roster_fetch_mock": "passed",
+    "probable_starter_first": "passed",
+    "unused_relievers_in_dropdown": "passed",
+    "used_reliever_removed_from_dropdown": "passed",
+    "six_line_pdf_excel_pitcher_priority": "passed"
+  },
+  "notes": [
+    "Each team can retain up to 15 pitcher records: six scorecard rows plus nine bullpen rows.",
+    "PDF and Excel output remain limited to six pitcher lines and prioritize the starter and pitchers who appeared.",
+    "All Version 27 regulation, extra-inning, safe-export, scoring, substitution, error, notes, and key-play behavior remains intact."
+  ]
+}

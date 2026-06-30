@@ -1,0 +1,141 @@
+{
+  "version": "32",
+  "feature": "Batted-ball defensive field location positions 1-9",
+  "generatedAt": "2026-06-28T16:15:05Z",
+  "automatedRegressionFiles": 47,
+  "automatedRegressionPassed": true,
+  "javascriptSyntaxPassed": true,
+  "browser": "Chromium 144 via Chrome DevTools Protocol",
+  "viewportCount": 11,
+  "viewports": [
+    {
+      "name": "iPhone SE portrait",
+      "width": 320,
+      "height": 568,
+      "passed": true
+    },
+    {
+      "name": "iPhone compact portrait",
+      "width": 360,
+      "height": 800,
+      "passed": true
+    },
+    {
+      "name": "iPhone standard portrait",
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "name": "iPhone Pro Max portrait",
+      "width": 430,
+      "height": 932,
+      "passed": true
+    },
+    {
+      "name": "iPhone landscape",
+      "width": 844,
+      "height": 390,
+      "passed": true
+    },
+    {
+      "name": "iPad mini portrait",
+      "width": 768,
+      "height": 1024,
+      "passed": true
+    },
+    {
+      "name": "iPad 10th gen portrait",
+      "width": 820,
+      "height": 1180,
+      "passed": true
+    },
+    {
+      "name": "iPad Pro 11 portrait",
+      "width": 834,
+      "height": 1194,
+      "passed": true
+    },
+    {
+      "name": "iPad landscape",
+      "width": 1180,
+      "height": 820,
+      "passed": true
+    },
+    {
+      "name": "iPad Pro 12.9 portrait",
+      "width": 1024,
+      "height": 1366,
+      "passed": true
+    },
+    {
+      "name": "iPad Pro 12.9 landscape",
+      "width": 1366,
+      "height": 1024,
+      "passed": true
+    }
+  ],
+  "endToEndFlowChecks": {
+    "phone": {
+      "mode": "flow",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "gridColumns": 3,
+        "expectedGridColumns": 3,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "openPassed": true,
+      "flow": {
+        "dialogClosed": true,
+        "notationSaved": true,
+        "fullLocationSaved": true,
+        "autosaveContainsLocation": true,
+        "pageStillContained": true,
+        "passed": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+    },
+    "tablet": {
+      "mode": "flow",
+      "viewport": {
+        "width": 834,
+        "height": 1194
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "gridColumns": 3,
+        "expectedGridColumns": 3,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "openPassed": true,
+      "flow": {
+        "dialogClosed": true,
+        "notationSaved": true,
+        "fullLocationSaved": true,
+        "autosaveContainsLocation": true,
+        "pageStillContained": true,
+        "passed": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+    }
+  },
+  "overallPassed": true
+}

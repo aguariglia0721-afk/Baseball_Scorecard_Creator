@@ -1,0 +1,16 @@
+{
+  "results": {
+    "batter": "Aaron Judge",
+    "batter_details": "#99 \u2022 RF \u2022 Bats R \u2022 AVG .321 \u2022 OBP .455 \u2022 Lineup 1",
+    "history": "K looking",
+    "pitcher": "Kodai Senga",
+    "pitcher_details": "#34 \u2022 Throws R \u2022 Record 7-2 \u2022 2.88 ERA \u2022 92 K",
+    "game": "3 P \u2022 3 Str \u2022 0 B \u2022 1 BF \u2022 1 K \u2022 0 BB \u2022 0 H",
+    "mirror_count": 1,
+    "old_card": 0,
+    "errors": []
+  },
+  "desktop_screenshot": "preview/v26-live-matchup-desktop.png",
+  "iphone_screenshot": "preview/v26-live-matchup-iphone.png",
+  "pdf": "/mnt/data/v26_looking_k_sample.pdf"
+}

@@ -1,0 +1,18 @@
+{
+  "before": {
+    "scrollY": 401,
+    "buttonTop": 188.1875,
+    "active": "setup"
+  },
+  "after": {
+    "scrollY": 401,
+    "buttonTop": 187.28611755371094,
+    "active": "setup",
+    "away": "",
+    "home": "",
+    "focused": "refreshGamesBtn"
+  },
+  "button_top_delta": -0.901,
+  "scroll_delta": 0,
+  "passed": true
+}

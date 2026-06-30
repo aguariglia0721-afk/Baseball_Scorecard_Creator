@@ -1,0 +1,24 @@
+{
+  "version": "27.2",
+  "feature": "continuous-autosave-and-recovery",
+  "completed_at": "2026-06-25T02:30:31.357415+00:00",
+  "capabilities": [
+    "250 ms debounced persistence after field and state changes",
+    "immediate lifecycle flush on pagehide, beforeunload, and app backgrounding",
+    "automatic startup restore of current snapshot",
+    "fallback restore from previous snapshot when current snapshot is invalid",
+    "manual Save Now control",
+    "manual Restore Previous Autosave control with current/previous swap",
+    "pre-export checkpoints for Game File, Excel, PDF, and pitch log",
+    "game data remains on screen after file operations",
+    "explicit reset is required to erase browser recovery data"
+  ],
+  "validation": {
+    "full_test_suite": "passed",
+    "javascript_syntax": "passed",
+    "runtime_snapshot_rotation": "passed",
+    "runtime_startup_restore": "passed",
+    "runtime_previous_restore": "passed",
+    "button_inventory_and_wiring": "passed"
+  }
+}

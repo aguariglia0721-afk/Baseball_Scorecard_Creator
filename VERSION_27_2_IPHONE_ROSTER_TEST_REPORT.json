@@ -1,0 +1,17 @@
+{
+  "version": "27.2",
+  "feature": "iphone-team-lineup-pitcher-persistence",
+  "status": "passed",
+  "checks": {
+    "team_names_survive_unannounced_mobile_form_reset": true,
+    "lineup_players_survive_unannounced_mobile_form_reset": true,
+    "bench_and_pitcher_fields_use_same_protection": true,
+    "full_autosave_uses_cached_roster_instead_of_blank_dom_fields": true,
+    "separate_roster_mirror_repairs_missing_full_snapshot_fields": true,
+    "pageshow_focus_foreground_and_freeze_lifecycle_paths_present": true,
+    "intentional_user_clear_is_respected": true,
+    "intentional_full_reset_clears_autosave_and_roster_mirror": true,
+    "iphone_13_emulated_browser_dom_test": true,
+    "complete_inherited_test_suite": true
+  }
+}

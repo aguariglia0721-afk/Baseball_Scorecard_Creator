@@ -1,0 +1,39 @@
+{
+  "viewport": 390,
+  "bodyScrollWidth": 390,
+  "lookup": {
+    "left": 36.0625,
+    "right": 353.9375,
+    "width": 317.875,
+    "scrollWidth": 316,
+    "clientWidth": 316
+  },
+  "game": {
+    "left": 22.59375,
+    "right": 367.40625,
+    "width": 344.8125,
+    "scrollWidth": 343,
+    "clientWidth": 343
+  },
+  "card": {
+    "left": 22.59375,
+    "right": 367.40625,
+    "width": 344.8125,
+    "scrollWidth": 343,
+    "clientWidth": 343
+  },
+  "schedule": {
+    "left": 36.0625,
+    "right": 353.9375,
+    "width": 317.875,
+    "scrollWidth": 318,
+    "clientWidth": 318
+  },
+  "lookupStyle": {
+    "width": "317.875px",
+    "minWidth": "0px",
+    "maxWidth": "100%",
+    "appearance": "none",
+    "fontSize": "16px"
+  }
+}

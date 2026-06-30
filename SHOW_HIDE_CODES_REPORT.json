@@ -1,0 +1,37 @@
+{
+  "initial": {
+    "hidden": false,
+    "collapsed": false,
+    "display": "grid",
+    "height": 312,
+    "label": "Hide Codes",
+    "expanded": "true"
+  },
+  "afterHide": {
+    "hidden": true,
+    "collapsed": true,
+    "display": "none",
+    "height": 0,
+    "label": "Show Codes",
+    "expanded": "false",
+    "ariaHidden": "true"
+  },
+  "afterShow": {
+    "hidden": false,
+    "collapsed": false,
+    "display": "grid",
+    "height": 312,
+    "label": "Hide Codes",
+    "expanded": "true",
+    "ariaHidden": "false"
+  },
+  "stateUnchanged": true,
+  "desktopViewport": {
+    "width": 1200,
+    "height": 900
+  },
+  "iphoneViewport": {
+    "width": 390,
+    "height": 844
+  }
+}

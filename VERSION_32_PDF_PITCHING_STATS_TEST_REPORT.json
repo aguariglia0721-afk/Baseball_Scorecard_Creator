@@ -1,0 +1,24 @@
+{
+  "version": "32.0.0",
+  "feature": "Populate calculated pitcher game lines in classic PDF columns",
+  "status": "passed",
+  "columns": ["IP", "H", "R", "ER", "BB", "K", "HP"],
+  "rule_cases": [
+    "Recorded outs convert to baseball innings-pitched notation",
+    "Hits allowed are assigned to the pitcher of record for the play",
+    "Walks include regular and intentional bases on balls",
+    "Strikeouts and hit batters populate the correct PDF columns",
+    "Inherited runners remain charged to the pitcher responsible for putting them on base",
+    "Automatic extra-inning runners remain unearned",
+    "Reached-on-error and catcher-interference runners are treated as unearned",
+    "Pitchers remain in first-appearance order",
+    "Version number remains 32"
+  ],
+  "validation": [
+    "JavaScript syntax checks",
+    "Full inherited automated test suite",
+    "Dedicated Version 32 PDF pitching-stat population test",
+    "PDF column-coordinate mapping test",
+    "Version 32 browser and installed-app cache refresh test"
+  ]
+}

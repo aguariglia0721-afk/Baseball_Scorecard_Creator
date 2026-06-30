@@ -1,0 +1,24 @@
+{
+  "version": "32.0.0",
+  "feature": "Separate MLB manager replay and ABS challenge tracking",
+  "status": "passed",
+  "rule_cases": [
+    "Regular-season default begins with one manager challenge per team",
+    "Postseason and All-Star selection begins with two manager challenges per team",
+    "Overturned replay retains the manager challenge",
+    "Confirmed replay consumes the manager challenge",
+    "Call-stands replay consumes the manager challenge",
+    "New manager replay is blocked when no manager challenge remains",
+    "Manager replay events do not alter ABS challenge state",
+    "ABS challenge events do not alter manager replay state",
+    "Manager replay data persists through collection, population, autosave, and migration",
+    "Manager replay information appears in summaries and exports"
+  ],
+  "validation": [
+    "JavaScript syntax checks",
+    "Full inherited automated test suite",
+    "Version 32 manager replay structural tests",
+    "Version 32 manager replay runtime rule tests",
+    "Version 32 replay and ABS independence tests"
+  ]
+}

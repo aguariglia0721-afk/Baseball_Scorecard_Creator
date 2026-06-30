@@ -1,0 +1,29 @@
+{
+  "version": "29.0.0",
+  "revision": "consistent Guariglia palette",
+  "status": "passed",
+  "completed": "2026-06-25",
+  "checks": {
+    "full_inherited_test_suite": "passed",
+    "javascript_syntax": "passed",
+    "legacy_broadcast_blue_css_values_remaining": 0,
+    "iphone_native_accent_color": "#9B4D1F",
+    "iphone_tap_highlight": "burnt orange",
+    "abs_palette": "brown, burnt orange, gold, cream",
+    "completed_pdf_palette": "fixed Guariglia palette",
+    "blank_pdf_palette": "fixed Guariglia palette",
+    "pdf_home_team_color_switching": false,
+    "service_worker_cache_bumped": true,
+    "recolored_pdf_preview_blue_like_pixels": 0
+  },
+  "palette": {
+    "deep_brown": "#3D2519",
+    "brown_2": "#5A3928",
+    "burnt_orange": "#9B4D1F",
+    "dark_burnt_orange": "#733716",
+    "gold": "#D9A441",
+    "cream": "#FFF8E9",
+    "warm_cream": "#F6EAD0",
+    "paper": "#FFFDF7"
+  }
+}

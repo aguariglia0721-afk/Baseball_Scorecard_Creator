@@ -1,0 +1,356 @@
+{
+  "generatedAt": "2026-06-28T16:24:38Z",
+  "browser": "Chromium 144 via Chrome DevTools Protocol",
+  "scope": "Batted-ball position popup and save flow across representative iPhone and iPad portrait/landscape viewports",
+  "passed": true,
+  "viewports": [
+    {
+      "name": "iPhone SE portrait",
+      "width": 320,
+      "height": 568,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-iphone-se-portrait.png"
+    },
+    {
+      "name": "iPhone compact portrait",
+      "width": 360,
+      "height": 800,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-iphone-compact-portrait.png"
+    },
+    {
+      "name": "iPhone standard portrait",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-iphone-standard-portrait.png"
+    },
+    {
+      "name": "iPhone Pro Max portrait",
+      "width": 430,
+      "height": 932,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-iphone-pro-max-portrait.png"
+    },
+    {
+      "name": "iPhone landscape",
+      "width": 844,
+      "height": 390,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-iphone-landscape.png"
+    },
+    {
+      "name": "iPad mini portrait",
+      "width": 768,
+      "height": 1024,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-ipad-mini-portrait.png"
+    },
+    {
+      "name": "iPad 10th gen portrait",
+      "width": 820,
+      "height": 1180,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-ipad-10th-gen-portrait.png"
+    },
+    {
+      "name": "iPad Pro 11 portrait",
+      "width": 834,
+      "height": 1194,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 834,
+        "height": 1194
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-ipad-pro-11-portrait.png"
+    },
+    {
+      "name": "iPad landscape",
+      "width": 1180,
+      "height": 820,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-ipad-landscape.png"
+    },
+    {
+      "name": "iPad Pro 12.9 portrait",
+      "width": 1024,
+      "height": 1366,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-ipad-pro-12-9-portrait.png"
+    },
+    {
+      "name": "iPad Pro 12.9 landscape",
+      "width": 1366,
+      "height": 1024,
+      "mobile": true,
+      "mode": "open",
+      "viewport": {
+        "width": 1366,
+        "height": 1024
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "screenshot": "preview/version32-field-location-ipad-pro-12-9-landscape.png"
+    }
+  ],
+  "flowChecks": {
+    "phone": {
+      "mode": "flow",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "openPassed": true,
+      "flow": {
+        "dialogClosed": true,
+        "notationSaved": true,
+        "fullLocationSaved": true,
+        "autosaveContainsLocation": true,
+        "pageStillContained": true,
+        "passed": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+    },
+    "tablet": {
+      "mode": "flow",
+      "viewport": {
+        "width": 834,
+        "height": 1194
+      },
+      "checks": {
+        "dialogOpen": true,
+        "buttonCount": 9,
+        "positionsComplete": true,
+        "touchTargets": true,
+        "noHorizontalOverflow": true,
+        "dialogInsideViewport": true,
+        "fieldVisible": true,
+        "fieldContainsButtons": true,
+        "formScrollableWhenNeeded": true,
+        "titleVisible": true
+      },
+      "openPassed": true,
+      "flow": {
+        "dialogClosed": true,
+        "notationSaved": true,
+        "fullLocationSaved": true,
+        "autosaveContainsLocation": true,
+        "pageStillContained": true,
+        "passed": true
+      },
+      "passed": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+    }
+  }
+}

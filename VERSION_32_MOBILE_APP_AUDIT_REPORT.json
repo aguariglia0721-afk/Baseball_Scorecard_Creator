@@ -1,0 +1,399 @@
+{
+  "version": 32,
+  "viewport": "390x844 touch",
+  "checks": [
+    {
+      "label": "setup",
+      "active": "setup",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "lineups-open-benches",
+      "active": "lineups",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "pitching",
+      "active": "pitching",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "custom-pitcher-dialog",
+      "active": "pitching",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "customPitcherDialog",
+          "top": 99.7,
+          "bottom": 744.3,
+          "height": 644.5,
+          "formScroll": 0,
+          "formTop": 99.7,
+          "formBottom": 744.3
+        }
+      ]
+    },
+    {
+      "label": "live-scoring",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "play-dialog",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "playDialog",
+          "top": 8,
+          "bottom": 836,
+          "height": 828,
+          "formScroll": 1141,
+          "formTop": 8,
+          "formBottom": 836
+        }
+      ]
+    },
+    {
+      "label": "error-panel",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "playDialog",
+          "top": 8,
+          "bottom": 836,
+          "height": 828,
+          "formScroll": 1141,
+          "formTop": 8,
+          "formBottom": 836
+        }
+      ]
+    },
+    {
+      "label": "interference-panel",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "playDialog",
+          "top": 8,
+          "bottom": 836,
+          "height": 828,
+          "formScroll": 1931,
+          "formTop": 8,
+          "formBottom": 836
+        }
+      ]
+    },
+    {
+      "label": "runner-event-dialog",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "runnerEventDialog",
+          "top": 8,
+          "bottom": 836,
+          "height": 828,
+          "formScroll": 385,
+          "formTop": 8,
+          "formBottom": 836
+        }
+      ]
+    },
+    {
+      "label": "challenge-center",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "manager-replay-dialog",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "managerReplayDialog",
+          "top": 55.8,
+          "bottom": 788.3,
+          "height": 732.5,
+          "formScroll": 0,
+          "formTop": 55.8,
+          "formBottom": 788.3
+        }
+      ]
+    },
+    {
+      "label": "abs-dialog",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "challengeDialog",
+          "top": 8,
+          "bottom": 836,
+          "height": 828,
+          "formScroll": 217,
+          "formTop": 8,
+          "formBottom": 836
+        }
+      ]
+    },
+    {
+      "label": "substitution-dialog",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "substitutionDialog",
+          "top": 30.7,
+          "bottom": 813.3,
+          "height": 782.7,
+          "formScroll": 0,
+          "formTop": 30.7,
+          "formBottom": 813.3
+        }
+      ]
+    },
+    {
+      "label": "current-scorecard-view",
+      "active": "scoring",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "pitch-tracking",
+      "active": "pitchTracking",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "summary",
+      "active": "summary",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "settings",
+      "active": "settings",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": []
+    },
+    {
+      "label": "blank-pdf-dialog",
+      "active": "settings",
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": [],
+      "dialog": [
+        {
+          "id": "blankPdfDialog",
+          "top": 170.1,
+          "bottom": 673.9,
+          "height": 503.8,
+          "formScroll": 0,
+          "formTop": 170.1,
+          "formBottom": 673.9
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "functional": {
+    "setupFields": true,
+    "lineupFieldCount": 228,
+    "customPitcherSaved": true,
+    "pitchCountAfterInputs": {
+      "balls": "1",
+      "strikes": "2"
+    },
+    "countReset": true,
+    "quickCodeToggle": true,
+    "runnerEvents": "2 events",
+    "replayLog": "1 attempt",
+    "absLog": "1 attempt",
+    "halfAfterThreeOuts": "\u25bc 1",
+    "plateAppearanceEndLine": {
+      "count": 1,
+      "style": {
+        "shadow": "rgb(61, 37, 25) 0px -4px 0px 0px inset",
+        "after": "3px"
+      }
+    },
+    "substitutionDialog": true,
+    "scorecardToggleOn": true,
+    "scorecardMobile": {
+      "endLines": 1,
+      "horizontalScroll": {
+        "max": 524,
+        "after": 180
+      },
+      "stickyPlayer": {
+        "position": "sticky",
+        "left": "0px"
+      }
+    },
+    "scorecardToggleOff": true,
+    "manualHalfInning": {
+      "before": "\u25bc 1",
+      "after": "\u25b2 2",
+      "changed": true
+    },
+    "stickyStack": [
+      {
+        "name": "autosave-bar no-print",
+        "top": 0,
+        "bottom": 27.8
+      },
+      {
+        "name": "step-nav",
+        "top": 42,
+        "bottom": 99.6
+      },
+      {
+        "name": "scoring-view-switcher",
+        "top": 100,
+        "bottom": 158.8
+      }
+    ],
+    "gameNotes": "Mobile notes field test"
+  },
+  "harnessNote": "The inline browser harness uses an opaque origin, so localStorage SecurityErrors are excluded; autosave remains covered by the inherited regression suite.",
+  "viewportMatrix": [
+    {
+      "width": 320,
+      "height": 568,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "bodyOverflow": 0,
+      "outside": [],
+      "small": [],
+      "zoom": []
+    }
+  ],
+  "layoutFailures": [],
+  "passed": true
+}

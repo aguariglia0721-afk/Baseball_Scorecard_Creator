@@ -1,0 +1,22 @@
+{
+  "version": "31.0.0",
+  "status": "passed",
+  "features": [
+    "Plate Appearances and Current Scorecard view toggle",
+    "live scorecard preview for innings 1-10",
+    "automatic continuation preview for innings 11-20",
+    "dark half-inning ending divider in Plate Appearances",
+    "dark half-inning ending divider in Current Scorecard",
+    "dark half-inning ending divider in browser print and classic PDF",
+    "autosaved and restored view preference",
+    "Version 30 autosave migration"
+  ],
+  "validation": [
+    "complete inherited automated test suite",
+    "Version 31 structural toggle tests",
+    "Version 31 half-inning behavior tests",
+    "JavaScript syntax checks",
+    "button inventory and wiring audit",
+    "ZIP extraction and integrity validation"
+  ]
+}

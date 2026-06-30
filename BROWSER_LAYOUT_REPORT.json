@@ -1,0 +1,338 @@
+[
+  {
+    "width": 1440,
+    "panel": "setup",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "panel": "lineups",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "panel": "pitching",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "panel": "scoring",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "panel": "summary",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "panel": "settings",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "panel": "setup",
+    "scrollWidth": 1024,
+    "viewport": 1024,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "panel": "lineups",
+    "scrollWidth": 1024,
+    "viewport": 1024,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "panel": "pitching",
+    "scrollWidth": 1024,
+    "viewport": 1024,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "panel": "scoring",
+    "scrollWidth": 1024,
+    "viewport": 1024,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "panel": "summary",
+    "scrollWidth": 1024,
+    "viewport": 1024,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 1024,
+    "panel": "settings",
+    "scrollWidth": 1024,
+    "viewport": 1024,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 768,
+    "panel": "setup",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 768,
+    "panel": "lineups",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 768,
+    "panel": "pitching",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 768,
+    "panel": "scoring",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 768,
+    "panel": "summary",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 768,
+    "panel": "settings",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 430,
+    "panel": "setup",
+    "scrollWidth": 430,
+    "viewport": 430,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 430,
+    "panel": "lineups",
+    "scrollWidth": 430,
+    "viewport": 430,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 430,
+    "panel": "pitching",
+    "scrollWidth": 430,
+    "viewport": 430,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 430,
+    "panel": "scoring",
+    "scrollWidth": 430,
+    "viewport": 430,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 430,
+    "panel": "summary",
+    "scrollWidth": 430,
+    "viewport": 430,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 430,
+    "panel": "settings",
+    "scrollWidth": 430,
+    "viewport": 430,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "panel": "setup",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "panel": "lineups",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "panel": "pitching",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "panel": "scoring",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "panel": "summary",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "panel": "settings",
+    "scrollWidth": 390,
+    "viewport": 390,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 360,
+    "panel": "setup",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 360,
+    "panel": "lineups",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 360,
+    "panel": "pitching",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 360,
+    "panel": "scoring",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 360,
+    "panel": "summary",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 360,
+    "panel": "settings",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 320,
+    "panel": "setup",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 320,
+    "panel": "lineups",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 320,
+    "panel": "pitching",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 320,
+    "panel": "scoring",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 320,
+    "panel": "summary",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "logoInside": true,
+    "pass": true
+  },
+  {
+    "width": 320,
+    "panel": "settings",
+    "scrollWidth": 320,
+    "viewport": 320,
+    "logoInside": true,
+    "pass": true
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "initial": {
+    "balls": 0,
+    "strikes": 0,
+    "history": [],
+    "active": true
+  },
+  "afterFoul": {
+    "balls": 0,
+    "strikes": 2,
+    "pitches": 3,
+    "history": [
+      "swingingStrike",
+      "calledStrike",
+      "foul"
+    ],
+    "sequence": "SW C F"
+  },
+  "afterUndo": {
+    "balls": 0,
+    "strikes": 2,
+    "pitches": 2,
+    "history": [
+      "swingingStrike",
+      "calledStrike"
+    ],
+    "sequence": "SW C"
+  },
+  "afterCalledThird": {
+    "balls": 0,
+    "strikes": 3,
+    "pending": true,
+    "history": [
+      "swingingStrike",
+      "calledStrike",
+      "calledStrike"
+    ],
+    "sequence": "SW C C",
+    "status": "Called strike three. Choose the official result."
+  },
+  "afterPlay": {
+    "balls": 0,
+    "strikes": 0,
+    "plays": [
+      {
+        "outcome": "KL",
+        "pitchSequence": "SW C C",
+        "pitchCount": {
+          "balls": 0,
+          "strikes": 3,
+          "pitches": 3,
+          "history": [
+            "swingingStrike",
+            "calledStrike",
+            "calledStrike"
+          ]
+        }
+      }
+    ],
+    "outs": 1
+  },
+  "afterKeyboardS": {
+    "balls": 0,
+    "strikes": 1,
+    "history": [
+      "swingingStrike"
+    ],
+    "sequence": "SW"
+  },
+  "desktop": {
+    "body": 1085,
+    "viewport": 1100,
+    "pair": {
+      "x": 311.390625,
+      "y": 249.8125,
+      "width": 225.515625,
+      "height": 87,
+      "top": 249.8125,
+      "right": 536.90625,
+      "bottom": 336.8125,
+      "left": 311.390625
+    },
+    "swing": {
+      "x": 313.390625,
+      "y": 251.8125,
+      "width": 110.75,
+      "height": 83,
+      "top": 251.8125,
+      "right": 424.140625,
+      "bottom": 334.8125,
+      "left": 313.390625
+    },
+    "called": {
+      "x": 424.140625,
+      "y": 251.8125,
+      "width": 110.765625,
+      "height": 83,
+      "top": 251.8125,
+      "right": 534.90625,
+      "bottom": 334.8125,
+      "left": 424.140625
+    }
+  },
+  "mobile": {
+    "body": 390,
+    "viewport": 390,
+    "pair": {
+      "x": 200.59375,
+      "y": 223.5,
+      "width": 153.296875,
+      "height": 75.78125,
+      "top": 223.5,
+      "right": 353.890625,
+      "bottom": 299.28125,
+      "left": 200.59375
+    },
+    "swing": {
+      "x": 202.59375,
+      "y": 225.5,
+      "width": 74.640625,
+      "height": 71.78125,
+      "top": 225.5,
+      "right": 277.234375,
+      "bottom": 297.28125,
+      "left": 202.59375
+    },
+    "called": {
+      "x": 277.234375,
+      "y": 225.5,
+      "width": 74.65625,
+      "height": 71.78125,
+      "top": 225.5,
+      "right": 351.890625,
+      "bottom": 297.28125,
+      "left": 277.234375
+    }
+  }
+}

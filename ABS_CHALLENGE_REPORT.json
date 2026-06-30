@@ -1,0 +1,64 @@
+{
+  "after_regulation": {
+    "available": 0,
+    "initialLost": 2,
+    "attempts": 3,
+    "overturned": 1,
+    "upheld": 2,
+    "extraGrants": 0
+  },
+  "record_disabled_at_zero": true,
+  "start_10th": {
+    "available": 1,
+    "initialLost": 2,
+    "extraGrants": 1,
+    "extraLost": 0
+  },
+  "after_10th_use": {
+    "available": 0,
+    "extraGrants": 1,
+    "extraLost": 1,
+    "attempts": 4
+  },
+  "start_11th": {
+    "available": 1,
+    "extraGrants": 2,
+    "extraLost": 1
+  },
+  "home_role_options": [
+    "Pitcher",
+    "Catcher"
+  ],
+  "home_success": {
+    "available": 2,
+    "attempts": 1,
+    "overturned": 1,
+    "upheld": 0
+  },
+  "after_edit": {
+    "available": 1,
+    "initialLost": 2,
+    "extraGrants": 1,
+    "extraLost": 0,
+    "overturned": 2,
+    "upheld": 2
+  },
+  "after_delete": {
+    "available": 1,
+    "initialLost": 2,
+    "extraGrants": 1,
+    "extraLost": 0,
+    "attempts": 3
+  },
+  "saved_challenge_count": 4,
+  "saved_names": [
+    "Pete Alonso",
+    "Zack Wheeler"
+  ],
+  "pdf_tokens": {
+    "away": "[X] [X] EI[ ]",
+    "home": "[ ] [ ] EI[-]"
+  },
+  "challenge_log_text": "T1 New York Mets Pete Alonso (Batter): Overturned \u2014 retained; T1 New York Mets Pete Alonso (Batter): Call upheld \u2014 lost; T10 New York Mets Pete Alonso (Batter): Call upheld \u2014 lost; T11 Philadelphia Phillies Zack Wheeler (Pitcher): Overturned \u2014 retained",
+  "page_errors": []
+}

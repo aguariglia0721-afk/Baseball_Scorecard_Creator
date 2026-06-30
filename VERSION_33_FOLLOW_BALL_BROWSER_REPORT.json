@@ -1,0 +1,72 @@
+{
+  "version": "33.0.2",
+  "method": "Chromium set-content harness because administrator policy blocks localhost navigation",
+  "tests": [
+    {
+      "device": "iphone-15-pro",
+      "viewport": [
+        390,
+        844
+      ],
+      "homeRunBypass": true,
+      "groundoutNotation": "GO6-3",
+      "doublePlayNotation": "DP4-3-1",
+      "repeatedFielderPath": "3-6-3",
+      "geometry": {
+        "open": true,
+        "scrollWidth": 390,
+        "viewport": 390,
+        "gridWidth": 328.96875,
+        "minButtonWidth": 54.265625,
+        "minButtonHeight": 54.265625,
+        "pathStops": 4,
+        "tray": "1\n3\n1B\n\u2192\n2\n6\nSS\n\u2192\n3\n3\n1B"
+      },
+      "pageErrors": []
+    },
+    {
+      "device": "ipad-pro-11",
+      "viewport": [
+        834,
+        1194
+      ],
+      "homeRunBypass": true,
+      "groundoutNotation": "GO6-3",
+      "doublePlayNotation": "DP4-3-1",
+      "repeatedFielderPath": "3-6-3",
+      "geometry": {
+        "open": true,
+        "scrollWidth": 834,
+        "viewport": 834,
+        "gridWidth": 540,
+        "minButtonWidth": 82,
+        "minButtonHeight": 82,
+        "pathStops": 4,
+        "tray": "1\n3\n1B\n\u2192\n2\n6\nSS\n\u2192\n3\n3\n1B"
+      },
+      "pageErrors": []
+    },
+    {
+      "device": "desktop",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "homeRunBypass": true,
+      "groundoutNotation": "GO6-3",
+      "doublePlayNotation": "DP4-3-1",
+      "repeatedFielderPath": "3-6-3",
+      "geometry": {
+        "open": true,
+        "scrollWidth": 1440,
+        "viewport": 1440,
+        "gridWidth": 540,
+        "minButtonWidth": 82,
+        "minButtonHeight": 82,
+        "pathStops": 4,
+        "tray": "1\n3\n1B\n\u2192\n2\n6\nSS\n\u2192\n3\n3\n1B"
+      },
+      "pageErrors": []
+    }
+  ]
+}

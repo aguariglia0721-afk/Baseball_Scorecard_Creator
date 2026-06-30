@@ -1,0 +1,42 @@
+{
+  "version": "29.0.0",
+  "status": "passed",
+  "completed": "2026-06-25",
+  "checks": {
+    "full_inherited_test_suite": "passed",
+    "version_29_unified_scoring_test": "passed",
+    "javascript_syntax": "passed",
+    "desktop_render": "passed",
+    "iphone_render": "passed",
+    "desktop_horizontal_overflow": false,
+    "iphone_horizontal_overflow": false,
+    "challenge_controls_collapsed_by_default": true,
+    "version_28_autosave_migration": true,
+    "palette_consistency_test": "passed",
+    "iphone_native_palette": "passed",
+    "pdf_fixed_guariglia_palette": "passed",
+    "legacy_blue_css_values_remaining": 0
+  },
+  "layout": {
+    "scoreboard_visible_during_pitch_entry": true,
+    "pitch_buttons_inside_scorebox": true,
+    "pitch_buttons_compact": true,
+    "actions": [
+      "Undo Pitch",
+      "Reset Count",
+      "Record Error",
+      "Challenge"
+    ],
+    "quick_results_before_abs": true,
+    "abs_revealed_by_challenge_button": true,
+    "palette": [
+      "deep brown",
+      "brown",
+      "burnt orange",
+      "dark burnt orange",
+      "gold",
+      "cream",
+      "paper white"
+    ]
+  }
+}

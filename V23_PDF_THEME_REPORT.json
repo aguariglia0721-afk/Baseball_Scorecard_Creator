@@ -1,0 +1,33 @@
+{
+  "version": 23,
+  "status": "pass",
+  "pdf_page": {
+    "pages": 1,
+    "width_points": 612,
+    "height_points": 792,
+    "orientation": "portrait",
+    "layout_changed": false
+  },
+  "completed_pdf": {
+    "home_team_palette": true,
+    "plus_signs": false,
+    "two_by_three_counters": false,
+    "generated_notation": "bold_and_larger"
+  },
+  "blank_pdf": {
+    "prompts_for_guides": true,
+    "traditional_guides_option": true,
+    "clean_boxes_option": true
+  },
+  "online_scoring_grid": {
+    "plus_signs": false,
+    "two_by_three_counters": false,
+    "generated_notation": "bold_and_larger"
+  },
+  "team_palette_records": 30,
+  "visual_samples": [
+    "New York Mets",
+    "San Diego Padres"
+  ],
+  "deployed": false
+}

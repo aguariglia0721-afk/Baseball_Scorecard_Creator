@@ -1,0 +1,2442 @@
+{
+  "beforeUndo": {
+    "inning": 1,
+    "half": "top",
+    "outs": 1,
+    "bases": {
+      "1": {
+        "id": "away-1",
+        "team": "away",
+        "playerIndex": 1,
+        "name": "A Two"
+      },
+      "2": {
+        "id": "away-0",
+        "team": "away",
+        "playerIndex": 0,
+        "name": "A One"
+      },
+      "3": null
+    },
+    "battingIndexes": {
+      "away": 3,
+      "home": 0
+    },
+    "plays": [
+      {
+        "team": "away",
+        "playerIndex": 0,
+        "paIndex": 0,
+        "outcome": "1B",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172924989-sun7t0g6",
+        "seq": 1,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 0,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 1,
+          "strikes": 1,
+          "pitches": 3,
+          "history": [
+            "ball",
+            "swingingStrike",
+            "inplay"
+          ],
+          "sessionId": "play-1782172924985-cma949th"
+        },
+        "pitchSessionId": "play-1782172924985-cma949th",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B SW IP",
+        "playerName": "A One",
+        "outcomeCode": "1B",
+        "recordedAt": "2026-06-23T00:02:04.989Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        }
+      },
+      {
+        "team": "away",
+        "playerIndex": 1,
+        "paIndex": 0,
+        "outcome": "BB",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "2",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172925300-8h6u1jls",
+        "seq": 2,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 4,
+          "strikes": 0,
+          "pitches": 4,
+          "history": [
+            "ball",
+            "ball",
+            "ball",
+            "ball"
+          ],
+          "sessionId": "play-1782172925295-2koogpre"
+        },
+        "pitchSessionId": "play-1782172925295-2koogpre",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B B B B",
+        "playerName": "A Two",
+        "outcomeCode": "BB",
+        "recordedAt": "2026-06-23T00:02:05.300Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-1",
+              "team": "away",
+              "playerIndex": 1,
+              "name": "A Two"
+            },
+            "2": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        }
+      },
+      {
+        "team": "away",
+        "playerIndex": 2,
+        "paIndex": 0,
+        "outcome": "K",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 1,
+        "errors": 0,
+        "destinations": {
+          "batter": "out",
+          "r1": "hold",
+          "r2": "hold",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172925630-dnw3y5qg",
+        "seq": 3,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-1",
+              "team": "away",
+              "playerIndex": 1,
+              "name": "A Two"
+            },
+            "2": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 0,
+          "strikes": 3,
+          "pitches": 3,
+          "history": [
+            "swingingStrike",
+            "calledStrike",
+            "swingingStrike"
+          ],
+          "sessionId": "play-1782172925605-4rs3dug3"
+        },
+        "pitchSessionId": "play-1782172925605-4rs3dug3",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "SW C SW",
+        "playerName": "A Three",
+        "outcomeCode": "K",
+        "recordedAt": "2026-06-23T00:02:05.630Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": {
+              "id": "away-1",
+              "team": "away",
+              "playerIndex": 1,
+              "name": "A Two"
+            },
+            "2": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 3,
+            "home": 0
+          }
+        }
+      }
+    ],
+    "nextSeq": 4,
+    "count": {
+      "balls": 0,
+      "strikes": 0,
+      "pitches": 0,
+      "history": [],
+      "pendingStrikeout": false,
+      "inPlay": false,
+      "sessionId": ""
+    },
+    "pitchLog": [
+      {
+        "id": "play-1782172924985-aieelfod",
+        "seq": 1,
+        "sessionId": "play-1782172924985-cma949th",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 0,
+        "batterName": "A One",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:04.985Z"
+      },
+      {
+        "id": "play-1782172924986-tskzl85k",
+        "seq": 2,
+        "sessionId": "play-1782172924985-cma949th",
+        "type": "swingingStrike",
+        "code": "SW",
+        "label": "Swinging Strike",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 0,
+        "batterName": "A One",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 1
+        },
+        "recordedAt": "2026-06-23T00:02:04.986Z"
+      },
+      {
+        "id": "play-1782172924987-p9sji6cp",
+        "seq": 3,
+        "sessionId": "play-1782172924985-cma949th",
+        "type": "inplay",
+        "code": "IP",
+        "label": "In Play",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 0,
+        "batterName": "A One",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 1
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 1
+        },
+        "recordedAt": "2026-06-23T00:02:04.987Z"
+      },
+      {
+        "id": "play-1782172925295-9m1em4bo",
+        "seq": 4,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.295Z"
+      },
+      {
+        "id": "play-1782172925297-cg1fdo8o",
+        "seq": 5,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.297Z"
+      },
+      {
+        "id": "play-1782172925298-msmefjbi",
+        "seq": 6,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.298Z"
+      },
+      {
+        "id": "play-1782172925299-oy74oumu",
+        "seq": 7,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 4,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.299Z"
+      },
+      {
+        "id": "play-1782172925605-xtoupye7",
+        "seq": 8,
+        "sessionId": "play-1782172925605-4rs3dug3",
+        "type": "swingingStrike",
+        "code": "SW",
+        "label": "Swinging Strike",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 2,
+        "batterName": "A Three",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 0,
+          "strikes": 1
+        },
+        "recordedAt": "2026-06-23T00:02:05.605Z"
+      },
+      {
+        "id": "play-1782172925607-pnre98gw",
+        "seq": 9,
+        "sessionId": "play-1782172925605-4rs3dug3",
+        "type": "calledStrike",
+        "code": "C",
+        "label": "Called Strike",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 2,
+        "batterName": "A Three",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 1
+        },
+        "countAfter": {
+          "balls": 0,
+          "strikes": 2
+        },
+        "recordedAt": "2026-06-23T00:02:05.607Z"
+      },
+      {
+        "id": "play-1782172925628-aeia4isc",
+        "seq": 10,
+        "sessionId": "play-1782172925605-4rs3dug3",
+        "type": "swingingStrike",
+        "code": "SW",
+        "label": "Swinging Strike",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 2,
+        "batterName": "A Three",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 2
+        },
+        "countAfter": {
+          "balls": 0,
+          "strikes": 3
+        },
+        "recordedAt": "2026-06-23T00:02:05.628Z"
+      }
+    ],
+    "nextPitchSeq": 11,
+    "pitchLogVersion": 1,
+    "activePitchers": {
+      "away": 0,
+      "home": 0
+    }
+  },
+  "statsBeforeUndo": {
+    "away": [],
+    "home": [
+      {
+        "team": "home",
+        "row": 0,
+        "key": "home:row:0",
+        "name": "Starter",
+        "number": "45",
+        "throws": "",
+        "pitches": 10,
+        "strikes": 5,
+        "balls": 5,
+        "swingingStrikes": 3,
+        "calledStrikes": 1,
+        "fouls": 0,
+        "inPlay": 1,
+        "hbpPitches": 0,
+        "battersFaced": 3,
+        "hits": 1,
+        "walks": 1,
+        "intentionalWalks": 0,
+        "hitBatters": 0,
+        "strikeouts": 1
+      }
+    ]
+  },
+  "afterLastPlayUndo": {
+    "inning": 1,
+    "half": "top",
+    "outs": 0,
+    "bases": {
+      "1": {
+        "id": "away-1",
+        "team": "away",
+        "playerIndex": 1,
+        "name": "A Two"
+      },
+      "2": {
+        "id": "away-0",
+        "team": "away",
+        "playerIndex": 0,
+        "name": "A One"
+      },
+      "3": null
+    },
+    "battingIndexes": {
+      "away": 2,
+      "home": 0
+    },
+    "plays": [
+      {
+        "team": "away",
+        "playerIndex": 0,
+        "paIndex": 0,
+        "outcome": "1B",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172924989-sun7t0g6",
+        "seq": 1,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 0,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 1,
+          "strikes": 1,
+          "pitches": 3,
+          "history": [
+            "ball",
+            "swingingStrike",
+            "inplay"
+          ],
+          "sessionId": "play-1782172924985-cma949th"
+        },
+        "pitchSessionId": "play-1782172924985-cma949th",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B SW IP",
+        "playerName": "A One",
+        "outcomeCode": "1B",
+        "recordedAt": "2026-06-23T00:02:04.989Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        }
+      },
+      {
+        "team": "away",
+        "playerIndex": 1,
+        "paIndex": 0,
+        "outcome": "BB",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "2",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172925300-8h6u1jls",
+        "seq": 2,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 4,
+          "strikes": 0,
+          "pitches": 4,
+          "history": [
+            "ball",
+            "ball",
+            "ball",
+            "ball"
+          ],
+          "sessionId": "play-1782172925295-2koogpre"
+        },
+        "pitchSessionId": "play-1782172925295-2koogpre",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B B B B",
+        "playerName": "A Two",
+        "outcomeCode": "BB",
+        "recordedAt": "2026-06-23T00:02:05.300Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-1",
+              "team": "away",
+              "playerIndex": 1,
+              "name": "A Two"
+            },
+            "2": {
+              "id": "away-0",
+              "team": "away",
+              "playerIndex": 0,
+              "name": "A One"
+            },
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        }
+      }
+    ],
+    "nextSeq": 3,
+    "count": {
+      "balls": 0,
+      "strikes": 0,
+      "pitches": 0,
+      "history": [],
+      "pendingStrikeout": false,
+      "inPlay": false,
+      "sessionId": ""
+    },
+    "pitchLog": [
+      {
+        "id": "play-1782172924985-aieelfod",
+        "seq": 1,
+        "sessionId": "play-1782172924985-cma949th",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 0,
+        "batterName": "A One",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:04.985Z"
+      },
+      {
+        "id": "play-1782172924986-tskzl85k",
+        "seq": 2,
+        "sessionId": "play-1782172924985-cma949th",
+        "type": "swingingStrike",
+        "code": "SW",
+        "label": "Swinging Strike",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 0,
+        "batterName": "A One",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 1
+        },
+        "recordedAt": "2026-06-23T00:02:04.986Z"
+      },
+      {
+        "id": "play-1782172924987-p9sji6cp",
+        "seq": 3,
+        "sessionId": "play-1782172924985-cma949th",
+        "type": "inplay",
+        "code": "IP",
+        "label": "In Play",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 0,
+        "batterName": "A One",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 1
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 1
+        },
+        "recordedAt": "2026-06-23T00:02:04.987Z"
+      },
+      {
+        "id": "play-1782172925295-9m1em4bo",
+        "seq": 4,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.295Z"
+      },
+      {
+        "id": "play-1782172925297-cg1fdo8o",
+        "seq": 5,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.297Z"
+      },
+      {
+        "id": "play-1782172925298-msmefjbi",
+        "seq": 6,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.298Z"
+      },
+      {
+        "id": "play-1782172925299-oy74oumu",
+        "seq": 7,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 4,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.299Z"
+      }
+    ],
+    "nextPitchSeq": 11,
+    "pitchLogVersion": 1,
+    "activePitchers": {
+      "away": 0,
+      "home": 0
+    }
+  },
+  "statsAfterLastPlayUndo": {
+    "away": [],
+    "home": [
+      {
+        "team": "home",
+        "row": 0,
+        "key": "home:row:0",
+        "name": "Starter",
+        "number": "45",
+        "throws": "",
+        "pitches": 7,
+        "strikes": 2,
+        "balls": 5,
+        "swingingStrikes": 1,
+        "calledStrikes": 0,
+        "fouls": 0,
+        "inPlay": 1,
+        "hbpPitches": 0,
+        "battersFaced": 2,
+        "hits": 1,
+        "walks": 1,
+        "intentionalWalks": 0,
+        "hitBatters": 0,
+        "strikeouts": 0
+      }
+    ]
+  },
+  "afterHistoricalDelete": {
+    "inning": 1,
+    "half": "top",
+    "outs": 0,
+    "bases": {
+      "1": {
+        "id": "away-1",
+        "team": "away",
+        "playerIndex": 1,
+        "name": "A Two"
+      },
+      "2": null,
+      "3": null
+    },
+    "battingIndexes": {
+      "away": 2,
+      "home": 0
+    },
+    "plays": [
+      {
+        "team": "away",
+        "playerIndex": 1,
+        "paIndex": 0,
+        "outcome": "BB",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "2",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172925300-8h6u1jls",
+        "seq": 2,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 4,
+          "strikes": 0,
+          "pitches": 4,
+          "history": [
+            "ball",
+            "ball",
+            "ball",
+            "ball"
+          ],
+          "sessionId": "play-1782172925295-2koogpre"
+        },
+        "pitchSessionId": "play-1782172925295-2koogpre",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B B B B",
+        "playerName": "A Two",
+        "outcomeCode": "BB",
+        "recordedAt": "2026-06-23T00:02:05.300Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-1",
+              "team": "away",
+              "playerIndex": 1,
+              "name": "A Two"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        }
+      }
+    ],
+    "nextSeq": 3,
+    "count": {
+      "balls": 0,
+      "strikes": 0,
+      "pitches": 0,
+      "history": [],
+      "pendingStrikeout": false,
+      "inPlay": false,
+      "sessionId": ""
+    },
+    "pitchLog": [
+      {
+        "id": "play-1782172925295-9m1em4bo",
+        "seq": 4,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.295Z"
+      },
+      {
+        "id": "play-1782172925297-cg1fdo8o",
+        "seq": 5,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.297Z"
+      },
+      {
+        "id": "play-1782172925298-msmefjbi",
+        "seq": 6,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.298Z"
+      },
+      {
+        "id": "play-1782172925299-oy74oumu",
+        "seq": 7,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 4,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.299Z"
+      }
+    ],
+    "nextPitchSeq": 11,
+    "pitchLogVersion": 1,
+    "activePitchers": {
+      "away": 0,
+      "home": 0
+    }
+  },
+  "statsAfterHistoricalDelete": {
+    "away": [],
+    "home": [
+      {
+        "team": "home",
+        "row": 0,
+        "key": "home:row:0",
+        "name": "Starter",
+        "number": "45",
+        "throws": "",
+        "pitches": 4,
+        "strikes": 0,
+        "balls": 4,
+        "swingingStrikes": 0,
+        "calledStrikes": 0,
+        "fouls": 0,
+        "inPlay": 0,
+        "hbpPitches": 0,
+        "battersFaced": 1,
+        "hits": 0,
+        "walks": 1,
+        "intentionalWalks": 0,
+        "hitBatters": 0,
+        "strikeouts": 0
+      }
+    ]
+  },
+  "afterHistoricalEdit": {
+    "inning": 1,
+    "half": "top",
+    "outs": 1,
+    "bases": {
+      "1": null,
+      "2": null,
+      "3": null
+    },
+    "battingIndexes": {
+      "away": 2,
+      "home": 0
+    },
+    "plays": [
+      {
+        "team": "away",
+        "playerIndex": 1,
+        "paIndex": 0,
+        "outcome": "GO",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 1,
+        "errors": 0,
+        "destinations": {
+          "batter": "out",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "edited to groundout",
+        "id": "play-1782172925300-8h6u1jls",
+        "seq": 2,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 4,
+          "strikes": 0,
+          "pitches": 4,
+          "history": [
+            "ball",
+            "ball",
+            "ball",
+            "ball"
+          ],
+          "sessionId": "play-1782172925295-2koogpre"
+        },
+        "pitchSessionId": "play-1782172925295-2koogpre",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B B B B",
+        "playerName": "A Two",
+        "outcomeCode": "GO",
+        "recordedAt": "2026-06-23T00:02:05.300Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        }
+      }
+    ],
+    "nextSeq": 3,
+    "count": {
+      "balls": 0,
+      "strikes": 0,
+      "pitches": 0,
+      "history": [],
+      "pendingStrikeout": false,
+      "inPlay": false,
+      "sessionId": ""
+    },
+    "pitchLog": [
+      {
+        "id": "play-1782172925295-9m1em4bo",
+        "seq": 4,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.295Z"
+      },
+      {
+        "id": "play-1782172925297-cg1fdo8o",
+        "seq": 5,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.297Z"
+      },
+      {
+        "id": "play-1782172925298-msmefjbi",
+        "seq": 6,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.298Z"
+      },
+      {
+        "id": "play-1782172925299-oy74oumu",
+        "seq": 7,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 4,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.299Z"
+      }
+    ],
+    "nextPitchSeq": 11,
+    "pitchLogVersion": 1,
+    "activePitchers": {
+      "away": 0,
+      "home": 0
+    }
+  },
+  "statsAfterHistoricalEdit": {
+    "away": [],
+    "home": [
+      {
+        "team": "home",
+        "row": 0,
+        "key": "home:row:0",
+        "name": "Starter",
+        "number": "45",
+        "throws": "",
+        "pitches": 4,
+        "strikes": 0,
+        "balls": 4,
+        "swingingStrikes": 0,
+        "calledStrikes": 0,
+        "fouls": 0,
+        "inPlay": 0,
+        "hbpPitches": 0,
+        "battersFaced": 1,
+        "hits": 0,
+        "walks": 0,
+        "intentionalWalks": 0,
+        "hitBatters": 0,
+        "strikeouts": 0
+      }
+    ]
+  },
+  "afterInningEndingPlay": {
+    "inning": 1,
+    "half": "bottom",
+    "outs": 0,
+    "bases": {
+      "1": null,
+      "2": null,
+      "3": null
+    },
+    "battingIndexes": {
+      "away": 4,
+      "home": 0
+    },
+    "plays": [
+      {
+        "team": "away",
+        "playerIndex": 1,
+        "paIndex": 0,
+        "outcome": "GO",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 1,
+        "errors": 0,
+        "destinations": {
+          "batter": "out",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "edited to groundout",
+        "id": "play-1782172925300-8h6u1jls",
+        "seq": 2,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 4,
+          "strikes": 0,
+          "pitches": 4,
+          "history": [
+            "ball",
+            "ball",
+            "ball",
+            "ball"
+          ],
+          "sessionId": "play-1782172925295-2koogpre"
+        },
+        "pitchSessionId": "play-1782172925295-2koogpre",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B B B B",
+        "playerName": "A Two",
+        "outcomeCode": "GO",
+        "recordedAt": "2026-06-23T00:02:05.300Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        }
+      },
+      {
+        "team": "away",
+        "playerIndex": 2,
+        "paIndex": 0,
+        "outcome": "1B",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172926624-08rypwp9",
+        "seq": 3,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 0,
+          "strikes": 0,
+          "pitches": 1,
+          "history": [
+            "inplay"
+          ],
+          "sessionId": "play-1782172926621-zzu5j5y9"
+        },
+        "pitchSessionId": "play-1782172926621-zzu5j5y9",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "IP",
+        "playerName": "A Three",
+        "outcomeCode": "1B",
+        "recordedAt": "2026-06-23T00:02:06.624Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": {
+              "id": "away-2",
+              "team": "away",
+              "playerIndex": 2,
+              "name": "A Three"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 3,
+            "home": 0
+          }
+        }
+      },
+      {
+        "team": "away",
+        "playerIndex": 3,
+        "paIndex": 0,
+        "outcome": "DP",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 2,
+        "errors": 0,
+        "destinations": {
+          "batter": "out",
+          "r1": "out",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172926825-6hzk2xae",
+        "seq": 4,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": {
+              "id": "away-2",
+              "team": "away",
+              "playerIndex": 2,
+              "name": "A Three"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 3,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 0,
+          "strikes": 0,
+          "pitches": 0,
+          "history": [],
+          "sessionId": ""
+        },
+        "pitchSessionId": "",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "",
+        "playerName": "A Four",
+        "outcomeCode": "DP",
+        "recordedAt": "2026-06-23T00:02:06.826Z",
+        "afterState": {
+          "inning": 1,
+          "half": "bottom",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 4,
+            "home": 0
+          }
+        }
+      }
+    ],
+    "nextSeq": 5,
+    "count": {
+      "balls": 0,
+      "strikes": 0,
+      "pitches": 0,
+      "history": [],
+      "pendingStrikeout": false,
+      "inPlay": false,
+      "sessionId": ""
+    },
+    "pitchLog": [
+      {
+        "id": "play-1782172925295-9m1em4bo",
+        "seq": 4,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.295Z"
+      },
+      {
+        "id": "play-1782172925297-cg1fdo8o",
+        "seq": 5,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.297Z"
+      },
+      {
+        "id": "play-1782172925298-msmefjbi",
+        "seq": 6,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.298Z"
+      },
+      {
+        "id": "play-1782172925299-oy74oumu",
+        "seq": 7,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 4,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.299Z"
+      },
+      {
+        "id": "play-1782172926622-jw07mb4i",
+        "seq": 11,
+        "sessionId": "play-1782172926621-zzu5j5y9",
+        "type": "inplay",
+        "code": "IP",
+        "label": "In Play",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 2,
+        "batterName": "A Three",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:06.622Z"
+      }
+    ],
+    "nextPitchSeq": 12,
+    "pitchLogVersion": 1,
+    "activePitchers": {
+      "away": 0,
+      "home": 0
+    }
+  },
+  "afterInningUndo": {
+    "inning": 1,
+    "half": "top",
+    "outs": 1,
+    "bases": {
+      "1": {
+        "id": "away-2",
+        "team": "away",
+        "playerIndex": 2,
+        "name": "A Three"
+      },
+      "2": null,
+      "3": null
+    },
+    "battingIndexes": {
+      "away": 3,
+      "home": 0
+    },
+    "plays": [
+      {
+        "team": "away",
+        "playerIndex": 1,
+        "paIndex": 0,
+        "outcome": "GO",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 1,
+        "errors": 0,
+        "destinations": {
+          "batter": "out",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "edited to groundout",
+        "id": "play-1782172925300-8h6u1jls",
+        "seq": 2,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 1,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 4,
+          "strikes": 0,
+          "pitches": 4,
+          "history": [
+            "ball",
+            "ball",
+            "ball",
+            "ball"
+          ],
+          "sessionId": "play-1782172925295-2koogpre"
+        },
+        "pitchSessionId": "play-1782172925295-2koogpre",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "B B B B",
+        "playerName": "A Two",
+        "outcomeCode": "GO",
+        "recordedAt": "2026-06-23T00:02:05.300Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        }
+      },
+      {
+        "team": "away",
+        "playerIndex": 2,
+        "paIndex": 0,
+        "outcome": "1B",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172926624-08rypwp9",
+        "seq": 3,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 0,
+          "strikes": 0,
+          "pitches": 1,
+          "history": [
+            "inplay"
+          ],
+          "sessionId": "play-1782172926621-zzu5j5y9"
+        },
+        "pitchSessionId": "play-1782172926621-zzu5j5y9",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "IP",
+        "playerName": "A Three",
+        "outcomeCode": "1B",
+        "recordedAt": "2026-06-23T00:02:06.624Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 1,
+          "bases": {
+            "1": {
+              "id": "away-2",
+              "team": "away",
+              "playerIndex": 2,
+              "name": "A Three"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 3,
+            "home": 0
+          }
+        }
+      }
+    ],
+    "nextSeq": 4,
+    "count": {
+      "balls": 0,
+      "strikes": 0,
+      "pitches": 0,
+      "history": [],
+      "pendingStrikeout": false,
+      "inPlay": false,
+      "sessionId": ""
+    },
+    "pitchLog": [
+      {
+        "id": "play-1782172925295-9m1em4bo",
+        "seq": 4,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.295Z"
+      },
+      {
+        "id": "play-1782172925297-cg1fdo8o",
+        "seq": 5,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 1,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.297Z"
+      },
+      {
+        "id": "play-1782172925298-msmefjbi",
+        "seq": 6,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 2,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.298Z"
+      },
+      {
+        "id": "play-1782172925299-oy74oumu",
+        "seq": 7,
+        "sessionId": "play-1782172925295-2koogpre",
+        "type": "ball",
+        "code": "B",
+        "label": "Ball",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 1,
+        "batterName": "A Two",
+        "countBefore": {
+          "balls": 3,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 4,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:05.299Z"
+      },
+      {
+        "id": "play-1782172926622-jw07mb4i",
+        "seq": 11,
+        "sessionId": "play-1782172926621-zzu5j5y9",
+        "type": "inplay",
+        "code": "IP",
+        "label": "In Play",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 2,
+        "batterName": "A Three",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:06.622Z"
+      }
+    ],
+    "nextPitchSeq": 12,
+    "pitchLogVersion": 1,
+    "activePitchers": {
+      "away": 0,
+      "home": 0
+    }
+  },
+  "statsAfterInningUndo": {
+    "away": [],
+    "home": [
+      {
+        "team": "home",
+        "row": 0,
+        "key": "home:row:0",
+        "name": "Starter",
+        "number": "45",
+        "throws": "",
+        "pitches": 5,
+        "strikes": 1,
+        "balls": 4,
+        "swingingStrikes": 0,
+        "calledStrikes": 0,
+        "fouls": 0,
+        "inPlay": 1,
+        "hbpPitches": 0,
+        "battersFaced": 2,
+        "hits": 1,
+        "walks": 0,
+        "intentionalWalks": 0,
+        "hitBatters": 0,
+        "strikeouts": 0
+      }
+    ]
+  },
+  "domAfterInningUndo": {
+    "inning": "Top 1",
+    "outs": "1 out",
+    "base1": true,
+    "base2": false,
+    "base3": false,
+    "batter": "A Four",
+    "scoreAway": "0",
+    "pitchLogCount": "5 recorded pitches"
+  },
+  "afterSelectorUndo": {
+    "inning": 1,
+    "half": "top",
+    "outs": 0,
+    "bases": {
+      "1": {
+        "id": "away-2",
+        "team": "away",
+        "playerIndex": 2,
+        "name": "A Three"
+      },
+      "2": null,
+      "3": null
+    },
+    "battingIndexes": {
+      "away": 3,
+      "home": 0
+    },
+    "plays": [
+      {
+        "team": "away",
+        "playerIndex": 2,
+        "paIndex": 0,
+        "outcome": "1B",
+        "pitcher": "Starter",
+        "inning": 1,
+        "half": "top",
+        "runs": 0,
+        "rbi": 0,
+        "outsOnPlay": 0,
+        "errors": 0,
+        "destinations": {
+          "batter": "1",
+          "r1": "empty",
+          "r2": "empty",
+          "r3": "empty"
+        },
+        "notes": "",
+        "id": "play-1782172926624-08rypwp9",
+        "seq": 3,
+        "beforeState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": null,
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 2,
+            "home": 0
+          }
+        },
+        "pitchCount": {
+          "balls": 0,
+          "strikes": 0,
+          "pitches": 1,
+          "history": [
+            "inplay"
+          ],
+          "sessionId": "play-1782172926621-zzu5j5y9"
+        },
+        "pitchSessionId": "play-1782172926621-zzu5j5y9",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitchSequence": "IP",
+        "playerName": "A Three",
+        "outcomeCode": "1B",
+        "recordedAt": "2026-06-23T00:02:06.624Z",
+        "afterState": {
+          "inning": 1,
+          "half": "top",
+          "outs": 0,
+          "bases": {
+            "1": {
+              "id": "away-2",
+              "team": "away",
+              "playerIndex": 2,
+              "name": "A Three"
+            },
+            "2": null,
+            "3": null
+          },
+          "battingIndexes": {
+            "away": 3,
+            "home": 0
+          }
+        }
+      }
+    ],
+    "nextSeq": 4,
+    "count": {
+      "balls": 0,
+      "strikes": 0,
+      "pitches": 0,
+      "history": [],
+      "pendingStrikeout": false,
+      "inPlay": false,
+      "sessionId": ""
+    },
+    "pitchLog": [
+      {
+        "id": "play-1782172926622-jw07mb4i",
+        "seq": 11,
+        "sessionId": "play-1782172926621-zzu5j5y9",
+        "type": "inplay",
+        "code": "IP",
+        "label": "In Play",
+        "inning": 1,
+        "half": "top",
+        "battingTeam": "away",
+        "pitchingTeam": "home",
+        "pitcherKey": "home:row:0",
+        "pitcherRow": 0,
+        "pitcherName": "Starter",
+        "pitcherNumber": "45",
+        "batterTeam": "away",
+        "batterIndex": 2,
+        "batterName": "A Three",
+        "countBefore": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "countAfter": {
+          "balls": 0,
+          "strikes": 0
+        },
+        "recordedAt": "2026-06-23T00:02:06.622Z"
+      }
+    ],
+    "nextPitchSeq": 12,
+    "pitchLogVersion": 1,
+    "activePitchers": {
+      "away": 0,
+      "home": 0
+    }
+  },
+  "statsAfterSelectorUndo": {
+    "away": [],
+    "home": [
+      {
+        "team": "home",
+        "row": 0,
+        "key": "home:row:0",
+        "name": "Starter",
+        "number": "45",
+        "throws": "",
+        "pitches": 1,
+        "strikes": 1,
+        "balls": 0,
+        "swingingStrikes": 0,
+        "calledStrikes": 0,
+        "fouls": 0,
+        "inPlay": 1,
+        "hbpPitches": 0,
+        "battersFaced": 1,
+        "hits": 1,
+        "walks": 0,
+        "intentionalWalks": 0,
+        "hitBatters": 0,
+        "strikeouts": 0
+      }
+    ]
+  },
+  "domAfterSelectorUndo": {
+    "inning": "Top 1",
+    "outs": "0 outs",
+    "base1": true,
+    "base2": false,
+    "base3": false,
+    "batter": "A Four",
+    "pitchLogCount": "1 recorded pitch"
+  }
+}
