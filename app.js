@@ -2394,6 +2394,6 @@ function init(){
   window.addEventListener("beforeunload",()=>persistAutosaveNow("Saved before closing",{force:true}));
   document.addEventListener("freeze",()=>persistAutosaveNow("Saved before mobile suspension",{force:true}));
   document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persistAutosaveNow("Saved while app moved to background",{force:true});else stabilizeRestoredGameFields("Game fields restored from background");});
-  if("serviceWorker" in navigator)navigator.serviceWorker.register("service-worker.js?v=34-pdf-duplex-r5",{updateViaCache:"none"}).catch(console.warn);
+  if("serviceWorker" in navigator)navigator.serviceWorker.register("service-worker.js?v=34-pdf-duplex-r5-icon-r1",{updateViaCache:"none"}).catch(console.warn);
 }
 init();
