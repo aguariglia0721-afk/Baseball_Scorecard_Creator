@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-06-28T17:22:05Z",
+  "browser": "Chromium via Playwright inline-source harness",
+  "scope": "Full setup, game scoring, MLB-aligned follow-the-ball field-map selection, home-run bypass, pitch tracking, undo, current scorecard, summary, autosave, second-launch recovery, and setup-first launch",
+  "environmentNote": "Managed Chromium blocks automated URL navigation. The unchanged production HTML, CSS, JavaScript, and saved storage state were loaded directly into Chromium for equivalent device emulation.",
+  "passed": true,
+  "devices": [
+    {
+      "name": "iPad Pro 11 portrait",
+      "width": 834,
+      "height": 1194,
+      "is_mobile": true,
+      "has_touch": true,
+      "phase1": {
+        "initial": {
+          "setupActive": true,
+          "setupStepActive": true,
+          "noOverflow": true
+        },
+        "locationChecks": [
+          {
+            "open": true,
+            "contained": true,
+            "ninePositions": true,
+            "touchTargets": true,
+            "fieldArt": true,
+            "pathOverlay": true,
+            "noOverflow": true,
+            "path": "7",
+            "pathSelected": true
+          },
+          {
+            "open": true,
+            "contained": true,
+            "ninePositions": true,
+            "touchTargets": true,
+            "fieldArt": true,
+            "pathOverlay": true,
+            "noOverflow": true,
+            "path": "6-3",
+            "pathSelected": true
+          },
+          {
+            "open": true,
+            "contained": true,
+            "ninePositions": true,
+            "touchTargets": true,
+            "fieldArt": true,
+            "pathOverlay": true,
+            "noOverflow": true,
+            "path": "4-3-1",
+            "pathSelected": true
+          }
+        ],
+        "afterGameFlow": {
+          "playCount": 8,
+          "inning": 2,
+          "half": "top",
+          "outs": 0,
+          "awayScore": 0,
+          "homeScore": 1,
+          "notations": [
+            "1B7",
+            "K",
+            "K",
+            "GO6-3",
+            "HR",
+            "BB",
+            "DP4-3-1",
+            "K"
+          ],
+          "pitchEvents": 6,
+          "noOverflow": true
+        },
+        "undoState": {
+          "playCount": 7,
+          "inning": 1,
+          "half": "bottom",
+          "outs": 2
+        },
+        "scorecardView": {
+          "visible": true,
+          "sheet": true,
+          "noOverflow": true
+        },
+        "summary": {
+          "panel": "summary",
+          "playLogCount": 8,
+          "hasScore": true,
+          "noOverflow": true
+        },
+        "autosave": {
+          "present": true,
+          "playCount": 8,
+          "awayTeam": "Audit Visitors",
+          "savedPanel": "summary"
+        },
+        "passed": true
+      },
+      "phase2": {
+        "restored": {
+          "setupActive": true,
+          "setupStepActive": true,
+          "awayTeam": "Audit Visitors",
+          "homeTeam": "Audit Home",
+          "playCount": 8,
+          "inning": 2,
+          "half": "top",
+          "homeScore": 1,
+          "noOverflow": true,
+          "passed": true
+        },
+        "resume": {
+          "panel": "scoring",
+          "markedPlays": 8,
+          "noOverflow": true,
+          "passed": true
+        },
+        "passed": true
+      },
+      "pageErrors": [],
+      "screenshots": [
+        "preview/version33-game-emulation-ipad-pro-11-portrait-summary.png",
+        "preview/version33-game-emulation-ipad-pro-11-portrait-restored.png"
+      ],
+      "passed": true
+    }
+  ]
+}

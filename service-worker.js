@@ -1,4 +1,4 @@
-const CACHE = "guariglia-scorecard-v34-pdf-duplex-r5";
+const CACHE = "guariglia-scorecard-v34-pdf-duplex-r5-home-icon-r7";
 const CORE_ASSETS = [
   "/styles.css?v=34-pdf-duplex-r5",
   "/app.js?v=34-pdf-duplex-r5",
@@ -7,6 +7,8 @@ const CORE_ASSETS = [
   "/pdf_background_data.js?v=34",
   "/vendor/jszip.min.js",
   "/assets/guariglia-crest.gif",
+  "/assets/apple-touch-icon-v34-r7.png",
+  "/apple-touch-icon.png",
   "/assets/icon-192.png",
   "/assets/icon-512.png",
   "/assets/Scorecard_20260615_blank_template.xlsx",

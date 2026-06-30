@@ -1,2 +1,3 @@
 Version 34 — Duplex PDF and Expanded Pitching Layout
 Release 34.0.0 Revision 5 — Substitution lines moved to the right edge of the prior inning box, unified page-two notes, substitution-safe lineup rendering, ASCII star fallback, full-width pitching tables, clear Replay/ABS status, and preserved Version 33 scoring behavior
+Revision 7 packaging note — Dedicated iPhone home-screen icon only; the in-app crest and all application behavior remain unchanged from Revision 5.

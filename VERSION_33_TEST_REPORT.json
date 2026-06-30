@@ -1,0 +1,23 @@
+{
+  "version": "33.0.0",
+  "feature": "Visual Baseball-Field Location Selector",
+  "generatedAt": "2026-06-28T16:31:29Z",
+  "javascriptSyntaxPassed": true,
+  "automatedTestFiles": 49,
+  "automatedTestsPassed": true,
+  "mobileBrowserAuditPassed": true,
+  "mobileViewportsTested": 11,
+  "phoneFlowPassed": true,
+  "tabletFlowPassed": true,
+  "validatedBehaviors": [
+    "Visual SVG baseball field renders in the popup",
+    "All nine defensive positions use standard alignment",
+    "Position buttons remain at least 44 by 44 CSS pixels on touch devices",
+    "Position buttons do not overlap",
+    "Popup remains inside representative iPhone and iPad viewports",
+    "No page-level horizontal overflow",
+    "Selected location is stored and appears in play notation and play log",
+    "Autosave contains the selected field location",
+    "Version 32 autosave is available for migration into Version 33"
+  ]
+}

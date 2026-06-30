@@ -1,0 +1,70 @@
+{
+  "version": "33.0.2",
+  "generatedAt": "2026-06-28T17:23:22Z",
+  "feature": "MLB-aligned follow-the-ball defensive sequences and home-run location bypass",
+  "officialRulesBasis": [
+    "2026 Official Baseball Rules 9.09 Putouts",
+    "9.10 Assists",
+    "9.11 Double and Triple Plays"
+  ],
+  "automatedTestFiles": 51,
+  "javascriptSyntaxValidation": true,
+  "browserGameEmulationPassed": true,
+  "devices": [
+    {
+      "name": "iPhone 15 Pro portrait",
+      "passed": true,
+      "notations": [
+        "1B7",
+        "K",
+        "K",
+        "GO6-3",
+        "HR",
+        "BB",
+        "DP4-3-1",
+        "K"
+      ],
+      "setupFirstRecovery": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "iPad Pro 11 portrait",
+      "passed": true,
+      "notations": [
+        "1B7",
+        "K",
+        "K",
+        "GO6-3",
+        "HR",
+        "BB",
+        "DP4-3-1",
+        "K"
+      ],
+      "setupFirstRecovery": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "Desktop 1440",
+      "passed": true,
+      "notations": [
+        "1B7",
+        "K",
+        "K",
+        "GO6-3",
+        "HR",
+        "BB",
+        "DP4-3-1",
+        "K"
+      ],
+      "setupFirstRecovery": true,
+      "noHorizontalOverflow": true
+    }
+  ],
+  "requiredExamples": {
+    "homeRun": "HR",
+    "shortstopGroundout": "GO6-3",
+    "customDoublePlay": "DP4-3-1",
+    "repeatedFielderDoublePlay": "DP3-6-3"
+  },
+  "passed": true
+}
