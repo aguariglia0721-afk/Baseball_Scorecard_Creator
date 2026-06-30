@@ -1,0 +1,29 @@
+GUARIGLIA BASEBALL SCORECARD BUILDER — PHONE INSTALLATION
+Version 34 Revision 6
+
+IMPORTANT
+This is a browser-linked Progressive Web App (PWA). The ZIP file is a Netlify-ready website package; it is not opened directly on the phone. It must first be published at an HTTPS web address.
+
+PUBLISH THE APP
+1. Sign in to Netlify.
+2. Open Netlify's manual deploy / drag-and-drop deployment page.
+3. Upload the ZIP file named Guariglia_Baseball_Scorecard_V34_R6_Phone_Install.zip.
+4. Netlify will provide an HTTPS website address.
+5. Send that web address to the person who will install the app.
+
+INSTALL ON IPHONE OR IPAD
+1. Open the HTTPS web address in Safari.
+2. Tap the Share button.
+3. Tap Add to Home Screen.
+4. Confirm the name and tap Add.
+5. The Guariglia crest will appear as the Home Screen icon.
+
+INSTALL ON ANDROID
+1. Open the HTTPS web address in Chrome.
+2. Open the Chrome menu.
+3. Tap Install app or Add to Home screen.
+4. Confirm the installation.
+5. The Guariglia crest will appear as the phone icon.
+
+UPDATING AN EXISTING IPHONE ICON
+Apple may retain an older Home Screen icon. Remove the existing Home Screen shortcut, reopen the updated website in Safari, and use Add to Home Screen again.

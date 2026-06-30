@@ -1,4 +1,4 @@
-const CACHE = "guariglia-scorecard-v34-pdf-duplex-r5-home-icon-r7";
+const CACHE = "guariglia-scorecard-v34-pdf-duplex-r5-phone-icon-r1";
 const CORE_ASSETS = [
   "/styles.css?v=34-pdf-duplex-r5",
   "/app.js?v=34-pdf-duplex-r5",
@@ -7,14 +7,16 @@ const CORE_ASSETS = [
   "/pdf_background_data.js?v=34",
   "/vendor/jszip.min.js",
   "/assets/guariglia-crest.gif",
-  "/assets/apple-touch-icon-v34-r7.png",
-  "/apple-touch-icon.png",
-  "/assets/icon-192.png",
-  "/assets/icon-512.png",
+  "/assets/apple-touch-icon.png?v=34-crest-icon-r1",
+  "/assets/favicon-32.png?v=34-crest-icon-r1",
+  "/assets/favicon.ico?v=34-crest-icon-r1",
+  "/assets/icon-192.png?v=34-crest-icon-r1",
+  "/assets/icon-512.png?v=34-crest-icon-r1",
+  "/assets/icon-maskable-512.png?v=34-crest-icon-r1",
   "/assets/Scorecard_20260615_blank_template.xlsx",
   "/assets/Scorecard_20260615_App_Colors_Classic_Blank.xlsx",
   "/assets/classic-scorecard-background.jpg?v=34-pdf-duplex-r5",
-  "/manifest.webmanifest"
+  "/manifest.webmanifest?v=34-crest-icon-r1"
 ];
 
 self.addEventListener("install", event => {
