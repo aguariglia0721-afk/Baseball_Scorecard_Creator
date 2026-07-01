@@ -652,12 +652,12 @@ function renderPitchConsole(message=""){
   if(status){
     const sequence=pitchSequenceLabel(count.history);
     const correctionMessage=correctionPlay?`${correctionPlay.outcome==="KL"?"Looking":"Swinging"} strikeout recorded. Use “Third strike not caught” only if the catcher did not legally catch strike three.`:"";
-    status.textContent=message || correctionMessage || (count.inPlay?"Ball is in play. Choose the result code below.":sequence?`Pitch sequence: ${sequence}`:"Ready for the first pitch.");
+    status.textContent=message || correctionMessage || (count.inPlay?"Ball is in play. Choose the completed result below. If the detail window opens, review the runners and tap ‘Save & Complete Batter’; the scorecard and totals update only after that final save.":sequence?`Pitch sequence: ${sequence}`:"Ready for the first pitch.");
   }
   if($("strikeoutChooser"))$("strikeoutChooser").hidden=!correctionPlay;
   if($("undoPitchBtn"))$("undoPitchBtn").disabled=!count.history.length;
   if($("resetCountBtn"))$("resetCountBtn").disabled=!(count.history.length||count.balls||count.strikes||count.inPlay);
-  document.querySelectorAll("[data-pitch]").forEach(button=>button.disabled=false);
+  document.querySelectorAll("[data-pitch]").forEach(button=>{button.disabled=Boolean(count.inPlay);button.setAttribute("aria-disabled",String(Boolean(count.inPlay)));});
 }
 function resetCurrentCount(message="Count reset to 0-0."){
   removeCurrentPitchSessionEvents();
@@ -686,6 +686,7 @@ function appendPitch(type,{allowAutomaticOutcome=true}={}){
   ensureScoringState();
   const count=scoring.count;
   if(!count.history.length&&scoring.lastAutoStrikeoutPlayId)scoring.lastAutoStrikeoutPlayId="";
+  if(count.inPlay&&allowAutomaticOutcome)return false;
   if(count.pendingStrikeout&&allowAutomaticOutcome)return false;
   if(!count.sessionId)count.sessionId=makeId();
   const before={balls:count.balls,strikes:count.strikes};
@@ -702,6 +703,7 @@ function appendPitch(type,{allowAutomaticOutcome=true}={}){
 }
 function addPitch(type){
   if(gameIsFinal()){alert("This game is final. Use Undo Last Play if the ending needs correction.");return;}
+  if(scoring.count.inPlay){renderPitchConsole("The ball is already in play. Choose the result below, then complete the batter before recording another pitch.");return;}
   if(!appendPitch(type))return;
   const count=scoring.count;
   if(type==="ball"&&count.balls>=4){recordQuickOutcome("BB",true,true);return;}
@@ -816,8 +818,8 @@ function prepareTerminalPitch(outcomeId){
 }
 function outcomeCanQuickSave(outcomeId){
   const basesOccupied=Boolean(scoring.bases[1]||scoring.bases[2]||scoring.bases[3]);
-  if(["BB","IBB","HBP","K","KL"].includes(outcomeId))return true;
-  return !basesOccupied&&["1B","2B","3B","HR","GO","FO","LO","PO"].includes(outcomeId);
+  if(["BB","IBB","HBP","K","KL","HR"].includes(outcomeId))return true;
+  return !basesOccupied&&["1B","2B","3B","GO","FO","LO","PO"].includes(outcomeId);
 }
 function recordQuickOutcome(outcomeId,forceDirect=false,skipPitchPreparation=false,fieldLocation="",fieldingSequence=""){
   if(gameIsFinal()){alert("This game is final. Use Undo Last Play if the ending needs correction.");return null;}
@@ -830,6 +832,7 @@ function recordQuickOutcome(outcomeId,forceDirect=false,skipPitchPreparation=fal
   fieldLocation=normalizeFieldingSequence(normalizedPath)[0]||"";fieldingSequence=normalizedPath;
   if(outcomeId==="D3K"||outcomeId==="OTHER"||(!forceDirect&&!outcomeCanQuickSave(outcomeId))){
     openPlayDialog(team,playerIndex,paIndex,outcomeId,null,{fieldLocation,fieldingSequence});
+    renderPitchConsole(`${OUTCOME_MAP[outcomeId]?.label||"Result"} selected. Review every runner, then tap “Save & Complete Batter” to populate the scorecard and totals below.`);
     return null;
   }
   const defaults=defaultDetails(outcomeId,team,playerIndex).d;
@@ -1454,7 +1457,10 @@ function openPlayDialog(team,playerIndex,paIndex,outcomeId,existing=null,prefill
   const selectedOutcome=v.outcome||outcomeId;updatePlayFieldLocationVisibility(selectedOutcome,v.fieldLocation||prefill.fieldLocation||"",v.fieldingSequence||prefill.fieldingSequence||"");$("droppedThirdStrikePanel").hidden=selectedOutcome!=="D3K";$("droppedThirdStrikeCause").value=v.droppedThirdStrikeCause||"unclassified";
   if((v.fieldingErrors||[]).length||selectedOutcome==="ROE")showErrorAssignmentPanel(v.fieldingErrors||[],v.errorDetails||"");
   if(v.interferenceType||["INT","CI"].includes(selectedOutcome))showInterferencePanel(v,selectedOutcome==="CI"?"catcher":"batter");
-  $("deletePlayBtn").hidden=!existing; $("playDialog").showModal();
+  $("deletePlayBtn").hidden=!existing;
+  if($("savePlayBtn")){$("savePlayBtn").textContent=existing?"Save Changes":"Save & Complete Batter";$("savePlayBtn").setAttribute("aria-label",existing?"Save changes to this completed plate appearance":"Save and complete this batter, then update the scorecard");}
+  if($("playCompletionNotice"))$("playCompletionNotice").textContent=existing?"Saving applies every correction to the scorecard, team totals, pitcher totals, and play log.":"This batter is not complete until you save. Confirm the result, runs, RBI, outs, and every runner destination; then the fields below will populate together.";
+  $("playDialog").showModal();
 }
 function handlePlayOutcomeChange(){
   const team=$("dialogTeam").value,idx=num($("dialogPlayerIndex").value),existing=scoring.plays.find(play=>play.id===$("dialogPlayId").value),outcome=$("playOutcome").value,def=defaultDetails($("playOutcome").value,team,idx,existing?.beforeState?.bases||null,existing?.beforeState?.outs??null).d;
@@ -2394,6 +2400,6 @@ function init(){
   window.addEventListener("beforeunload",()=>persistAutosaveNow("Saved before closing",{force:true}));
   document.addEventListener("freeze",()=>persistAutosaveNow("Saved before mobile suspension",{force:true}));
   document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persistAutosaveNow("Saved while app moved to background",{force:true});else stabilizeRestoredGameFields("Game fields restored from background");});
-  if("serviceWorker" in navigator)navigator.serviceWorker.register("service-worker.js?v=34-pdf-duplex-r5",{updateViaCache:"none"}).catch(console.warn);
+  if("serviceWorker" in navigator)navigator.serviceWorker.register("service-worker.js?v=34-pa-sync-r6",{updateViaCache:"none"}).catch(console.warn);
 }
 init();

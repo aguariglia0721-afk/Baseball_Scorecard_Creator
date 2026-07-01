@@ -1,0 +1,28 @@
+const fs=require('fs');
+const assert=require('assert');
+const html=fs.readFileSync('index.html','utf8');
+const css=fs.readFileSync('styles.css','utf8');
+const app=fs.readFileSync('app.js','utf8');
+const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
+const manifest=JSON.parse(fs.readFileSync('manifest.webmanifest','utf8'));
+
+assert.equal(pkg.version,'34.0.1');
+assert.equal(manifest.short_name,'Scorecard V34');
+assert.match(html,/Version 34/);
+assert.match(html,/id="pitchConsoleTitle">Live Game Center/);
+assert.match(html,/class="scoreboard-card broadcast-scorebox"/);
+const start=html.indexOf('class="scoreboard-card broadcast-scorebox"');
+const end=html.indexOf('\n        <div class="scoring-help">',start);
+assert(start>=0&&end>start,'broadcast scorebox boundaries must exist');
+for(const marker of ['compact-pitch-button-grid','live-action-grid','compact-quick-results','id="absChallengePanel"'])assert(html.indexOf(marker,start)>start&&html.indexOf(marker,start)<end,`${marker} must live inside the scorebox`);
+for(const id of ['scoreAwayAbbr','scoreHomeAbbr','scoreAwayName','scoreHomeName','scoreAwayRuns','scoreHomeRuns','inningLabel','outsLabel','gameStatusLabel','base1','base2','base3','ballCount','strikeCount','currentBatterName','currentPitcherName','onDeckName','inHoleName'])assert(html.includes(`id="${id}"`),`missing ${id}`);
+assert.match(css,/broadcast-scorebox\.scoreboard-card/);
+assert.match(css,/broadcast-count\.count-display strong\{font-size:clamp\(1\.18rem,2\.2vw,1\.55rem\)/,'count must be compact in Version 32');
+assert.match(css,/@media \(max-width:430px\)[\s\S]*broadcast-count/,'mobile scorebox rules missing');
+assert.match(app,/function teamScoreboxAbbreviation/);
+assert.match(app,/function compactInningLabel/);
+assert.match(app,/onDeckIndex=\(index\+1\)%LINEUP_ROWS/);
+assert.match(app,/inHoleIndex=\(index\+2\)%LINEUP_ROWS/);
+assert.match(app,/const VERSION_NUMBER = 34/);
+assert.match(app,/Version 28/,'Version 28 autosave migration must remain available');
+console.log('Version 32 broadcast-style Live Game Center tests passed');

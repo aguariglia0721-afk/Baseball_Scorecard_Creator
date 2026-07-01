@@ -1,0 +1,15 @@
+const fs=require('fs');
+const assert=require('assert');
+const css=fs.readFileSync('styles.css','utf8');
+const html=fs.readFileSync('index.html','utf8');
+const sw=fs.readFileSync('service-worker.js','utf8');
+assert.match(html,/id="lookupDate" type="date"/,'scheduled-game date input remains present');
+assert.match(html,/id="gameDate" type="date"/,'manual game date input remains present');
+assert.match(css,/Version 32 iPhone startup date-field containment fix/,'date containment fix is documented in CSS');
+assert.match(css,/input\[type="date"\][\s\S]*?min-width:0!important[\s\S]*?max-width:100%!important/,'date inputs have hard width containment');
+assert.match(css,/#lookupDate,#gameDate[\s\S]*?-webkit-appearance:none[\s\S]*?font-size:16px/,'mobile iPhone date inputs use stable native sizing and no zoom');
+assert.match(css,/::-webkit-date-and-time-value[\s\S]*?min-width:0[\s\S]*?width:100%/,'Safari date value is constrained');
+assert.match(html,/styles\.css\?v=34-pa-sync-r6/,'HTML requests the corrected stylesheet cache key');
+assert.match(sw,/guariglia-scorecard-v34-pa-sync-r6/,'service worker cache is updated');
+assert.match(sw,/styles\.css\?v=34-pa-sync-r6/,'service worker precaches corrected stylesheet');
+console.log('Version 32 iPhone date-field containment checks passed.');

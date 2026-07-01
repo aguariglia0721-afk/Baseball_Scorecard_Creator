@@ -1,0 +1,12 @@
+const fs=require("fs"),path=require("path"),vm=require("vm"),assert=require("assert");
+const root=path.resolve(__dirname,"..");
+const app=fs.readFileSync(path.join(root,"app.js"),"utf8"),html=fs.readFileSync(path.join(root,"index.html"),"utf8"),css=fs.readFileSync(path.join(root,"styles.css"),"utf8");
+assert(app.includes("const VERSION_NUMBER = 34"),"Version number must be 26");
+["absChallengeTitle","awayChallengeTokens","homeChallengeTokens","challengeEventLog","challengeDialog","challengeRole","challengeName","challengeResult"].forEach(id=>assert(html.includes(`id=\"${id}\"`),`Missing challenge UI ${id}`));
+["computeChallengeState","renderChallengeTracker","saveChallenge","challengePdfTokens","challengeLogText"].forEach(name=>assert(app.includes(`function ${name}`),`Missing ${name}`));
+assert(app.includes('roles.includes(prior)'),"Role restrictions should be applied");
+assert(app.includes('incoming.challengerRole==="batter"?"strike":"ball"'),"Original call must follow challenger role");
+assert(app.includes('if(inning>=10&&available===0){available=1;extraGrants++;'),"Extra-inning grant rule missing");
+assert(css.includes(".abs-challenge-card")&&css.includes(".challenge-token.is-lost"),"Challenge styling missing");
+assert(html.includes("Only the batter, pitcher, or catcher may challenge"),"MLB challenger restriction must be visible");
+console.log("Version 27 ABS challenge tests passed.");

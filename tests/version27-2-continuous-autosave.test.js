@@ -1,0 +1,24 @@
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const path=require("node:path");
+const root=path.resolve(__dirname,"..");
+const app=fs.readFileSync(path.join(root,"app.js"),"utf8");
+const html=fs.readFileSync(path.join(root,"index.html"),"utf8");
+
+assert.match(app,/const AUTOSAVE_STORAGE_KEY = "guariglia-scorecard-v34-autosave-current"/);
+assert.match(app,/const AUTOSAVE_BACKUP_KEY = "guariglia-scorecard-v34-autosave-previous"/);
+assert.match(app,/function persistAutosaveNow\(/);
+assert.match(app,/autosaveTimer=setTimeout\(\(\)=>persistAutosaveNow\(message\),250\)/,"field changes must debounce into a real save");
+assert.match(app,/document\.addEventListener\("input",autosaveFieldChange\)/);
+assert.match(app,/document\.addEventListener\("change",autosaveFieldChange\)/);
+assert.match(app,/function initializePersistentStartup\(\)/);
+assert.match(app,/applySavedSnapshot\(saved,label,\{startOnSetup:true\}\)/);
+assert.match(app,/function restorePreviousAutosave\(\)/);
+assert.match(app,/function saveGameFile\(\)\{persistAutosaveNow\("Game file checkpoint"/);
+assert.match(app,/async function exportExcel\(\)\{[\s\S]*persistAutosaveNow\("Excel export checkpoint"/);
+assert.match(app,/async function exportClassicPdf\(\)\{persistAutosaveNow\("PDF export checkpoint"/);
+assert.match(app,/async function openGameFile\(file\)\{[\s\S]*persistAutosaveNow\("Checkpoint before opening a game file"/);
+assert.match(html,/id="saveNowBtn"/);
+assert.match(html,/id="restoreAutosaveBtn"/);
+assert.match(html,/Every field edit, pitch, play, substitution, challenge, note, and roster change is saved automatically/);
+console.log("Version 32 continuous autosave tests passed");

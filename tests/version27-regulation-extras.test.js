@@ -1,0 +1,14 @@
+const fs=require("fs"),assert=require("assert");
+const app=fs.readFileSync("app.js","utf8"),html=fs.readFileSync("index.html","utf8"),pkg=require("../package.json");
+assert(app.includes("const VERSION_NUMBER = 34"),"Version 27 constant missing");
+assert(html.includes('id="extraInningsRule"'),"Extra-inning rule selector missing");
+assert(app.includes("function decideGameStatus"),"Game-ending decision logic missing");
+assert(app.includes('half==="bottom"&&score.home>score.away'),"Walk-off ending rule missing");
+assert(app.includes('half==="top"&&halfEnded&&score.home>score.away'),"Middle-of-ninth ending rule missing");
+assert(app.includes("function automaticRunnerForState"),"Automatic runner selection missing");
+assert(app.includes("runnerIndex=(dueIndex+LINEUP_ROWS-1)%LINEUP_ROWS"),"Preceding batting-order runner rule missing");
+assert(app.includes("if(maxInning>=11)pages.push(classicPdfOverlay(11),classicPdfNotesPage(11,false))"),"Innings 11-20 PDF continuation missing");
+assert(app.includes("function showPostExportDialog"),"Safe post-export prompt missing");
+assert(html.includes('id="keepGameOpenBtn"')&&html.includes('id="clearAfterExportBtn"'),"Keep/clear choices missing");
+assert(pkg.version==="34.0.1","Package version must be 34.0.1");
+console.log("Version 27 regulation, extras, continuation PDF, and safe export checks passed.");

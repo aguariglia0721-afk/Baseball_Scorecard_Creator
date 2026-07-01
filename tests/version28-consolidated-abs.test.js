@@ -1,0 +1,22 @@
+const fs=require('fs');
+const assert=require('assert');
+const html=fs.readFileSync('index.html','utf8');
+const css=fs.readFileSync('styles.css','utf8');
+const app=fs.readFileSync('app.js','utf8');
+
+const scoreboxStart=html.indexOf('<div class="scoreboard-card broadcast-scorebox"');
+const scoreboxEnd=html.indexOf('\n        <div class="scoring-help">',scoreboxStart);
+const quickStart=html.indexOf('<div class="quick-results-card compact-quick-results"',scoreboxStart);
+const absStart=html.indexOf('<section id="absChallengePanel"',scoreboxStart);
+assert(scoreboxStart>=0&&scoreboxEnd>scoreboxStart,'broadcast scorebox boundaries must exist');
+assert(quickStart>scoreboxStart&&quickStart<absStart,'Quick Results must precede ABS controls');
+assert(absStart>quickStart&&absStart<scoreboxEnd,'ABS challenge tracker must be inside the Live Game Center scorebox');
+assert.equal((html.match(/class="abs-challenge-card/g)||[]).length,1,'there must be only one ABS tracker');
+for(const id of ['absChallengeTitle','awayChallengeTokens','homeChallengeTokens','awayChallengesAvailable','homeChallengesAvailable','challengeLogCount','challengeEventLog','challengeQuickBtn'])assert(html.includes(`id="${id}"`),`missing consolidated ABS element ${id}`);
+assert.match(html,/id="absChallengePanel"[^>]*hidden/,'ABS controls must start collapsed');
+assert.match(css,/broadcast-abs-challenge\.abs-challenge-card/,'consolidated ABS styles missing');
+assert.match(css,/#absChallengePanel\[hidden\]/,'hidden ABS styling missing');
+assert.match(css,/broadcast-abs-log summary/,'compact challenge log styles missing');
+assert.match(app,/document\.querySelector\("\.abs-challenge-card"\)\.addEventListener\("click"/,'consolidated ABS controls must retain delegated behavior');
+assert.match(app,/\$\("challengeQuickBtn"\)\.addEventListener\("click",toggleChallengePanel\)/,'Challenge button must reveal the ABS controls');
+console.log('Version 32 consolidated ABS Live Game Center tests passed');

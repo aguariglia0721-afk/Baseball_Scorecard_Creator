@@ -1,0 +1,33 @@
+const fs=require('fs'),path=require('path'),assert=require('assert');
+const root=path.resolve(__dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+const dataModule=require('../baseball-data.js');
+
+assert(html.includes('Version 34'),'visible version must be 26');
+['currentBatterName','currentBatterDetails','currentBatterHistory','currentPitcherName','currentPitcherDetails','currentPitcherGameStats'].forEach(id=>assert(html.includes(`id="${id}"`),`missing live matchup field ${id}`));
+assert(!html.includes('class="current-batter-card"'),'separate current batter card must be removed');
+assert(html.indexOf('class="scoring-help"')>html.indexOf('id="quickResultGrid"'),'How to Score must be directly below Quick Results');
+assert(html.indexOf('id="undoBtn"')>html.indexOf('class="scoring-help"'),'game correction controls must remain available below scoring instructions');
+assert(app.includes('function renderLiveMatchup()'),'live matchup renderer missing');
+assert(app.includes('liveBatterPlateAppearances'),'prior plate appearances must be shown');
+assert(app.includes('tracking.pitches'),'current pitcher game totals must be shown');
+assert(css.includes('.live-matchup-card')&&css.includes('.count-and-matchup'),'live matchup styling missing');
+assert(css.includes('.mirrored-k-mark')&&css.includes('scaleX(-1)'),'mirrored looking strikeout styling missing');
+assert(app.includes('mirror:lookingOnly'),'PDF looking strikeout must use mirrored K rendering');
+assert(!app.includes('code:"ꓘ"'),'unsupported Unicode reverse K must not be used as the stored code');
+assert(app.includes('seasonStat')===false,'season-stat enrichment belongs in baseball-data.js, not app.js');
+
+const feed={liveData:{boxscore:{teams:{away:{battingOrder:[1],pitchers:[2],players:{ID1:{person:{fullName:'Test Batter'}},ID2:{person:{fullName:'Test Pitcher'}}}},home:{battingOrder:[],pitchers:[],players:{}}}}},gameData:{teams:{away:{name:'Away'},home:{name:'Home'}},datetime:{officialDate:'2026-06-23'}}};
+const schedule={dates:[{games:[{teams:{away:{team:{name:'Away'}},home:{team:{name:'Home'}}}}]}]};
+const people={1:{id:1,fullName:'Test Batter',primaryNumber:'12',primaryPosition:{abbreviation:'RF'},batSide:{code:'L'},stats:[{group:{displayName:'hitting'},splits:[{stat:{avg:'.321',obp:'.410'}}]}]},2:{id:2,fullName:'Test Pitcher',primaryNumber:'45',pitchHand:{code:'R'},stats:[{group:{displayName:'pitching'},splits:[{stat:{wins:5,losses:2,era:'2.88',strikeOuts:77}}]}]}};
+const built=dataModule.buildGameData(feed,schedule,people);
+assert.equal(built.away.lineup[0].bats,'L');
+assert.equal(built.away.lineup[0].avg,'.321');
+assert.equal(built.away.lineup[0].obp,'.410');
+assert.equal(built.away.pitchers[0].throws,'RHP');
+assert.equal(built.away.pitchers[0].record,'5-2');
+assert.equal(built.away.pitchers[0].era,'2.88');
+assert.equal(built.away.pitchers[0].k,'77');
+console.log('Version 27 live matchup tests passed.');

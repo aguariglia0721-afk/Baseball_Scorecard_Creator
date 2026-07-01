@@ -1,0 +1,20 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const css=fs.readFileSync(path.join(root,'styles.css'),'utf8');
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+
+const forbiddenBlueHexes=['#071957','#14358f','#081f69','#0a2473','#173a8f','#111b38','#132f72','#17213b','#18213c','#4e5b73','#657189','#eef2f8','#e7edf9','#cfdcff','#dce6ff','#d1d9e9','#c7d0e1','#cbd4e5','#d8dfeb','#f5f7fb'];
+for(const color of forbiddenBlueHexes)assert.ok(!css.toLowerCase().includes(color),`legacy blue ${color} must not remain in CSS`);
+assert.match(css,/accent-color:var\(--orange\)/,'iPhone checkbox and radio controls must use burnt orange');
+assert.match(css,/-webkit-tap-highlight-color:rgba\(155,77,31,.18\)/,'iPhone tap highlight must use the approved palette');
+assert.match(css,/broadcast-abs-log\{border-color:#d4bb87;background:var\(--paper\)/,'ABS log must use warm palette borders and paper background');
+assert.match(app,/Version 32 uses one consistent Guariglia palette/,'PDF palette must be fixed to the approved palette');
+assert.doesNotMatch(app,/classicPdfPalette=scorecardPaletteForHomeTeam\(d\.homeTeam\)/,'PDF export must not change palette by home team');
+assert.match(html,/styles\.css\?v=34-pa-sync-r6/,'CSS cache key must refresh installed iPhone apps');
+assert.match(html,/app\.js\?v=34-pa-sync-r6/,'JS cache key must refresh installed iPhone apps');
+assert.match(sw,/v34-pa-sync-r6/,'service worker must use the new palette cache');
+console.log('Version 32 app, iPhone, ABS, and PDF palette consistency tests passed');

@@ -1,0 +1,21 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const app = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const worker = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
+
+assert.match(app, /function rebuildDerivedGameState\(\)/, 'a full derived-state rebuild function must exist');
+assert.match(app, /if\(dest===\"hold\"&&originalBase\[key\]\)post\[originalBase\[key\]\]=runner/, 'runners marked hold must remain on their original bases');
+assert.match(app, /play\.beforeState=\{inning:state\.inning,half:state\.half,outs:state\.outs,bases:deepClone\(state\.bases\),battingIndexes:deepClone\(state\.battingIndexes\)\}/, 'every remaining play must receive a rebuilt before-state snapshot');
+assert.match(app, /play\.afterState=buildAfterState\(play,play\.beforeState,\{placements,score\}\)/, 'every remaining play must receive a rebuilt after-state snapshot');
+assert.match(app, /scoring\.inning=finalStatus\.status==="final"\?finalStatus\.inning:state\.inning;[\s\S]*scoring\.outs=state\.outs;[\s\S]*scoring\.bases=deepClone\(state\.bases\);[\s\S]*scoring\.battingIndexes=deepClone\(state\.battingIndexes\)/, 'inning, outs, bases, and batting order must all be restored from replay');
+assert.match(app, /function synchronizeCurrentPitchSession\(\)/, 'current uncompleted pitch session must be synchronized after replay');
+assert.match(app, /scoring\.pitchLog=scoring\.pitchLog\.filter\(event=>event\.sessionId!==removed\.pitchSessionId\)/, 'undoing a completed play must remove its pitch events');
+assert.match(app, /deletePlay\(id\)[\s\S]*rebuildDerivedGameState\(\);[\s\S]*refreshAll\(\)/, 'every play deletion must rebuild all counters and displays');
+assert.match(app, /rebuildDerivedGameState\(\);refreshAll\(\);scheduleAutosave\(existing\?"Play updated and all game counters rebuilt"/, 'editing a saved play must also rebuild all counters and displays');
+assert.match(app, /defaultDetails\(\$\("playOutcome"\)\.value,team,idx,existing\?\.beforeState\?\.bases\|\|null,existing\?\.beforeState\?\.outs\?\?null\)/, 'editing a historical outcome must use that play’s rebuilt base state');
+assert.match(html, /app\.js\?v=34-pa-sync-r6/, 'undo-rebuild JavaScript must be cache-busted');
+assert.match(worker, /guariglia-scorecard-v34-pa-sync-r6/, 'service-worker cache must be bumped for the undo fix');
+console.log('undo and full-state rebuild tests passed');
