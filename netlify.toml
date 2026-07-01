@@ -27,14 +27,3 @@
   for = "/baseball-data.js"
   [headers.values]
     Cache-Control = "no-cache"
-
-
-[[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Cache-Control = "no-cache, must-revalidate"
-
-[[headers]]
-  for = "/assets/apple-touch-icon.png"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"

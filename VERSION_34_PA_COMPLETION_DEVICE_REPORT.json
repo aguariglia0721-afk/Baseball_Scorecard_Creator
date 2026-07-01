@@ -1,0 +1,126 @@
+{
+  "version": "34.0.1 Revision 6",
+  "scope": "Pitch count through completed plate appearance synchronization",
+  "allPassed": true,
+  "devices": [
+    {
+      "device": "iPhone 15 Pro",
+      "viewport": [
+        390,
+        844
+      ],
+      "passed": true,
+      "plays": [
+        "BB",
+        "K",
+        "HR",
+        "1B",
+        "1B"
+      ],
+      "score": 2,
+      "pitcher": {
+        "pitches": 10,
+        "strikes": 6,
+        "balls": 4,
+        "bf": 5,
+        "hits": 3,
+        "walks": 1,
+        "k": 1
+      },
+      "screenshot": "preview/version34-pa-sync-iphone-15-pro.png"
+    },
+    {
+      "device": "iPad Pro 11",
+      "viewport": [
+        834,
+        1194
+      ],
+      "passed": true,
+      "plays": [
+        "BB",
+        "K",
+        "HR",
+        "1B",
+        "1B"
+      ],
+      "score": 2,
+      "pitcher": {
+        "pitches": 10,
+        "strikes": 6,
+        "balls": 4,
+        "bf": 5,
+        "hits": 3,
+        "walks": 1,
+        "k": 1
+      },
+      "screenshot": "preview/version34-pa-sync-ipad-pro-11.png"
+    },
+    {
+      "device": "Android Pixel 7",
+      "viewport": [
+        412,
+        915
+      ],
+      "passed": true,
+      "plays": [
+        "BB",
+        "K",
+        "HR",
+        "1B",
+        "1B"
+      ],
+      "score": 2,
+      "pitcher": {
+        "pitches": 10,
+        "strikes": 6,
+        "balls": 4,
+        "bf": 5,
+        "hits": 3,
+        "walks": 1,
+        "k": 1
+      },
+      "screenshot": "preview/version34-pa-sync-android-pixel-7.png"
+    },
+    {
+      "device": "Desktop 1440",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "passed": true,
+      "plays": [
+        "BB",
+        "K",
+        "HR",
+        "1B",
+        "1B"
+      ],
+      "score": 2,
+      "pitcher": {
+        "pitches": 10,
+        "strikes": 6,
+        "balls": 4,
+        "bf": 5,
+        "hits": 3,
+        "walks": 1,
+        "k": 1
+      },
+      "screenshot": "preview/version34-pa-sync-desktop-1440.png"
+    }
+  ],
+  "scenarios": [
+    "Automatic four-ball walk",
+    "Automatic swinging strikeout",
+    "In Play locks all additional pitch input",
+    "Home run with runner aboard completes immediately",
+    "Direct single with empty bases",
+    "Single with runner aboard remains pending until Save & Complete Batter",
+    "Lower plate-appearance grid population",
+    "Current Scorecard inning notation and AB/R/H/RBI population",
+    "Game score and runner scoring",
+    "Pitcher P/Str/B/BF/H/BB/K totals",
+    "Count reset and next batter advancement",
+    "Autosave persistence",
+    "Page-level overflow check"
+  ]
+}

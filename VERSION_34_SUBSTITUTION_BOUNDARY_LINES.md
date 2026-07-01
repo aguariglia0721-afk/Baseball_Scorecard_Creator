@@ -8,4 +8,4 @@ Version 34 remains the production version. Revision 5 refines the visual boundar
 - If the incoming player has not yet batted, the recorded substitution inning determines the next scoring boundary; an away-team defensive substitution in the bottom half advances the boundary to the following inning.
 - Multiple substitutions in one batting-order position can produce separate chronological dividers when they begin in different innings.
 - Existing readable substitute lines, column clipping, ellipsizing, ASCII `*` markers, and the complete page-two substitution timeline remain unchanged.
-- Service-worker cache revision: `v34-pdf-duplex-r5`.
+- Service-worker cache revision: `v34-pa-sync-r6`.

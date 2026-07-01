@@ -1,8 +1,18 @@
 # Guariglia Baseball Scorecard Builder
 
-## Version 34.0.0 — Duplex PDF and Expanded Pitching Layout
+## Version 34.0.1 — Duplex PDF and Expanded Pitching Layout
 
 Version 34 uses the approved Version 33 build as its source and preserves all scoring, field-map, autosave, saved-game, Excel, undo/rebuild, and mobile behavior.
+
+### Version 34 Revision 6 scoring synchronization correction
+
+- Balls and strikes now hand off cleanly to the completed plate appearance and the next batter.
+- Once **In Play** is selected, every pitch button is locked until the batter is completed, preventing an extra ball, strike, foul, or second in-play pitch from corrupting the count.
+- Automatic four-ball walks and third-strike outs immediately populate the lower Plate Appearances grid, Current Scorecard, batting totals, pitcher totals, play log, and autosave.
+- Home runs complete immediately even when runners are aboard because every runner destination is fixed by the play.
+- Results that require runner review remain clearly pending. The detail dialog now states that the batter is not complete and uses the explicit button **Save & Complete Batter**.
+- After the final save, result notation, AB/R/H/RBI, runs, score, pitcher P/Str/B/BF/H/BB/K, count reset, and next-batter advancement update together.
+- Verified independently on iPhone, iPad, Android, and desktop browser profiles.
 
 ### Version 34 PDF substitution boundary correction
 

@@ -1,6 +1,6 @@
 {
   "version": 34,
-  "revision": 5,
+  "revision": 6,
   "build": "Guariglia Baseball Scorecard Builder Version 34",
   "created_utc": "2026-06-30T04:31:00Z",
   "status": "passed",
@@ -50,5 +50,26 @@
     "multiple_substitution_boundaries": true
   },
   "sample_generation_note": "The visual sample was generated in an isolated browser document; PDF export completed successfully and the deployed app autosave code was validated by the regression suite.",
-  "browser_errors": []
+  "browser_errors": [],
+  "release": "34.0.1",
+  "plate_appearance_synchronization": {
+    "automatic_walk_population": true,
+    "automatic_strikeout_population": true,
+    "in_play_locks_pitch_input": true,
+    "home_run_with_runners_completes_immediately": true,
+    "runner_detail_requires_explicit_final_save": true,
+    "lower_scorecard_fields_populate_after_save": true,
+    "count_resets_and_next_batter_advances": true,
+    "autosave_contains_completed_plays": true
+  },
+  "device_audit": {
+    "all_passed": true,
+    "profiles": [
+      "iPhone 15 Pro 390x844",
+      "iPad Pro 11 834x1194",
+      "Android Pixel 7 412x915",
+      "Desktop 1440x1000"
+    ],
+    "report": "VERSION_34_PA_COMPLETION_DEVICE_REPORT.json"
+  }
 }

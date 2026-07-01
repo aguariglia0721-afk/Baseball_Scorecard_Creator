@@ -1083,3 +1083,8 @@ html,body{overflow-x:clip}
 .field-ball-path polyline{fill:none;stroke:#fff3a6;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px rgba(61,37,25,.75));stroke-dasharray:2.2 1.2}
 .field-ball-path-stop{fill:#fff8e9;stroke:#6f3519;stroke-width:.65}
 .field-ball-current{fill:#f7d77e;stroke:#4c2b1b;stroke-width:.8;filter:drop-shadow(0 1px 1px rgba(0,0,0,.45))}
+
+
+/* Version 34 Revision 6: make pending plate-appearance completion unmistakable. */
+.play-completion-notice{margin:0 0 14px;padding:10px 12px;border:1px solid color-mix(in srgb,var(--gold) 58%,var(--brown));border-radius:10px;background:color-mix(in srgb,var(--gold) 18%,white);color:var(--brown);font-weight:700;line-height:1.4}
+.pitch-button:disabled{cursor:not-allowed;filter:saturate(.55);opacity:.58}

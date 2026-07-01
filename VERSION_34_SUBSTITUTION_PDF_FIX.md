@@ -7,7 +7,7 @@ Version 34 remains the version number and production line. This revision correct
 - All lineup text is clipped to the Player / No. column and ellipsized when necessary.
 - Up to two substitute entries can be shown beneath the starter. If additional substitutions occur, page one keeps the latest two visible and page two retains the complete substitution chronology.
 - Key-play stars in PDF Game Notes use the ASCII `*` fallback and cannot become `?`.
-- Service-worker cache revision: `v34-pdf-duplex-r5`.
+- Service-worker cache revision: `v34-pa-sync-r6`.
 
 ## Revision 5 boundary-line refinement
 

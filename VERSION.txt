@@ -1,2 +1,2 @@
 Version 34 — Duplex PDF and Expanded Pitching Layout
-Release 34.0.0 Revision 6 — Phone-install package using the supplied Guariglia crest for iPhone, iPad, Android, browser-favicon, and PWA home-screen icons. The visible app, scoring behavior, PDF/Excel exports, and all Revision 5 functionality remain unchanged.
+Release 34.0.1 Revision 6 — Corrected the balls/strikes-to-completed-batter handoff, locked pitch input after a ball is put in play, made pending completion explicit, completed home runs immediately with runners aboard, synchronized the scorecard/stat fields after the final save, and preserved all Revision 5 PDF and substitution fixes.
