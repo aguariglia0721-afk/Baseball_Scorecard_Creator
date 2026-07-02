@@ -1,0 +1,12 @@
+{
+  "name": "guariglia-baseball-scorecard-builder-v34",
+  "version": "34.0.0",
+  "private": true,
+  "description": "Guariglia Baseball Scorecard Builder Version 34 Revision 12 with a compact sticky app dock, integrated live pitcher selector, full defensive field, phone-simplified offense-only base-runner number labels, an on-deck and in-the-hole strip beneath the live field, synchronized live scoring, duplex PDFs, and mobile/desktop support.",
+  "devDependencies": {
+    "@netlify/functions": "latest"
+  },
+  "scripts": {
+    "check:js": "node --check app.js && node --check baseball-data.js && node --check service-worker.js"
+  }
+}

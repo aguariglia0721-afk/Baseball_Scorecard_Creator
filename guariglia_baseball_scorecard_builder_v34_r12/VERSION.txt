@@ -1,0 +1,2 @@
+Version 34 — Duplex PDF and Expanded Pitching Layout
+Release 34.0.0 Revision 12 — Preserves Revision 11 scoring, recovery, sticky dock, live field, upcoming-batter strip, exports, and duplex PDF behavior. On iPhone and Android phone displays, the live field is simplified to show only each offensive runner’s uniform number and occupied base; iPad and desktop field displays remain unchanged.

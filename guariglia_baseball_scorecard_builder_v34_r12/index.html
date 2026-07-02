@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#9b4d1f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Guariglia Scorecard" />
+  <title>Guariglia Baseball Scorecard Builder - Version 34</title>
+  <!-- Version 34 supersedes the approved Version 33 production baseline. -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-v34-r7.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css?v=34-live-field-r12" />
+</head>
+<body>
+  <div class="app-top-dock no-print">
+    <header class="hero compact-hero">
+      <div class="hero-brand">
+        <div class="brand-mark-wrap"><img class="brand-mark" src="assets/guariglia-crest.gif" alt="Guariglia crest" /></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Guariglia company app • Version 34 Revision 12</p>
+          <h1>Baseball Scorecard Builder & Live Scorer</h1>
+          <p class="subtitle">Build, score, save, and export from one compact workspace.</p>
+        </div>
+      </div>
+      <div class="hero-actions" aria-label="Game file and export actions">
+        <button id="saveGameFileBtn" class="secondary" type="button">Save Game</button>
+        <label class="button secondary file-button">Open Game<input id="openGameFile" type="file" accept=".json,.scoregame" /></label>
+        <button id="exportExcelBtn" class="secondary" type="button">Excel</button>
+        <button id="printPdfBtn" class="primary" type="button">PDF</button>
+      </div>
+    </header>
+
+    <div id="autosaveBar" class="autosave-bar" role="status">Continuous autosave starting…</div>
+
+    <nav class="step-nav" aria-label="App sections">
+      <button class="step active" data-panel="setup" type="button"><span>1</span> Setup</button>
+      <button class="step" data-panel="lineups" type="button"><span>2</span> Lineups</button>
+      <button class="step" data-panel="pitching" type="button"><span>3</span> Pitching</button>
+      <button class="step live-step" data-panel="scoring" type="button"><span>4</span> Live Scoring</button>
+      <button class="step" data-panel="pitchTracking" type="button"><span>5</span> Pitch Tracking</button>
+      <button class="step" data-panel="summary" type="button"><span>6</span> Summary</button>
+      <button class="step" data-panel="settings" type="button"><span>7</span> Settings</button>
+    </nav>
+  </div>
+
+  <main class="app-shell no-print">
+
+    <section id="setup" class="panel active">
+      <div class="panel-title-row">
+        <div><p class="section-kicker">Game setup</p><h2>Choose a game or enter it manually</h2><p>Official MLB and affiliated MiLB schedules can populate the basic game information. Every field remains editable.</p></div>
+        <button class="primary next-panel" data-next="lineups" type="button">Next: Lineups</button>
+      </div>
+
+      <div class="mode-grid">
+        <article class="entry-card lookup-card">
+          <h3>Scheduled game</h3>
+          <div class="schedule-controls">
+            <label>Game date<input id="lookupDate" type="date" /></label>
+            <label>League / level
+              <select id="scheduleLevel">
+                <option value="mlb">MLB</option>
+                <option value="all-pro">MLB + All MiLB</option>
+                <option value="all-milb">All MiLB</option>
+                <option value="triple-a">Triple-A</option>
+                <option value="double-a">Double-A</option>
+                <option value="high-a">High-A</option>
+                <option value="single-a">Single-A</option>
+                <option value="rookie">Rookie</option>
+              </select>
+            </label>
+            <button id="refreshGamesBtn" class="secondary align-end" type="button">Reset Card / Refresh Schedule List</button>
+          </div>
+          <label class="scheduled-games-field">Scheduled games<select id="dailyGameSelect"><option value="">Choose a date, then refresh</option></select></label>
+          <button id="lookupGameBtn" class="primary full-width" type="button" disabled>Fill App from Selected Game</button>
+          <div class="connection-row"><span id="connectionBadge" class="connection-badge checking">Checking connection…</span></div>
+          <p id="lookupStatus" class="status-line" role="status">Ready to load a schedule. Refresh Schedule clears the current game before reloading; use Reset Card / Refresh Schedule List to perform that action.</p>
+        </article>
+
+        <article class="entry-card">
+          <h3>Manual entry</h3>
+          <p>Use this for college, high school, youth, historic, exhibition, or custom games.</p>
+          <button id="clearForManualBtn" class="secondary full-width" type="button">Start a Blank Game</button>
+          <p class="small-note">The live scorer works the same way for scheduled and manually entered games.</p>
+        </article>
+      </div>
+
+      <div class="form-grid two-col section-gap">
+        <label>Away Team<input id="awayTeam" type="text" placeholder="Away team" /></label>
+        <label>Home Team<input id="homeTeam" type="text" placeholder="Home team" /></label>
+        <label>Away Record<input id="awayRecord" type="text" placeholder="Optional" /></label>
+        <label>Home Record<input id="homeRecord" type="text" placeholder="Optional" /></label>
+        <label>Date<input id="gameDate" type="date" /></label>
+        <label>Time<input id="gameTime" type="text" placeholder="Game time" /></label>
+        <label>Venue<input id="venue" type="text" placeholder="Ballpark / field" /></label>
+        <label>Game Number<input id="gameNumber" type="text" placeholder="Optional" /></label>
+        <label>Extra-inning rule<select id="extraInningsRule"><option value="automatic-runner">MLB regular season — automatic runner on second</option><option value="standard">Postseason / traditional — bases empty</option></select></label>
+        <label>Manager replay challenges<select id="managerChallengeAllotment"><option value="1">Regular season / most games — 1 per team</option><option value="2">Postseason / All-Star — 2 per team</option></select></label>
+        <label>Weather<input id="weather" type="text" placeholder="Temperature, conditions, wind" /></label>
+        <label>Umpires<input id="umpires" type="text" placeholder="Plate, first, second, third" /></label>
+        <label>TV / Broadcast<input id="broadcast" type="text" placeholder="TV / streaming" /></label>
+        <label>Radio / Listen<input id="radio" type="text" placeholder="Radio / audio" /></label>
+      </div>
+    </section>
+
+    <section id="lineups" class="panel">
+      <div class="panel-title-row">
+        <div><p class="section-kicker">Batting order</p><h2>Lineups</h2><p>Nine batting-order rows are available for each team. Changes here immediately update the live scorer.</p></div>
+        <button class="primary next-panel" data-next="pitching" type="button">Next: Pitching</button>
+      </div>
+      <div class="lineup-input-wrap">
+        <article class="entry-card roster-card"><h3 id="awayLineupHeading">Away Lineup</h3><div id="awayLineupInputs" class="lineup-inputs"></div><details class="bench-roster"><summary>Bench / Available Substitutes</summary><p>Enter or review reserve players. Used players are removed automatically from substitution menus.</p><div id="awayBenchInputs" class="bench-inputs"></div></details></article>
+        <article class="entry-card roster-card"><h3 id="homeLineupHeading">Home Lineup</h3><div id="homeLineupInputs" class="lineup-inputs"></div><details class="bench-roster"><summary>Bench / Available Substitutes</summary><p>Enter or review reserve players. Used players are removed automatically from substitution menus.</p><div id="homeBenchInputs" class="bench-inputs"></div></details></article>
+      </div>
+    </section>
+
+    <section id="pitching" class="panel">
+      <div class="panel-title-row">
+        <div><p class="section-kicker">Pitching staff</p><h2>Pitchers</h2><p>The starting pitcher appears first. Use the Add Pitcher dropdown to bring in each reliever only when needed.</p></div>
+        <button class="primary next-panel" data-next="scoring" type="button">Start Live Scoring</button>
+      </div>
+      <div class="lineup-input-wrap">
+        <article class="entry-card pitcher-roster-card"><h3 id="awayPitcherHeading">Away Pitchers</h3><div id="awayPitcherInputs" class="pitcher-inputs selected-pitcher-inputs"></div><div id="awayBullpenInputs" class="pitcher-inputs pitcher-data-pool" hidden aria-hidden="true"></div><div class="pitching-change-box"><label>Add Pitcher<select id="awayPitchingChangeSelect"><option value="">Add pitcher…</option></select></label><p id="awayPitchingChangeStatus">Starting pitcher is active.</p></div></article>
+        <article class="entry-card pitcher-roster-card"><h3 id="homePitcherHeading">Home Pitchers</h3><div id="homePitcherInputs" class="pitcher-inputs selected-pitcher-inputs"></div><div id="homeBullpenInputs" class="pitcher-inputs pitcher-data-pool" hidden aria-hidden="true"></div><div class="pitching-change-box"><label>Add Pitcher<select id="homePitchingChangeSelect"><option value="">Add pitcher…</option></select></label><p id="homePitchingChangeStatus">Starting pitcher is active.</p></div></article>
+      </div>
+    </section>
+
+    <section id="scoring" class="panel scoring-panel">
+      <section class="pitch-console" aria-labelledby="pitchConsoleTitle">
+        <div class="pitch-console-title-row">
+          <div>
+            <p class="section-kicker">Pitch-by-pitch scoring</p>
+            <h2 id="pitchConsoleTitle">Live Game Center</h2>
+          </div>
+          <p id="pitchStatus" class="pitch-status" role="status">Ready for the first pitch.</p>
+        </div>
+
+        <div class="scoreboard-card broadcast-scorebox" aria-label="Current game situation" aria-live="polite">
+          <div class="broadcast-score-main">
+            <div class="broadcast-team-stack" aria-label="Score">
+              <div class="broadcast-team-row away-row">
+                <span id="scoreAwayAbbr" class="broadcast-team-abbr">AWY</span>
+                <span id="scoreAwayName" class="broadcast-team-name">Away</span>
+                <strong id="scoreAwayRuns" class="broadcast-team-score">0</strong>
+              </div>
+              <div class="broadcast-team-row home-row">
+                <span id="scoreHomeAbbr" class="broadcast-team-abbr">HME</span>
+                <span id="scoreHomeName" class="broadcast-team-name">Home</span>
+                <strong id="scoreHomeRuns" class="broadcast-team-score">0</strong>
+              </div>
+            </div>
+
+            <div class="broadcast-situation">
+              <div class="broadcast-inning-row">
+                <strong id="inningLabel" class="broadcast-inning">▲ 1</strong>
+                <span id="outsLabel" class="broadcast-outs">0 outs</span>
+                <span id="gameStatusLabel" class="game-status-label">Game in progress</span>
+              </div>
+              <div class="broadcast-field-and-count">
+                <div id="liveDefensiveField" class="live-defensive-field" aria-label="Defensive alignment and offensive base runners">
+                  <svg class="live-field-art" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                    <defs>
+                      <linearGradient id="liveFieldGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#78b95b"/><stop offset="1" stop-color="#326d31"/></linearGradient>
+                      <linearGradient id="liveFieldDirt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0b677"/><stop offset="1" stop-color="#b97a42"/></linearGradient>
+                      <pattern id="liveFieldStripe" width="54" height="54" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="27" height="54" fill="rgba(255,255,255,.055)"/><rect x="27" width="27" height="54" fill="rgba(0,0,0,.04)"/></pattern>
+                    </defs>
+                    <rect x="3" y="3" width="594" height="494" rx="34" fill="#2f5f2e" stroke="#704321" stroke-width="6"/>
+                    <path d="M300 486 L35 226 Q300 -12 565 226 Z" fill="url(#liveFieldGrass)"/>
+                    <path d="M300 486 L35 226 Q300 -12 565 226 Z" fill="url(#liveFieldStripe)"/>
+                    <path d="M300 472 L154 340 L300 208 L446 340 Z" fill="url(#liveFieldDirt)" stroke="#9f6337" stroke-width="4"/>
+                    <path d="M300 424 L210 340 L300 257 L390 340 Z" fill="#4f8d3e" stroke="rgba(255,255,255,.24)" stroke-width="2"/>
+                    <path d="M300 472 L35 226 M300 472 L565 226" fill="none" stroke="#f9efd8" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M300 472 L154 340 L300 208 L446 340 Z" fill="none" stroke="#f4e0bd" stroke-width="4"/>
+                    <g fill="#fff9e9" stroke="#8e603c" stroke-width="3"><rect x="435" y="329" width="22" height="22" transform="rotate(45 446 340)"/><rect x="289" y="197" width="22" height="22" transform="rotate(45 300 208)"/><rect x="143" y="329" width="22" height="22" transform="rotate(45 154 340)"/><path d="M286 462 L314 462 L320 475 L300 489 L280 475 Z"/></g>
+                    <path d="M77 228 Q300 37 523 228" fill="none" stroke="rgba(255,255,255,.20)" stroke-width="3"/><path d="M116 264 Q300 109 484 264" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="3"/>
+                  </svg>
+
+                  <div class="field-defense-marker live-pos-7"><span class="field-position-code">LF</span><strong id="defenseName7">LF</strong></div>
+                  <div class="field-defense-marker live-pos-8"><span class="field-position-code">CF</span><strong id="defenseName8">CF</strong></div>
+                  <div class="field-defense-marker live-pos-9"><span class="field-position-code">RF</span><strong id="defenseName9">RF</strong></div>
+                  <div class="field-defense-marker live-pos-6"><span class="field-position-code">SS</span><strong id="defenseName6">SS</strong></div>
+                  <div class="field-defense-marker live-pos-4"><span class="field-position-code">2B</span><strong id="defenseName4">2B</strong></div>
+                  <div class="field-defense-marker live-pos-5"><span class="field-position-code">3B</span><strong id="defenseName5">3B</strong></div>
+                  <div class="field-defense-marker live-pos-3"><span class="field-position-code">1B</span><strong id="defenseName3">1B</strong></div>
+                  <div class="field-defense-marker live-pos-1"><span class="field-position-code">P</span><strong id="defenseName1">P</strong></div>
+                  <div class="field-defense-marker live-pos-2"><span class="field-position-code">C</span><strong id="defenseName2">C</strong></div>
+
+                  <span id="base2" class="base live-field-base live-field-base-2"></span>
+                  <span id="base3" class="base live-field-base live-field-base-3"></span>
+                  <span id="base1" class="base live-field-base live-field-base-1"></span>
+                  <div id="liveRunner2" class="live-base-runner live-runner-2" hidden><span>2B</span><strong id="liveRunnerName2">—</strong><b id="liveRunnerNumber2" class="live-runner-number" aria-hidden="true">#—</b></div>
+                  <div id="liveRunner3" class="live-base-runner live-runner-3" hidden><span>3B</span><strong id="liveRunnerName3">—</strong><b id="liveRunnerNumber3" class="live-runner-number" aria-hidden="true">#—</b></div>
+                  <div id="liveRunner1" class="live-base-runner live-runner-1" hidden><span>1B</span><strong id="liveRunnerName1">—</strong><b id="liveRunnerNumber1" class="live-runner-number" aria-hidden="true">#—</b></div>
+                </div>
+                <div class="count-display broadcast-count prominent-count" aria-label="Current balls and strikes">
+                  <div class="count-column balls-column"><small>BALLS</small><strong id="ballCount">0</strong></div>
+                  <span class="count-divider" aria-hidden="true"></span>
+                  <div class="count-column strikes-column"><small>STRIKES</small><strong id="strikeCount">0</strong></div>
+                </div>
+              </div>
+
+              <div class="broadcast-batting-order broadcast-upcoming-strip" aria-label="Upcoming batters">
+                <div><span>On Deck</span><strong id="onDeckName">—</strong><small id="onDeckDetails"></small></div>
+                <div><span>In the Hole</span><strong id="inHoleName">—</strong><small id="inHoleDetails"></small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="live-matchup-card broadcast-matchup-card" aria-label="Current batter and pitcher">
+            <article class="live-player batter-live-player">
+              <p class="live-player-label">At Bat</p>
+              <h3 id="currentBatterName">Enter lineups to begin</h3>
+              <p id="currentBatterDetails" class="live-player-details">Lineup information will appear here.</p>
+              <p><strong>Today:</strong> <span id="currentBatterHistory">No previous plate appearances</span></p>
+            </article>
+            <article class="live-player pitcher-live-player">
+              <p class="live-player-label">Pitching</p>
+              <label class="live-pitcher-selector">
+                <span id="activePitcherTeamLabel">Defensive pitcher</span>
+                <select id="activePitcherSelect" aria-label="Change the current defensive pitcher"></select>
+              </label>
+              <h3 id="currentPitcherName" class="visually-hidden">Enter pitchers to begin</h3>
+              <p id="currentPitcherDetails" class="live-player-details">Pitcher information will appear here.</p>
+              <p><strong>Game:</strong> <span id="currentPitcherGameStats">0 pitches</span></p>
+            </article>
+          </div>
+
+
+          <section class="live-scoring-control-deck" aria-label="Live pitch and play controls">
+            <div class="pitch-button-grid compact-pitch-button-grid" aria-label="Pitch controls">
+              <button id="ballBtn" class="pitch-button ball-button" type="button" data-pitch="ball"><span>Ball</span><kbd>B</kbd></button>
+              <div class="strike-button-pair" role="group" aria-label="Strike controls">
+                <button id="swingStrikeBtn" class="pitch-button strike-button swing-strike-button" type="button" data-pitch="swingingStrike"><span>Swinging<br>Strike</span><kbd>S</kbd></button>
+                <button id="calledStrikeBtn" class="pitch-button strike-button called-strike-button" type="button" data-pitch="calledStrike"><span>Called<br>Strike</span><kbd>C</kbd></button>
+              </div>
+              <button id="foulBtn" class="pitch-button foul-button" type="button" data-pitch="foul"><span>Foul</span><kbd>F</kbd></button>
+              <button id="inPlayBtn" class="pitch-button inplay-button" type="button" data-pitch="inplay"><span>In Play</span><kbd>I</kbd></button>
+            </div>
+
+            <div class="pitch-tool-row compact-pitch-tool-row">
+              <span id="pitchTotalLabel">0 pitches this plate appearance</span>
+              <div class="live-action-grid" aria-label="Pitch correction and scoring tools">
+                <button id="undoPitchBtn" class="secondary compact" type="button">Undo Pitch <kbd>⌫</kbd></button>
+                <button id="resetCountBtn" class="secondary compact" type="button">Reset Count</button>
+                <button id="recordErrorQuickBtn" class="secondary compact" type="button">Record Error</button>
+                <button id="runnerEventBtn" class="secondary compact" type="button">Runner Event</button>
+                <button id="challengeQuickBtn" class="primary compact challenge-toggle-button" type="button" aria-expanded="false" aria-controls="absChallengePanel">Challenge</button>
+              </div>
+            </div>
+
+            <div id="strikeoutChooser" class="terminal-choice" hidden>
+              <strong>Was strike three legally caught?</strong>
+              <p class="terminal-choice-note">The normal swinging or looking strikeout was recorded automatically. Use the first button only when the catcher did not legally catch strike three.</p>
+              <div class="terminal-choice-buttons two-choice">
+                <button type="button" data-terminal-outcome="D3K">K+ — Third Strike Not Caught</button>
+                <button type="button" data-terminal-outcome="dismiss">Caught — Keep Strikeout</button>
+              </div>
+            </div>
+
+            <div class="quick-results-card compact-quick-results">
+              <div class="quick-results-heading">
+                <div><strong>Quick result codes</strong><span>Tap a code when the plate appearance ends.</span></div>
+                <button id="toggleQuickResultsBtn" class="secondary compact" type="button" aria-expanded="true" aria-controls="quickResultGrid">Hide Codes</button>
+              </div>
+              <div id="quickResultGrid" class="quick-result-grid"></div>
+            </div>
+
+            <details class="runner-event-card">
+              <summary><span>Runner Events</span><strong id="runnerEventLogCount">0 events</strong></summary>
+              <p class="small-note">Records stolen bases, caught stealing, pickoff attempts and outcomes, wild pitches, passed balls, and defensive indifference without ending the plate appearance.</p>
+              <div id="runnerEventSummary" class="runner-event-summary"></div>
+              <div id="runnerEventLog"><p class="empty-tracking-note">No runner events recorded.</p></div>
+            </details>
+
+            <section id="absChallengePanel" class="abs-challenge-card broadcast-abs-challenge" aria-labelledby="challengeCenterTitle" hidden>
+              <div class="challenge-center-header">
+                <div>
+                  <p class="live-player-label">Challenge Center</p>
+                  <h3 id="challengeCenterTitle">Manager Replay &amp; ABS</h3>
+                </div>
+                <p class="abs-rule-note">Manager replay challenges and ABS ball–strike challenges use separate challenge pools.</p>
+              </div>
+
+              <div class="challenge-system-block manager-replay-block" aria-labelledby="managerReplayTitle">
+                <div class="abs-challenge-header broadcast-abs-header">
+                  <div>
+                    <p class="live-player-label">Manager Replay</p>
+                    <h3 id="managerReplayTitle">Replay Review Challenges</h3>
+                  </div>
+                  <p class="abs-rule-note">One challenge per team in most games; two in postseason and All-Star games. Any overturn preserves the challenge. A confirmed call or call that stands consumes it.</p>
+                </div>
+                <div class="challenge-team-grid replay-team-grid">
+                  <article class="challenge-team-card" data-replay-team="away">
+                    <div class="challenge-team-heading"><h3 id="awayReplayHeading">Away Replay</h3><strong id="awayReplayAvailable">1 available</strong></div>
+                    <div id="awayReplayTokens" class="challenge-token-row" aria-label="Away team manager replay status"></div>
+                    <button class="secondary compact replay-record-button" data-record-replay="away" type="button">Record Away Replay</button>
+                    <p id="awayReplayStatus" class="challenge-status"></p>
+                  </article>
+                  <article class="challenge-team-card" data-replay-team="home">
+                    <div class="challenge-team-heading"><h3 id="homeReplayHeading">Home Replay</h3><strong id="homeReplayAvailable">1 available</strong></div>
+                    <div id="homeReplayTokens" class="challenge-token-row" aria-label="Home team manager replay status"></div>
+                    <button class="secondary compact replay-record-button" data-record-replay="home" type="button">Record Home Replay</button>
+                    <p id="homeReplayStatus" class="challenge-status"></p>
+                  </article>
+                </div>
+                <details class="broadcast-abs-log replay-log">
+                  <summary><span>Manager Replay Log</span><strong id="managerReplayLogCount">0 attempts</strong></summary>
+                  <div id="managerReplayEventLog" class="challenge-event-log"><p class="empty-tracking-note">No manager replay challenges recorded.</p></div>
+                </details>
+              </div>
+
+              <div class="challenge-system-divider" role="separator"></div>
+
+              <div class="challenge-system-block abs-system-block" aria-labelledby="absChallengeTitle">
+                <div class="abs-challenge-header broadcast-abs-header">
+                  <div>
+                    <p class="live-player-label">ABS Challenges</p>
+                    <h3 id="absChallengeTitle">Ball–Strike Challenges</h3>
+                  </div>
+                  <p class="abs-rule-note">Only the batter, pitcher, or catcher may challenge. The batter may challenge a called strike; the pitcher or catcher may challenge a called ball. The request must be immediate and cannot come from the manager, coaches, dugout, or another player. Successful challenges are retained; unsuccessful challenges are lost. A team entering an extra inning with none receives one challenge.</p>
+                </div>
+                <div class="challenge-team-grid">
+                  <article class="challenge-team-card" data-challenge-team="away">
+                    <div class="challenge-team-heading"><h3 id="awayChallengeHeading">Away ABS</h3><strong id="awayChallengesAvailable">2 available</strong></div>
+                    <div id="awayChallengeTokens" class="challenge-token-row" aria-label="Away team ABS challenge status"></div>
+                    <button class="secondary compact challenge-record-button" data-record-challenge="away" type="button">Record Away ABS</button>
+                    <p id="awayChallengeStatus" class="challenge-status"></p>
+                  </article>
+                  <article class="challenge-team-card" data-challenge-team="home">
+                    <div class="challenge-team-heading"><h3 id="homeChallengeHeading">Home ABS</h3><strong id="homeChallengesAvailable">2 available</strong></div>
+                    <div id="homeChallengeTokens" class="challenge-token-row" aria-label="Home team ABS challenge status"></div>
+                    <button class="secondary compact challenge-record-button" data-record-challenge="home" type="button">Record Home ABS</button>
+                    <p id="homeChallengeStatus" class="challenge-status"></p>
+                  </article>
+                </div>
+                <details class="broadcast-abs-log">
+                  <summary><span>ABS Challenge Log</span><strong id="challengeLogCount">0 attempts</strong></summary>
+                  <div id="challengeEventLog" class="challenge-event-log"><p class="empty-tracking-note">No ABS challenges recorded.</p></div>
+                </details>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <div class="scoring-help">
+          <strong>How to score:</strong> use Ball, Swinging Strike, Called Strike, Foul, and In Play to build the count. Ball four records a walk automatically. The pitch type on strike three determines swinging or looking strikeout; use K+ only when strike three was not legally caught. Use the Quick Results when the plate appearance ends; choose <strong>Interference</strong> for batter, runner, catcher/defensive, umpire, fan, coach, or other interference and then record the umpire’s ruling.
+        </div>
+
+        <p class="keyboard-help"><strong>Keyboard:</strong> B ball · S swinging strike · C called strike · F foul · I in play · 1/2/3/4 hit · W walk · H hit-by-pitch · K strikeout · G groundout · O flyout · L lineout · P popout · X fielder’s choice · Backspace undo pitch. After an automatic strikeout: D records that strike three was not caught.</p>
+
+        <div class="game-control-row" aria-label="Game correction controls">
+          <button id="undoBtn" class="secondary" type="button" title="Reverse the most recently completed plate appearance and rebuild all game totals.">Undo Last Play</button>
+          <button id="manualHalfBtn" class="secondary" type="button" title="Manually correct the current half-inning when the automatic inning state needs adjustment.">Change Half-Inning</button>
+          <button id="resetScoringBtn" class="danger" type="button" title="Erase the entire game after confirmation.">Reset Entire Game</button>
+        </div>
+      </section>
+
+
+
+      <div class="scoring-view-switcher" role="tablist" aria-label="Live scoring display">
+        <button id="plateAppearancesViewBtn" class="scoring-view-button is-active" type="button" role="tab" aria-selected="true" aria-controls="plateAppearancesView">Plate Appearances</button>
+        <button id="currentScorecardViewBtn" class="scoring-view-button" type="button" role="tab" aria-selected="false" aria-controls="currentScorecardView">Current Scorecard</button>
+      </div>
+
+      <div id="plateAppearancesView" class="scoring-view-panel" role="tabpanel" aria-labelledby="plateAppearancesViewBtn">
+        <div class="team-score-section">
+          <div class="team-score-heading"><h3 id="awayScoringHeading">Away Batters</h3><span>Recorded plate appearances 1–10</span></div>
+          <div id="awayScoringGrid" class="scoring-grid-wrap"></div>
+        </div>
+        <div class="team-score-section">
+          <div class="team-score-heading"><h3 id="homeScoringHeading">Home Batters</h3><span>Recorded plate appearances 1–10</span></div>
+          <div id="homeScoringGrid" class="scoring-grid-wrap"></div>
+        </div>
+      </div>
+
+      <div id="currentScorecardView" class="scoring-view-panel" role="tabpanel" aria-labelledby="currentScorecardViewBtn" hidden>
+        <div class="current-scorecard-view-header">
+          <div><p class="section-kicker">Live scorebook</p><h2>Current Scorecard</h2><p>The scorecard updates immediately after every pitch result, play, substitution, and correction. On a phone, swipe the tables left or right to view every inning and total.</p></div>
+        </div>
+        <div id="currentScorecardPreview" class="current-scorecard-preview" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="pitchTracking" class="panel">
+      <div class="panel-title-row">
+        <div>
+          <p class="section-kicker">Permanent pitch history</p>
+          <h2>Pitch Tracking</h2>
+          <p>Every pitch and completed plate appearance is retained by pitcher. These totals are recalculated automatically after an undo, deletion, or edited play.</p>
+        </div>
+        <button id="downloadPitchLogBtn" class="secondary" type="button">Download Pitch Log CSV</button>
+      </div>
+      <div id="pitcherTrackingSummary" class="pitcher-tracking-summary"></div>
+      <div class="pitch-log-heading">
+        <div><h3>Pitch-by-pitch log</h3><p id="pitchLogCount">0 recorded pitches</p></div>
+      </div>
+      <div id="pitchEventLog" class="pitch-event-log"></div>
+    </section>
+
+    <section id="summary" class="panel">
+      <div class="panel-title-row">
+        <div><p class="section-kicker">Game record</p><h2>Summary & Export</h2><p>Review the line score, batting totals, and play log before exporting. Games reaching the 11th inning automatically produce a second PDF scorecard page for innings 11–20.</p></div>
+        <div class="button-row"><button id="exportExcelBtn2" class="secondary" type="button">Download Excel</button><button id="printPdfBtn2" class="primary" type="button">Download PDF</button></div>
+      </div>
+      <div id="lineScoreSummary" class="summary-card"></div>
+      <div class="summary-grid">
+        <div><h3>Batting totals</h3><div id="battingSummary"></div></div>
+        <div><h3>Play log</h3><div id="playLog" class="play-log"></div></div>
+      </div>
+      <label>Game Notes<textarea id="gameNotes" rows="7" placeholder="Substitutions, milestones, scoring notes, weather updates, or other details"></textarea></label>
+    </section>
+
+    <section id="settings" class="panel">
+      <div class="panel-title-row"><div><p class="section-kicker">App settings</p><h2>Template, recovery, transfer, and installation</h2></div></div>
+      <div class="settings-grid">
+        <article class="entry-card"><h3>Continuous recovery</h3><p>Every field edit, pitch, play, substitution, challenge, note, and roster change is saved automatically in this browser. Team, lineup, bench, and pitcher information is also protected by a separate mobile recovery copy. Closing, refreshing, exporting, or moving the app to the background will not erase the live game.</p><p id="autosaveDetails" class="small-note">Continuous autosave starting…</p><div class="stack-buttons"><button id="saveNowBtn" class="primary" type="button">Save Now</button><button id="restoreAutosaveBtn" class="secondary" type="button" disabled>Restore Previous Autosave</button></div><p class="small-note">Save Game File remains the method for moving a game to another device. Browser autosave protects this device.</p></article>
+        <article class="entry-card"><h3>Blank scorecards</h3><p>The completed-game PDF uses the selected home MLB team’s colors and clean computer scoring boxes. Blank PDFs let you choose whether to retain the traditional plus signs and 2×3 ball-strike guides.</p><button id="downloadBlankPdfBtn" class="primary full-width" type="button">Download Blank PDF</button><label>Upload a newer Excel template<input id="templateFile" type="file" accept=".xlsx,.xlsm" /></label><p id="templateStatus" class="small-note">Using the built-in blank Excel scorecard.</p><button id="downloadBlankBtn" class="secondary full-width" type="button">Download Blank Excel</button></article>
+        <article class="entry-card"><h3>Move a game between devices</h3><p>Save a game file on one device and open it on the other. All lineups, scoring, notes, and totals are included.</p><div class="stack-buttons"><button id="saveGameFileBtn2" class="secondary" type="button">Save Game File</button><label class="button secondary file-button">Open Game File<input id="openGameFile2" type="file" accept=".json,.scoregame" /></label></div></article>
+        <article class="entry-card"><h3>Install on iPhone</h3><p>Open the Netlify site in Safari, tap Share, then choose <strong>Add to Home Screen</strong>.</p><button id="installBtn" class="secondary full-width" type="button" hidden>Install App</button></article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="fieldLocationDialog" class="play-dialog field-location-dialog no-print" aria-labelledby="fieldLocationTitle">
+    <form method="dialog" id="fieldLocationForm">
+      <div class="dialog-header"><div><p class="section-kicker">Batted-ball location</p><h2 id="fieldLocationTitle">Where was the ball hit?</h2></div><button id="closeFieldLocationDialogBtn" class="icon-button" value="cancel" type="button" aria-label="Close">×</button></div>
+      <p id="fieldLocationPrompt" class="field-location-prompt">Tap each defensive player in the order the ball traveled.</p>
+      <div id="fieldLocationGrid" class="field-location-grid" role="group" aria-label="Defensive positions one through nine"></div>
+      <section class="fielding-sequence-panel" aria-labelledby="fieldingSequenceHeading">
+        <div class="fielding-sequence-heading"><strong id="fieldingSequenceHeading">Ball path</strong><span>Example: 6 → 3</span></div>
+        <div id="fieldingSequenceTray" class="fielding-sequence-tray" role="status" aria-live="polite"></div>
+        <div class="fielding-sequence-actions"><button id="undoFieldingSequenceBtn" class="secondary compact" type="button">Undo Last</button><button id="clearFieldingSequenceBtn" class="secondary compact" type="button">Clear</button><button id="useFieldingSequenceBtn" class="primary" type="button" disabled>Use Ball Path</button></div>
+      </section>
+      <p class="small-note field-location-note">Official defensive numbers: 1 P, 2 C, 3 1B, 4 2B, 5 3B, 6 SS, 7 LF, 8 CF, 9 RF. Repeated fielders are allowed, such as 3–6–3.</p>
+      <div class="dialog-actions"><span class="spacer"></span><button id="cancelFieldLocationBtn" class="secondary" value="cancel" type="button">Cancel</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="playDialog" class="play-dialog no-print">
+    <form method="dialog" id="playForm">
+      <div class="dialog-header"><div><p class="section-kicker">Plate appearance details</p><h2 id="dialogTitle">Record Play</h2></div><button id="closePlayDialogBtn" class="icon-button" value="cancel" type="button" aria-label="Close">×</button></div>
+      <input id="dialogTeam" type="hidden" /><input id="dialogPlayerIndex" type="hidden" /><input id="dialogPaIndex" type="hidden" /><input id="dialogPlayId" type="hidden" />
+      <div class="form-grid two-col">
+        <label>Result<select id="playOutcome"></select></label>
+        <label>Pitcher<input id="playPitcher" type="text" placeholder="Optional" /></label>
+        <label>Inning<input id="playInning" type="number" min="1" max="30" /></label>
+        <label>Half<select id="playHalf"><option value="top">Top</option><option value="bottom">Bottom</option></select></label>
+        <label>Runs scored<input id="playRuns" type="number" min="0" max="4" value="0" /></label>
+        <label>RBI<input id="playRbi" type="number" min="0" max="4" value="0" /></label>
+        <label>Outs on play<input id="playOuts" type="number" min="0" max="3" value="0" /></label>
+        <label>Errors charged<input id="playErrors" type="number" min="0" max="3" value="0" readonly /></label>
+      </div>
+      <section id="playFieldLocationSection" class="play-field-location-section" hidden>
+        <input id="playFieldingSequence" type="hidden" value="" />
+        <select id="playFieldLocation" class="legacy-field-location-select" tabindex="-1" aria-hidden="true"><option value="">Choose position 1–9</option></select>
+        <label>Ball path / fielding sequence<input id="playFieldingSequenceDisplay" type="text" value="No ball path selected" readonly /></label>
+        <button id="chooseFieldLocationBtn" class="secondary compact" type="button">Follow Ball on Field</button>
+      </section>
+      <h3>Where everyone finished</h3>
+      <div class="runner-grid">
+        <label>Batter<select id="batterDestination"></select></label>
+        <label>Runner from 1st<select id="runner1Destination"></select></label>
+        <label>Runner from 2nd<select id="runner2Destination"></select></label>
+        <label>Runner from 3rd<select id="runner3Destination"></select></label>
+      </div>
+      <section id="droppedThirdStrikePanel" class="dropped-third-strike-panel" hidden>
+        <label>Third strike not caught ruling<select id="droppedThirdStrikeCause"><option value="unclassified">Not yet classified</option><option value="wild-pitch">Wild pitch — charge pitcher</option><option value="passed-ball">Passed ball — charge catcher</option></select></label>
+        <p class="small-note">Use this when the batter reaches on an uncaught third strike. A wild pitch adds to the pitcher’s WP total; a passed ball does not.</p>
+      </section>
+      <div class="play-note-tools">
+        <button id="keyPlayBtn" class="secondary compact key-play-button" type="button" aria-pressed="false">★ Key Play</button>
+        <button id="recordErrorBtn" class="secondary compact" type="button">Record Error</button>
+        <button id="recordInterferenceBtn" class="secondary compact interference-button" type="button">Record Interference</button>
+      </div>
+      <section id="errorAssignmentPanel" class="error-assignment-panel" hidden>
+        <div class="error-panel-heading"><div><strong>Assign defensive error</strong><span>Select the fielder and error type. Add a second error only when needed.</span></div><button id="closeErrorPanelBtn" class="icon-button small-icon" type="button" aria-label="Close error assignment">×</button></div>
+        <div id="errorAssignmentRows" class="error-assignment-rows"></div>
+        <button id="addSecondErrorBtn" class="secondary compact" type="button">+ Add Second Error</button>
+        <label>Error details<textarea id="errorDetails" rows="2" placeholder="Optional explanation, such as wild throw into the dugout"></textarea></label>
+      </section>
+      <section id="interferencePanel" class="interference-panel" hidden>
+        <div class="interference-panel-heading">
+          <div><strong>Record interference</strong><span>Choose the type and enter the umpire’s ruling. Outs and base placements above remain editable.</span></div>
+          <button id="closeInterferencePanelBtn" class="icon-button small-icon" type="button" aria-label="Close interference details">×</button>
+        </div>
+        <div class="form-grid two-col interference-grid">
+          <label>Interference type<select id="interferenceType"></select></label>
+          <label>Person / player involved<input id="interferencePerson" type="text" placeholder="Optional name or description" /></label>
+          <label>Umpire ruling<select id="interferenceRuling"></select></label>
+          <label class="checkbox-field"><input id="interferenceEndsPa" type="checkbox" /> Ends the plate appearance and advances the batting order</label>
+          <label class="checkbox-field"><input id="interferenceAtBat" type="checkbox" /> Charge an official at-bat</label>
+          <label class="checkbox-field"><input id="interferenceHit" type="checkbox" /> Credit the batter with a hit</label>
+        </div>
+        <label>Interference details<textarea id="interferenceDetails" rows="2" placeholder="Describe what happened and any bases or outs awarded by the umpire"></textarea></label>
+        <p class="small-note interference-rule-note">Obstruction remains a separate result. Use this panel for offensive/player, catcher, umpire, fan/spectator, coach, or other interference.</p>
+      </section>
+      <label>Notes<textarea id="playNotes" rows="3" placeholder="Example: line drive to right; runner scored on throwing error"></textarea></label>
+      <div class="dialog-actions"><button id="deletePlayBtn" class="danger" type="button" hidden>Delete Play</button><span class="spacer"></span><button id="cancelPlayBtn" class="secondary" value="cancel" type="button">Cancel</button><button id="savePlayBtn" class="primary" value="default" type="submit">Save Play</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="runnerEventDialog" class="play-dialog runner-event-dialog no-print">
+    <form id="runnerEventForm">
+      <div class="dialog-header"><div><p class="section-kicker">Baserunning and pitch event</p><h2 id="runnerEventDialogTitle">Record Runner Event</h2></div><button id="closeRunnerEventDialogBtn" class="icon-button" type="button" aria-label="Close">×</button></div>
+      <input id="runnerEventPlayId" type="hidden" /><input id="runnerEventTeam" type="hidden" />
+      <div class="form-grid two-col">
+        <label>Event type<select id="runnerEventType" required></select></label>
+        <label>Result<select id="runnerEventResult" required></select></label>
+        <label>Primary runner<select id="runnerEventPrimaryBase" required></select></label>
+        <label>Pitcher<input id="runnerEventPitcher" type="text" placeholder="Current pitcher" /></label>
+        <label>Inning<input id="runnerEventInning" type="number" min="1" max="30" required /></label>
+        <label>Half<select id="runnerEventHalf"><option value="top">Top</option><option value="bottom">Bottom</option></select></label>
+        <label>Runs scored<input id="runnerEventRuns" type="number" min="0" max="3" value="0" /></label>
+        <label>Outs on event<input id="runnerEventOuts" type="number" min="0" max="3" value="0" /></label>
+      </div>
+      <h3>Runner destinations</h3>
+      <div class="runner-grid runner-event-destinations">
+        <label><span>Runner from 1st</span><select id="runnerEventRunner1Destination"></select></label>
+        <label><span>Runner from 2nd</span><select id="runnerEventRunner2Destination"></select></label>
+        <label><span>Runner from 3rd</span><select id="runnerEventRunner3Destination"></select></label>
+      </div>
+      <p class="small-note">A wild pitch is charged to the pitcher only when a runner advances, or when an uncaught third strike permits the batter to reach. Passed balls are charged to the catcher. Defensive indifference does not count as a stolen base.</p>
+      <label>Notes<textarea id="runnerEventNotes" rows="3" placeholder="Optional details, throw, fielder, or scorer ruling"></textarea></label>
+      <div class="dialog-actions"><button id="deleteRunnerEventBtn" class="danger" type="button" hidden>Delete Event</button><span class="spacer"></span><button id="cancelRunnerEventBtn" class="secondary" type="button">Cancel</button><button id="saveRunnerEventBtn" class="primary" type="submit">Save Event</button></div>
+    </form>
+  </dialog>
+
+
+  <dialog id="substitutionDialog" class="play-dialog substitution-dialog no-print">
+    <form id="substitutionForm">
+      <div class="dialog-header"><div><p class="section-kicker">Player substitution</p><h2 id="substitutionDialogTitle">Replace Player</h2></div><button id="closeSubstitutionDialogBtn" class="icon-button" type="button" aria-label="Close">×</button></div>
+      <input id="substitutionTeam" type="hidden" /><input id="substitutionLineupIndex" type="hidden" /><input id="substitutionIncomingKey" type="hidden" />
+      <div class="substitution-matchup"><div><span>Leaving game</span><strong id="substitutionOutgoing"></strong></div><div aria-hidden="true">→</div><div><span>Entering game</span><strong id="substitutionIncoming"></strong></div></div>
+      <div class="form-grid two-col">
+        <label>Reason<select id="substitutionReason"><option value="Pinch Hitter">Pinch Hitter</option><option value="Pinch Runner">Pinch Runner</option><option value="Injury Replacement">Injury Replacement</option><option value="Defensive Replacement">Defensive Replacement</option><option value="Double Switch">Double Switch</option><option value="Other">Other</option></select></label>
+        <label>Position when entering<input id="substitutionPosition" type="text" placeholder="Position" /></label>
+        <label>Inning<input id="substitutionInning" type="number" min="1" max="30" /></label>
+        <label>Half<select id="substitutionHalf"><option value="top">Top</option><option value="bottom">Bottom</option></select></label>
+      </div>
+      <label>Substitution note<textarea id="substitutionNote" rows="2" placeholder="Optional details"></textarea></label>
+      <div class="dialog-actions"><span class="spacer"></span><button id="cancelSubstitutionBtn" class="secondary" type="button">Cancel</button><button class="primary" type="submit">Confirm Substitution</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="managerReplayDialog" class="play-dialog challenge-dialog no-print">
+    <form id="managerReplayForm">
+      <div class="dialog-header"><div><p class="section-kicker">Manager replay details</p><h2 id="managerReplayDialogTitle">Record Manager Replay</h2></div><button id="closeManagerReplayDialogBtn" class="icon-button" type="button" aria-label="Close">×</button></div>
+      <input id="managerReplayId" type="hidden" /><input id="managerReplayTeam" type="hidden" />
+      <p id="managerReplayTeamSummary" class="challenge-dialog-team"></p>
+      <div class="form-grid two-col">
+        <label>Inning<input id="managerReplayInning" type="number" min="1" max="30" /></label>
+        <label>Half<select id="managerReplayHalf"><option value="top">Top</option><option value="bottom">Bottom</option></select></label>
+        <label class="span-two">Call or play challenged<input id="managerReplayCall" type="text" placeholder="Example: Safe call at second base" autocomplete="off" required /></label>
+        <label>Replay result<select id="managerReplayResult" required><option value="">Choose result</option><option value="overturned">Overturned — challenge retained</option><option value="confirmed">Confirmed — challenge lost</option><option value="stands">Call stands — challenge lost</option></select></label>
+      </div>
+      <label>Notes<textarea id="managerReplayNotes" rows="3" placeholder="Optional replay details"></textarea></label>
+      <div class="dialog-actions"><button id="deleteManagerReplayBtn" class="danger" type="button" hidden>Delete Replay</button><span class="spacer"></span><button id="cancelManagerReplayBtn" class="secondary" type="button">Cancel</button><button id="saveManagerReplayBtn" class="primary" type="submit">Save Replay</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="challengeDialog" class="play-dialog challenge-dialog no-print">
+    <form id="challengeForm">
+      <div class="dialog-header"><div><p class="section-kicker">ABS challenge details</p><h2 id="challengeDialogTitle">Record Challenge</h2></div><button id="closeChallengeDialogBtn" class="icon-button" type="button" aria-label="Close">×</button></div>
+      <input id="challengeId" type="hidden" /><input id="challengeTeam" type="hidden" /><input id="challengeLinkedPitchId" type="hidden" />
+      <p id="challengeTeamSummary" class="challenge-dialog-team"></p>
+      <div class="form-grid two-col">
+        <label>Inning<input id="challengeInning" type="number" min="1" max="30" /></label>
+        <label>Half<select id="challengeHalf"><option value="top">Top</option><option value="bottom">Bottom</option></select></label>
+        <label>Who requested it?<select id="challengeRole"><option value="batter">Batter — batting team</option><option value="pitcher">Pitcher — fielding team</option><option value="catcher">Catcher — fielding team</option></select></label>
+        <label>Player name<input id="challengeName" type="text" list="challengePlayerSuggestions" placeholder="Player name" autocomplete="off" /></label>
+        <p id="challengeRoleRule" class="challenge-role-rule span-two">Batter challenges a called strike for the batting team.</p>
+        <label>Original umpire call<select id="challengeOriginalCall" disabled><option value="strike">Called Strike</option><option value="ball">Called Ball</option></select></label>
+        <label>ABS result<select id="challengeResult" required><option value="">Choose result</option><option value="overturned">Overturned — challenge retained</option><option value="upheld">Call upheld — challenge lost</option></select></label>
+      </div>
+      <datalist id="challengePlayerSuggestions"></datalist>
+      <p id="challengePitchSummary" class="challenge-pitch-summary"></p>
+      <label>Notes<textarea id="challengeNotes" rows="3" placeholder="Optional challenge details"></textarea></label>
+      <div class="dialog-actions"><button id="deleteChallengeBtn" class="danger" type="button" hidden>Delete Challenge</button><span class="spacer"></span><button id="cancelChallengeBtn" class="secondary" type="button">Cancel</button><button id="saveChallengeBtn" class="primary" type="submit">Save Challenge</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="customPitcherDialog" class="play-dialog custom-pitcher-dialog no-print">
+    <form id="customPitcherForm" method="dialog">
+      <div class="dialog-header"><div><p class="section-kicker">Pitching staff</p><h2 id="customPitcherDialogTitle">Add Custom Pitcher</h2></div><button id="closeCustomPitcherDialogBtn" class="icon-button" type="button" aria-label="Close">×</button></div>
+      <input id="customPitcherTeam" type="hidden" />
+      <div class="form-grid three-col">
+        <label>Uniform number<input id="customPitcherNum" type="text" placeholder="#" /></label>
+        <label class="span-two">Pitcher name<input id="customPitcherName" type="text" placeholder="Pitcher name" /></label>
+        <label>Throws<input id="customPitcherThrows" type="text" placeholder="RHP / LHP" /></label>
+        <label>Record<input id="customPitcherRecord" type="text" placeholder="W-L" /></label>
+        <label>ERA<input id="customPitcherEra" type="text" placeholder="ERA" /></label>
+        <label>Strikeouts<input id="customPitcherK" type="text" placeholder="K" /></label>
+      </div>
+      <div class="dialog-actions"><span class="spacer"></span><button id="cancelCustomPitcherBtn" class="secondary" type="button">Cancel</button><button class="primary" type="submit">Add Pitcher</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="blankPdfDialog" class="play-dialog blank-pdf-choice no-print">
+    <form method="dialog">
+      <div class="dialog-header"><div><p class="section-kicker">Blank PDF option</p><h2>Include traditional scoring guides?</h2></div><button class="icon-button" value="cancel" type="submit" aria-label="Close">×</button></div>
+      <p>The blank PDF keeps the exact classic scorecard format. Choose whether each scoring square should include the small plus sign and 2×3 ball-strike counter.</p>
+      <div class="choice-grid">
+        <button id="blankPdfWithGuidesBtn" class="secondary choice-card" type="button"><strong>Include Traditional Guides</strong><span>Print the plus sign and 2×3 ball-strike counter in every blank scoring box.</span></button>
+        <button id="blankPdfCleanBtn" class="primary choice-card" type="button"><strong>Use Clean Boxes</strong><span>Print empty scoring boxes with no plus signs or counters.</span></button>
+      </div>
+      <div class="dialog-actions"><span class="spacer"></span><button class="secondary" value="cancel" type="submit">Cancel</button></div>
+    </form>
+  </dialog>
+
+
+  <dialog id="postExportDialog" class="play-dialog post-export-dialog no-print">
+    <form method="dialog">
+      <div class="dialog-header"><div><p class="section-kicker">Export complete</p><h2 id="postExportTitle">Keep this game open?</h2></div><button id="closePostExportDialogBtn" class="icon-button" value="keep" type="submit" aria-label="Close">×</button></div>
+      <p id="postExportMessage">Your file was saved. The live game remains on screen unless you deliberately clear it.</p>
+      <div class="choice-grid">
+        <button id="keepGameOpenBtn" class="primary choice-card" value="keep" type="submit" autofocus><strong>Keep Game Open</strong><span>Continue scoring with every player, pitch, note, and inning still available.</span></button>
+        <button id="clearAfterExportBtn" class="danger choice-card" value="clear" type="button"><strong>Clear Card</strong><span>Erase the live game only after a second confirmation.</span></button>
+      </div>
+    </form>
+  </dialog>
+
+  <section id="printScorecard" class="print-scorecard" aria-hidden="true"></section>
+
+  <script src="vendor/jszip.min.js"></script>
+  <script src="template_data.js"></script>
+  <script src="pdf_background_data.js?v=34"></script>
+  <script src="baseball-data.js?v=34"></script>
+  <script src="app.js?v=34-live-field-r12"></script>
+</body>
+</html>

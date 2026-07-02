@@ -1,0 +1,26 @@
+Guariglia Baseball Scorecard Builder Version 34 Revision 12
+Clean GitHub/Netlify package generated 2026-07-02
+
+Included files:
+.gitignore
+README.md
+VERSION.txt
+VERSION_34_REVISION12.md
+VERSION_34_REVISION12_TEST_REPORT.md
+app.js
+apple-touch-icon.png
+assets/apple-touch-icon-v34-r7.png
+assets/guariglia-crest.gif
+assets/icon-192.png
+assets/icon-512.png
+baseball-data.js
+index.html
+manifest.webmanifest
+netlify.toml
+netlify/functions/mlb.mts
+package.json
+pdf_background_data.js
+service-worker.js
+styles.css
+template_data.js
+vendor/jszip.min.js

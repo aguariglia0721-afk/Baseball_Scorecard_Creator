@@ -1,0 +1,24 @@
+{
+  "name": "Guariglia Baseball Scorecard Builder Version 34",
+  "short_name": "Scorecard V34",
+  "description": "Version 34 Revision 12 with a simplified offensive-runner number display on iPhone and Android phones, the full live defensive field on iPad and desktop, synchronized live scoring, duplex PDFs, and automatic On Deck and In the Hole panels for the team currently batting.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8e9",
+  "theme_color": "#9b4d1f",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
