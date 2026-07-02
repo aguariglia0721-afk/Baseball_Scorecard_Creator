@@ -9,30 +9,31 @@
   <meta name="apple-mobile-web-app-title" content="Guariglia Scorecard" />
   <title>Guariglia Baseball Scorecard Builder - Version 34</title>
   <!-- Version 34 supersedes the approved Version 33 production baseline. -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-v34-r7.png" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="styles.css?v=34-pa-sync-r6" />
+  <link rel="stylesheet" href="styles.css?v=34-live-field-r11" />
 </head>
 <body>
-  <header class="hero no-print">
-    <div class="hero-brand">
-      <div class="brand-mark-wrap"><img class="brand-mark" src="assets/guariglia-crest.gif" alt="Guariglia crest" /></div>
-      <div class="hero-copy">
-        <p class="eyebrow">Guariglia company app • Version 34</p>
-        <h1>Baseball Scorecard Builder & Live Scorer</h1>
-        <p class="subtitle">Build the scorecard, score every plate appearance from a phone or desktop, and export the finished game.</p>
+  <div class="app-top-dock no-print">
+    <header class="hero compact-hero">
+      <div class="hero-brand">
+        <div class="brand-mark-wrap"><img class="brand-mark" src="assets/guariglia-crest.gif" alt="Guariglia crest" /></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Guariglia company app • Version 34 Revision 11</p>
+          <h1>Baseball Scorecard Builder & Live Scorer</h1>
+          <p class="subtitle">Build, score, save, and export from one compact workspace.</p>
+        </div>
       </div>
-    </div>
-    <div class="hero-actions">
-      <button id="saveGameFileBtn" class="secondary" type="button">Save Game File</button>
-      <label class="button secondary file-button">Open Game File<input id="openGameFile" type="file" accept=".json,.scoregame" /></label>
-      <button id="exportExcelBtn" class="secondary" type="button">Download Excel</button>
-      <button id="printPdfBtn" class="primary" type="button">Download PDF</button>
-    </div>
-  </header>
+      <div class="hero-actions" aria-label="Game file and export actions">
+        <button id="saveGameFileBtn" class="secondary" type="button">Save Game</button>
+        <label class="button secondary file-button">Open Game<input id="openGameFile" type="file" accept=".json,.scoregame" /></label>
+        <button id="exportExcelBtn" class="secondary" type="button">Excel</button>
+        <button id="printPdfBtn" class="primary" type="button">PDF</button>
+      </div>
+    </header>
 
-  <div id="autosaveBar" class="autosave-bar no-print" role="status">Continuous autosave starting…</div>
+    <div id="autosaveBar" class="autosave-bar" role="status">Continuous autosave starting…</div>
 
-  <main class="app-shell no-print">
     <nav class="step-nav" aria-label="App sections">
       <button class="step active" data-panel="setup" type="button"><span>1</span> Setup</button>
       <button class="step" data-panel="lineups" type="button"><span>2</span> Lineups</button>
@@ -42,6 +43,9 @@
       <button class="step" data-panel="summary" type="button"><span>6</span> Summary</button>
       <button class="step" data-panel="settings" type="button"><span>7</span> Settings</button>
     </nav>
+  </div>
+
+  <main class="app-shell no-print">
 
     <section id="setup" class="panel active">
       <div class="panel-title-row">
@@ -153,16 +157,52 @@
                 <span id="outsLabel" class="broadcast-outs">0 outs</span>
                 <span id="gameStatusLabel" class="game-status-label">Game in progress</span>
               </div>
-              <div class="broadcast-diamond-and-count">
-                <div class="bases broadcast-bases" aria-label="Base runners">
-                  <span id="base2" class="base"></span>
-                  <span id="base3" class="base"></span>
-                  <span id="base1" class="base"></span>
+              <div class="broadcast-field-and-count">
+                <div id="liveDefensiveField" class="live-defensive-field" aria-label="Defensive alignment and offensive base runners">
+                  <svg class="live-field-art" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                    <defs>
+                      <linearGradient id="liveFieldGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#78b95b"/><stop offset="1" stop-color="#326d31"/></linearGradient>
+                      <linearGradient id="liveFieldDirt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0b677"/><stop offset="1" stop-color="#b97a42"/></linearGradient>
+                      <pattern id="liveFieldStripe" width="54" height="54" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="27" height="54" fill="rgba(255,255,255,.055)"/><rect x="27" width="27" height="54" fill="rgba(0,0,0,.04)"/></pattern>
+                    </defs>
+                    <rect x="3" y="3" width="594" height="494" rx="34" fill="#2f5f2e" stroke="#704321" stroke-width="6"/>
+                    <path d="M300 486 L35 226 Q300 -12 565 226 Z" fill="url(#liveFieldGrass)"/>
+                    <path d="M300 486 L35 226 Q300 -12 565 226 Z" fill="url(#liveFieldStripe)"/>
+                    <path d="M300 472 L154 340 L300 208 L446 340 Z" fill="url(#liveFieldDirt)" stroke="#9f6337" stroke-width="4"/>
+                    <path d="M300 424 L210 340 L300 257 L390 340 Z" fill="#4f8d3e" stroke="rgba(255,255,255,.24)" stroke-width="2"/>
+                    <path d="M300 472 L35 226 M300 472 L565 226" fill="none" stroke="#f9efd8" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M300 472 L154 340 L300 208 L446 340 Z" fill="none" stroke="#f4e0bd" stroke-width="4"/>
+                    <g fill="#fff9e9" stroke="#8e603c" stroke-width="3"><rect x="435" y="329" width="22" height="22" transform="rotate(45 446 340)"/><rect x="289" y="197" width="22" height="22" transform="rotate(45 300 208)"/><rect x="143" y="329" width="22" height="22" transform="rotate(45 154 340)"/><path d="M286 462 L314 462 L320 475 L300 489 L280 475 Z"/></g>
+                    <path d="M77 228 Q300 37 523 228" fill="none" stroke="rgba(255,255,255,.20)" stroke-width="3"/><path d="M116 264 Q300 109 484 264" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="3"/>
+                  </svg>
+
+                  <div class="field-defense-marker live-pos-7"><span class="field-position-code">LF</span><strong id="defenseName7">LF</strong></div>
+                  <div class="field-defense-marker live-pos-8"><span class="field-position-code">CF</span><strong id="defenseName8">CF</strong></div>
+                  <div class="field-defense-marker live-pos-9"><span class="field-position-code">RF</span><strong id="defenseName9">RF</strong></div>
+                  <div class="field-defense-marker live-pos-6"><span class="field-position-code">SS</span><strong id="defenseName6">SS</strong></div>
+                  <div class="field-defense-marker live-pos-4"><span class="field-position-code">2B</span><strong id="defenseName4">2B</strong></div>
+                  <div class="field-defense-marker live-pos-5"><span class="field-position-code">3B</span><strong id="defenseName5">3B</strong></div>
+                  <div class="field-defense-marker live-pos-3"><span class="field-position-code">1B</span><strong id="defenseName3">1B</strong></div>
+                  <div class="field-defense-marker live-pos-1"><span class="field-position-code">P</span><strong id="defenseName1">P</strong></div>
+                  <div class="field-defense-marker live-pos-2"><span class="field-position-code">C</span><strong id="defenseName2">C</strong></div>
+
+                  <span id="base2" class="base live-field-base live-field-base-2"></span>
+                  <span id="base3" class="base live-field-base live-field-base-3"></span>
+                  <span id="base1" class="base live-field-base live-field-base-1"></span>
+                  <div id="liveRunner2" class="live-base-runner live-runner-2" hidden><span>2B</span><strong id="liveRunnerName2">—</strong></div>
+                  <div id="liveRunner3" class="live-base-runner live-runner-3" hidden><span>3B</span><strong id="liveRunnerName3">—</strong></div>
+                  <div id="liveRunner1" class="live-base-runner live-runner-1" hidden><span>1B</span><strong id="liveRunnerName1">—</strong></div>
                 </div>
-                <div class="count-display broadcast-count" aria-label="Current balls and strikes">
-                  <small>BALLS – STRIKES</small>
-                  <div><strong id="ballCount">0</strong><span>–</span><strong id="strikeCount">0</strong></div>
+                <div class="count-display broadcast-count prominent-count" aria-label="Current balls and strikes">
+                  <div class="count-column balls-column"><small>BALLS</small><strong id="ballCount">0</strong></div>
+                  <span class="count-divider" aria-hidden="true"></span>
+                  <div class="count-column strikes-column"><small>STRIKES</small><strong id="strikeCount">0</strong></div>
                 </div>
+              </div>
+
+              <div class="broadcast-batting-order broadcast-upcoming-strip" aria-label="Upcoming batters">
+                <div><span>On Deck</span><strong id="onDeckName">—</strong><small id="onDeckDetails"></small></div>
+                <div><span>In the Hole</span><strong id="inHoleName">—</strong><small id="inHoleDetails"></small></div>
               </div>
             </div>
           </div>
@@ -176,23 +216,18 @@
             </article>
             <article class="live-player pitcher-live-player">
               <p class="live-player-label">Pitching</p>
-              <h3 id="currentPitcherName">Enter pitchers to begin</h3>
+              <label class="live-pitcher-selector">
+                <span id="activePitcherTeamLabel">Defensive pitcher</span>
+                <select id="activePitcherSelect" aria-label="Change the current defensive pitcher"></select>
+              </label>
+              <h3 id="currentPitcherName" class="visually-hidden">Enter pitchers to begin</h3>
               <p id="currentPitcherDetails" class="live-player-details">Pitcher information will appear here.</p>
               <p><strong>Game:</strong> <span id="currentPitcherGameStats">0 pitches</span></p>
             </article>
           </div>
 
-          <div class="broadcast-batting-order" aria-label="Upcoming batters">
-            <div><span>On Deck</span><strong id="onDeckName">—</strong><small id="onDeckDetails"></small></div>
-            <div><span>In the Hole</span><strong id="inHoleName">—</strong><small id="inHoleDetails"></small></div>
-          </div>
 
           <section class="live-scoring-control-deck" aria-label="Live pitch and play controls">
-            <div class="active-pitcher-row compact-active-pitcher">
-              <label><span id="activePitcherTeamLabel">Defensive pitcher</span><select id="activePitcherSelect"></select></label>
-              <p>Every pitch and completed plate appearance is credited to this pitcher.</p>
-            </div>
-
             <div class="pitch-button-grid compact-pitch-button-grid" aria-label="Pitch controls">
               <button id="ballBtn" class="pitch-button ball-button" type="button" data-pitch="ball"><span>Ball</span><kbd>B</kbd></button>
               <div class="strike-button-pair" role="group" aria-label="Strike controls">
@@ -405,7 +440,6 @@
   <dialog id="playDialog" class="play-dialog no-print">
     <form method="dialog" id="playForm">
       <div class="dialog-header"><div><p class="section-kicker">Plate appearance details</p><h2 id="dialogTitle">Record Play</h2></div><button id="closePlayDialogBtn" class="icon-button" value="cancel" type="button" aria-label="Close">×</button></div>
-      <p id="playCompletionNotice" class="play-completion-notice" role="status">This batter is not complete until you save. Confirm the result and every runner destination so all scorecard fields update together.</p>
       <input id="dialogTeam" type="hidden" /><input id="dialogPlayerIndex" type="hidden" /><input id="dialogPaIndex" type="hidden" /><input id="dialogPlayId" type="hidden" />
       <div class="form-grid two-col">
         <label>Result<select id="playOutcome"></select></label>
@@ -462,7 +496,7 @@
         <p class="small-note interference-rule-note">Obstruction remains a separate result. Use this panel for offensive/player, catcher, umpire, fan/spectator, coach, or other interference.</p>
       </section>
       <label>Notes<textarea id="playNotes" rows="3" placeholder="Example: line drive to right; runner scored on throwing error"></textarea></label>
-      <div class="dialog-actions"><button id="deletePlayBtn" class="danger" type="button" hidden>Delete Play</button><span class="spacer"></span><button id="cancelPlayBtn" class="secondary" value="cancel" type="button">Cancel</button><button id="savePlayBtn" class="primary" value="default" type="submit">Save &amp; Complete Batter</button></div>
+      <div class="dialog-actions"><button id="deletePlayBtn" class="danger" type="button" hidden>Delete Play</button><span class="spacer"></span><button id="cancelPlayBtn" class="secondary" value="cancel" type="button">Cancel</button><button id="savePlayBtn" class="primary" value="default" type="submit">Save Play</button></div>
     </form>
   </dialog>
 
@@ -592,6 +626,6 @@
   <script src="template_data.js"></script>
   <script src="pdf_background_data.js?v=34"></script>
   <script src="baseball-data.js?v=34"></script>
-  <script src="app.js?v=34-pa-sync-r6"></script>
+  <script src="app.js?v=34-live-field-r11"></script>
 </body>
 </html>

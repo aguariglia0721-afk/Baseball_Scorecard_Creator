@@ -1,0 +1,337 @@
+Pitch #	Inning	Half	Pitching Team	Pitcher #	Pitcher	Batting Team	Batter	Pitch Code	Pitch Type	Count Before	Count After	Recorded At
+1	1	top	home	52	Cionel Pérez	away	Trea Turner	C	Called Strike	0-0	0-1	2026-06-28T17:43:44.943Z
+2	1	top	home	52	Cionel Pérez	away	Trea Turner	IP	In Play	0-1	0-1	2026-06-28T17:43:59.060Z
+3	1	top	home	52	Cionel Pérez	away	Kyle Schwarber	SW	Swinging Strike	0-0	0-1	2026-06-28T17:44:35.656Z
+4	1	top	home	52	Cionel Pérez	away	Kyle Schwarber	SW	Swinging Strike	0-1	0-2	2026-06-28T17:44:53.017Z
+5	1	top	home	52	Cionel Pérez	away	Kyle Schwarber	F	Foul	0-2	0-2	2026-06-28T17:45:23.861Z
+6	1	top	home	52	Cionel Pérez	away	Kyle Schwarber	SW	Swinging Strike	0-2	0-3	2026-06-28T17:45:47.163Z
+7	1	top	home	52	Cionel Pérez	away	Bryce Harper	SW	Swinging Strike	0-0	0-1	2026-06-28T17:46:23.429Z
+8	1	top	home	52	Cionel Pérez	away	Bryce Harper	SW	Swinging Strike	0-1	0-2	2026-06-28T17:46:40.829Z
+9	1	top	home	52	Cionel Pérez	away	Bryce Harper	SW	Swinging Strike	0-2	0-3	2026-06-28T17:46:59.830Z
+10	1	bottom	away	44	Jesús Luzardo	home	Carson Benge	C	Called Strike	0-0	0-1	2026-06-28T17:49:13.467Z
+11	1	bottom	away	44	Jesús Luzardo	home	Carson Benge	B	Ball	0-1	1-1	2026-06-28T17:49:28.583Z
+12	1	bottom	away	44	Jesús Luzardo	home	Carson Benge	SW	Swinging Strike	1-1	1-2	2026-06-28T17:49:39.716Z
+13	1	bottom	away	44	Jesús Luzardo	home	Carson Benge	F	Foul	1-2	1-2	2026-06-28T17:50:01.828Z
+14	1	bottom	away	44	Jesús Luzardo	home	Carson Benge	F	Foul	1-2	1-2	2026-06-28T17:50:16.578Z
+15	1	bottom	away	44	Jesús Luzardo	home	Carson Benge	IP	In Play	1-2	1-2	2026-06-28T17:50:34.011Z
+16	1	bottom	away	44	Jesús Luzardo	home	Juan Soto	F	Foul	0-0	0-1	2026-06-28T17:51:07.651Z
+17	1	bottom	away	44	Jesús Luzardo	home	Juan Soto	C	Called Strike	0-1	0-2	2026-06-28T17:51:33.872Z
+18	1	bottom	away	44	Jesús Luzardo	home	Juan Soto	IP	In Play	0-2	0-2	2026-06-28T17:51:47.258Z
+24	1	bottom	away	44	Jesús Luzardo	home	Bo Bichette	B	Ball	0-0	1-0	2026-06-28T17:54:26.155Z
+25	1	bottom	away	44	Jesús Luzardo	home	Bo Bichette	F	Foul	1-0	1-1	2026-06-28T17:54:27.801Z
+26	1	bottom	away	44	Jesús Luzardo	home	Bo Bichette	B	Ball	1-1	2-1	2026-06-28T17:54:28.367Z
+27	1	bottom	away	44	Jesús Luzardo	home	Bo Bichette	B	Ball	2-1	3-1	2026-06-28T17:54:28.663Z
+28	1	bottom	away	44	Jesús Luzardo	home	Bo Bichette	C	Called Strike	3-1	3-2	2026-06-28T17:54:45.484Z
+29	1	bottom	away	44	Jesús Luzardo	home	Bo Bichette	SW	Swinging Strike	3-2	3-3	2026-06-28T17:55:03.537Z
+30	2	top	home	52	Cionel Pérez	away	Alec Bohm	C	Called Strike	0-0	0-1	2026-06-28T17:56:31.183Z
+31	2	top	home	52	Cionel Pérez	away	Alec Bohm	IP	In Play	0-1	0-1	2026-06-28T17:56:32.662Z
+35	2	top	home	32	Tobias Myers	away	Brandon Marsh	C	Called Strike	0-0	0-1	2026-06-28T17:58:13.798Z
+36	2	top	home	32	Tobias Myers	away	Brandon Marsh	SW	Swinging Strike	0-1	0-2	2026-06-28T17:58:15.948Z
+37	2	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	0-2	0-2	2026-06-28T17:58:17.064Z
+38	2	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	0-2	0-2	2026-06-28T17:58:19.696Z
+39	2	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	0-2	0-2	2026-06-28T17:58:26.817Z
+40	2	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	0-2	0-2	2026-06-28T17:58:27.016Z
+41	2	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	0-2	0-2	2026-06-28T17:58:39.227Z
+42	2	top	home	32	Tobias Myers	away	Brandon Marsh	C	Called Strike	0-2	0-3	2026-06-28T17:59:09.255Z
+43	2	top	home	32	Tobias Myers	away	J.T. Realmuto	C	Called Strike	0-0	0-1	2026-06-28T17:59:41.386Z
+44	2	top	home	32	Tobias Myers	away	J.T. Realmuto	SW	Swinging Strike	0-1	0-2	2026-06-28T17:59:57.941Z
+45	2	top	home	32	Tobias Myers	away	J.T. Realmuto	SW	Swinging Strike	0-2	0-3	2026-06-28T18:00:32.792Z
+46	2	top	home	32	Tobias Myers	away	Bryson Stott	C	Called Strike	0-0	0-1	2026-06-28T18:01:06.834Z
+47	2	top	home	32	Tobias Myers	away	Bryson Stott	B	Ball	0-1	1-1	2026-06-28T18:01:23.821Z
+48	2	top	home	32	Tobias Myers	away	Bryson Stott	B	Ball	1-1	2-1	2026-06-28T18:01:42.570Z
+49	2	top	home	32	Tobias Myers	away	Bryson Stott	F	Foul	2-1	2-2	2026-06-28T18:02:13.792Z
+50	2	top	home	32	Tobias Myers	away	Bryson Stott	F	Foul	2-2	2-2	2026-06-28T18:02:39.398Z
+51	2	top	home	32	Tobias Myers	away	Bryson Stott	IP	In Play	2-2	2-2	2026-06-28T18:03:06.575Z
+52	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	C	Called Strike	0-0	0-1	2026-06-28T18:03:53.704Z
+53	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	SW	Swinging Strike	0-1	0-2	2026-06-28T18:04:36.988Z
+54	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	F	Foul	0-2	0-2	2026-06-28T18:04:48.459Z
+55	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	F	Foul	0-2	0-2	2026-06-28T18:05:14.221Z
+56	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	B	Ball	0-2	1-2	2026-06-28T18:05:40.220Z
+57	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	F	Foul	1-2	1-2	2026-06-28T18:06:05.517Z
+58	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	C	Called Strike	1-2	1-3	2026-06-28T18:06:25.930Z
+59	2	bottom	away	44	Jesús Luzardo	home	Mark Vientos	IP	In Play	1-3	1-3	2026-06-28T18:06:45.286Z
+69	3	top	home	32	Tobias Myers	away	Justin Crawford	B	Ball	0-0	1-0	2026-06-28T18:14:22.113Z
+70	3	top	home	32	Tobias Myers	away	Justin Crawford	B	Ball	1-0	2-0	2026-06-28T18:14:32.038Z
+71	3	top	home	32	Tobias Myers	away	Justin Crawford	IP	In Play	2-0	2-0	2026-06-28T18:14:43.651Z
+72	3	top	home	32	Tobias Myers	away	Trea Turner	C	Called Strike	0-0	0-1	2026-06-28T18:15:25.507Z
+73	3	top	home	32	Tobias Myers	away	Trea Turner	IP	In Play	0-1	0-1	2026-06-28T18:15:27.476Z
+74	3	top	home	32	Tobias Myers	away	Kyle Schwarber	IP	In Play	0-0	0-0	2026-06-28T18:16:27.559Z
+75	3	top	home	32	Tobias Myers	away	Bryce Harper	B	Ball	0-0	1-0	2026-06-28T18:18:51.645Z
+76	3	top	home	32	Tobias Myers	away	Bryce Harper	IP	In Play	1-0	1-0	2026-06-28T18:19:08.491Z
+77	3	top	home	32	Tobias Myers	away	Alec Bohm	IP	In Play	0-0	0-0	2026-06-28T18:19:55.761Z
+78	3	top	home	32	Tobias Myers	away	Brandon Marsh	B	Ball	0-0	1-0	2026-06-28T18:20:55.851Z
+79	3	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	1-0	1-1	2026-06-28T18:21:04.716Z
+80	3	top	home	32	Tobias Myers	away	Brandon Marsh	B	Ball	1-1	2-1	2026-06-28T18:21:22.674Z
+81	3	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	2-1	2-2	2026-06-28T18:21:44.048Z
+82	3	top	home	32	Tobias Myers	away	Brandon Marsh	B	Ball	2-2	3-2	2026-06-28T18:22:09.467Z
+83	3	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	3-2	3-2	2026-06-28T18:22:30.003Z
+84	3	top	home	32	Tobias Myers	away	Brandon Marsh	F	Foul	3-2	3-2	2026-06-28T18:23:09.792Z
+85	3	top	home	32	Tobias Myers	away	Brandon Marsh	IP	In Play	3-2	3-2	2026-06-28T18:23:31.213Z
+86	3	top	home	32	Tobias Myers	away	J.T. Realmuto	B	Ball	0-0	1-0	2026-06-28T18:25:42.480Z
+87	3	top	home	32	Tobias Myers	away	J.T. Realmuto	C	Called Strike	1-0	1-1	2026-06-28T18:26:28.426Z
+88	3	top	home	32	Tobias Myers	away	J.T. Realmuto	SW	Swinging Strike	1-1	1-2	2026-06-28T18:26:28.751Z
+89	3	top	home	32	Tobias Myers	away	J.T. Realmuto	IP	In Play	1-2	1-2	2026-06-28T18:27:33.960Z
+90	3	bottom	away	44	Jesús Luzardo	home	Tyrone Taylor	C	Called Strike	0-0	0-1	2026-06-28T18:28:21.270Z
+91	3	bottom	away	44	Jesús Luzardo	home	Tyrone Taylor	B	Ball	0-1	1-1	2026-06-28T18:28:21.762Z
+92	3	bottom	away	44	Jesús Luzardo	home	Tyrone Taylor	IP	In Play	1-1	1-1	2026-06-28T18:28:23.285Z
+93	3	bottom	away	44	Jesús Luzardo	home	Luis Torrens	C	Called Strike	0-0	0-1	2026-06-28T18:29:08.196Z
+94	3	bottom	away	44	Jesús Luzardo	home	Luis Torrens	IP	In Play	0-1	0-1	2026-06-28T18:29:39.925Z
+95	3	bottom	away	44	Jesús Luzardo	home	Luis Torrens	C	Called Strike	0-0	0-1	2026-06-28T18:30:25.236Z
+96	3	bottom	away	44	Jesús Luzardo	home	Luis Torrens	C	Called Strike	0-1	0-2	2026-06-28T18:31:41.451Z
+97	3	bottom	away	44	Jesús Luzardo	home	Luis Torrens	F	Foul	0-2	0-2	2026-06-28T18:31:58.623Z
+98	3	bottom	away	44	Jesús Luzardo	home	Luis Torrens	B	Ball	0-2	1-2	2026-06-28T18:32:17.836Z
+99	3	bottom	away	44	Jesús Luzardo	home	Luis Torrens	IP	In Play	1-2	1-2	2026-06-28T18:32:35.912Z
+100	3	bottom	away	44	Jesús Luzardo	home	Carson Benge	B	Ball	0-0	1-0	2026-06-28T18:33:06.548Z
+101	3	bottom	away	44	Jesús Luzardo	home	Carson Benge	C	Called Strike	1-0	1-1	2026-06-28T18:33:26.719Z
+102	3	bottom	away	44	Jesús Luzardo	home	Carson Benge	SW	Swinging Strike	1-1	1-2	2026-06-28T18:33:35.789Z
+103	3	bottom	away	44	Jesús Luzardo	home	Carson Benge	F	Foul	1-2	1-2	2026-06-28T18:34:04.367Z
+104	3	bottom	away	44	Jesús Luzardo	home	Carson Benge	F	Foul	1-2	1-2	2026-06-28T18:34:26.720Z
+105	3	bottom	away	44	Jesús Luzardo	home	Carson Benge	SW	Swinging Strike	1-2	1-3	2026-06-28T18:34:47.293Z
+107	4	top	home	32	Tobias Myers	away	Bryson Stott	C	Called Strike	0-0	0-1	2026-06-28T18:36:13.806Z
+108	4	top	home	32	Tobias Myers	away	Bryson Stott	SW	Swinging Strike	0-1	0-2	2026-06-28T18:36:14.098Z
+109	4	top	home	32	Tobias Myers	away	Bryson Stott	F	Foul	0-2	0-2	2026-06-28T18:36:27.902Z
+110	4	top	home	32	Tobias Myers	away	Bryson Stott	F	Foul	0-2	0-2	2026-06-28T18:36:50.392Z
+111	4	top	home	32	Tobias Myers	away	Bryson Stott	F	Foul	0-2	0-2	2026-06-28T18:37:24.806Z
+112	4	top	home	32	Tobias Myers	away	Bryson Stott	F	Foul	0-2	0-2	2026-06-28T18:37:48.907Z
+113	4	top	home	32	Tobias Myers	away	Bryson Stott	SW	Swinging Strike	0-2	0-3	2026-06-28T18:38:12.470Z
+114	4	top	home	32	Tobias Myers	away	Derek Hill	F	Foul	0-0	0-1	2026-06-28T18:38:43.120Z
+115	4	top	home	32	Tobias Myers	away	Derek Hill	F	Foul	0-1	0-2	2026-06-28T18:39:05.872Z
+116	4	top	home	32	Tobias Myers	away	Derek Hill	B	Ball	0-2	1-2	2026-06-28T18:39:32.930Z
+117	4	top	home	32	Tobias Myers	away	Derek Hill	IP	In Play	1-2	1-2	2026-06-28T18:39:43.498Z
+118	4	top	home	32	Tobias Myers	away	Justin Crawford	B	Ball	0-0	1-0	2026-06-28T18:40:24.277Z
+119	4	top	home	32	Tobias Myers	away	Justin Crawford	SW	Swinging Strike	1-0	1-1	2026-06-28T18:40:42.677Z
+120	4	top	home	32	Tobias Myers	away	Justin Crawford	IP	In Play	1-1	1-1	2026-06-28T18:41:00.160Z
+121	4	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	0-0	1-0	2026-06-28T18:43:56.664Z
+123	4	bottom	away	44	Jesús Luzardo	home	Juan Soto	C	Called Strike	1-0	1-1	2026-06-28T18:44:19.384Z
+124	4	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	1-1	2-1	2026-06-28T18:44:21.773Z
+125	4	bottom	away	44	Jesús Luzardo	home	Juan Soto	C	Called Strike	2-1	2-2	2026-06-28T18:44:57.914Z
+126	4	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	2-2	3-2	2026-06-28T18:45:07.564Z
+127	4	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	3-2	4-2	2026-06-28T18:45:23.128Z
+128	4	bottom	away	44	Jesús Luzardo	home	Bo Bichette	B	Ball	0-0	1-0	2026-06-28T18:45:56.547Z
+129	4	bottom	away	44	Jesús Luzardo	home	Bo Bichette	B	Ball	1-0	2-0	2026-06-28T18:46:16.366Z
+130	4	bottom	away	44	Jesús Luzardo	home	Bo Bichette	IP	In Play	2-0	2-0	2026-06-28T18:46:30.139Z
+131	4	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	C	Called Strike	0-0	0-1	2026-06-28T18:48:04.118Z
+132	4	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	SW	Swinging Strike	0-1	0-2	2026-06-28T18:48:20.232Z
+133	4	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	B	Ball	0-2	1-2	2026-06-28T18:48:41.934Z
+134	4	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	SW	Swinging Strike	1-2	1-3	2026-06-28T18:49:00.868Z
+135	4	bottom	away	44	Jesús Luzardo	home	Francisco Alvarez	B	Ball	0-0	1-0	2026-06-28T18:49:44.008Z
+136	4	bottom	away	44	Jesús Luzardo	home	Francisco Alvarez	B	Ball	1-0	2-0	2026-06-28T18:50:52.509Z
+137	4	bottom	away	44	Jesús Luzardo	home	Francisco Alvarez	C	Called Strike	2-0	2-1	2026-06-28T18:50:55.566Z
+138	4	bottom	away	44	Jesús Luzardo	home	Francisco Alvarez	B	Ball	2-1	3-1	2026-06-28T18:51:28.296Z
+139	4	bottom	away	44	Jesús Luzardo	home	Francisco Alvarez	F	Foul	3-1	3-2	2026-06-28T18:51:28.830Z
+140	4	bottom	away	44	Jesús Luzardo	home	Francisco Alvarez	SW	Swinging Strike	3-2	3-3	2026-06-28T18:52:03.431Z
+141	4	bottom	away	44	Jesús Luzardo	home	Mark Vientos	C	Called Strike	0-0	0-1	2026-06-28T18:52:28.035Z
+142	4	bottom	away	44	Jesús Luzardo	home	Mark Vientos	C	Called Strike	0-1	0-2	2026-06-28T18:52:54.447Z
+143	4	bottom	away	44	Jesús Luzardo	home	Mark Vientos	B	Ball	0-2	1-2	2026-06-28T18:53:04.755Z
+144	4	bottom	away	44	Jesús Luzardo	home	Mark Vientos	SW	Swinging Strike	1-2	1-3	2026-06-28T18:53:20.822Z
+145	5	top	home	34	Kodai Senga	away	Trea Turner	C	Called Strike	0-0	0-1	2026-06-28T18:56:23.794Z
+146	5	top	home	34	Kodai Senga	away	Trea Turner	B	Ball	0-1	1-1	2026-06-28T18:58:08.830Z
+147	5	top	home	34	Kodai Senga	away	Trea Turner	IP	In Play	1-1	1-1	2026-06-28T18:58:09.756Z
+148	5	top	home	34	Kodai Senga	away	Kyle Schwarber	C	Called Strike	0-0	0-1	2026-06-28T18:58:20.478Z
+149	5	top	home	34	Kodai Senga	away	Kyle Schwarber	SW	Swinging Strike	0-1	0-2	2026-06-28T18:58:20.876Z
+150	5	top	home	34	Kodai Senga	away	Kyle Schwarber	B	Ball	0-2	1-2	2026-06-28T18:58:21.277Z
+151	5	top	home	34	Kodai Senga	away	Kyle Schwarber	SW	Swinging Strike	1-2	1-3	2026-06-28T18:58:44.988Z
+152	5	top	home	34	Kodai Senga	away	Bryce Harper	C	Called Strike	0-0	0-1	2026-06-28T18:59:23.949Z
+153	5	top	home	34	Kodai Senga	away	Bryce Harper	IP	In Play	0-1	0-1	2026-06-28T18:59:46.952Z
+154	5	bottom	away	44	Jesús Luzardo	home	Tyrone Taylor	B	Ball	0-0	1-0	2026-06-28T19:07:22.561Z
+155	5	bottom	away	44	Jesús Luzardo	home	Tyrone Taylor	F	Foul	1-0	1-1	2026-06-28T19:07:31.241Z
+156	5	bottom	away	44	Jesús Luzardo	home	Tyrone Taylor	SW	Swinging Strike	1-1	1-2	2026-06-28T19:07:41.425Z
+157	5	bottom	away	44	Jesús Luzardo	home	Tyrone Taylor	IP	In Play	1-2	1-2	2026-06-28T19:07:59.195Z
+158	5	bottom	away	44	Jesús Luzardo	home	Brett Baty	F	Foul	0-0	0-1	2026-06-28T19:08:38.561Z
+159	5	bottom	away	44	Jesús Luzardo	home	Brett Baty	SW	Swinging Strike	0-1	0-2	2026-06-28T19:09:01.482Z
+160	5	bottom	away	44	Jesús Luzardo	home	Brett Baty	B	Ball	0-2	1-2	2026-06-28T19:09:28.600Z
+161	5	bottom	away	44	Jesús Luzardo	home	Brett Baty	B	Ball	1-2	2-2	2026-06-28T19:09:45.680Z
+162	5	bottom	away	44	Jesús Luzardo	home	Brett Baty	B	Ball	2-2	3-2	2026-06-28T19:10:05.964Z
+163	5	bottom	away	44	Jesús Luzardo	home	Brett Baty	F	Foul	3-2	3-2	2026-06-28T19:10:24.706Z
+164	5	bottom	away	44	Jesús Luzardo	home	Brett Baty	B	Ball	3-2	4-2	2026-06-28T19:10:51.457Z
+165	5	bottom	away	44	Jesús Luzardo	home	Luis Torrens	C	Called Strike	0-0	0-1	2026-06-28T19:11:36.869Z
+167	5	bottom	away	44	Jesús Luzardo	home	Luis Torrens	F	Foul	0-1	0-2	2026-06-28T19:11:44.803Z
+168	5	bottom	away	44	Jesús Luzardo	home	Luis Torrens	IP	In Play	0-2	0-2	2026-06-28T19:12:17.473Z
+169	5	bottom	away	44	Jesús Luzardo	home	Carson Benge	IP	In Play	0-0	0-0	2026-06-28T19:12:52.134Z
+170	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	0-0	1-0	2026-06-28T19:14:35.620Z
+171	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	SW	Swinging Strike	1-0	1-1	2026-06-28T19:14:53.356Z
+172	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	1-1	2-1	2026-06-28T19:15:09.108Z
+173	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	F	Foul	2-1	2-2	2026-06-28T19:15:32.875Z
+174	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	F	Foul	2-2	2-2	2026-06-28T19:15:33.790Z
+175	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	F	Foul	2-2	2-2	2026-06-28T19:15:34.306Z
+176	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	F	Foul	2-2	2-2	2026-06-28T19:15:44.688Z
+177	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	F	Foul	2-2	2-2	2026-06-28T19:15:47.306Z
+178	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	F	Foul	2-2	2-2	2026-06-28T19:16:16.309Z
+179	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	2-2	3-2	2026-06-28T19:16:34.815Z
+180	5	bottom	away	44	Jesús Luzardo	home	Juan Soto	B	Ball	3-2	4-2	2026-06-28T19:16:52.579Z
+181	5	bottom	away	44	Jesús Luzardo	home	Bo Bichette	C	Called Strike	0-0	0-1	2026-06-28T19:17:57.648Z
+182	5	bottom	away	44	Jesús Luzardo	home	Bo Bichette	F	Foul	0-1	0-2	2026-06-28T19:18:11.918Z
+183	5	bottom	away	44	Jesús Luzardo	home	Bo Bichette	SW	Swinging Strike	0-2	0-3	2026-06-28T19:18:44.789Z
+184	5	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	C	Called Strike	0-0	0-1	2026-06-28T19:19:03.260Z
+185	5	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	B	Ball	0-1	1-1	2026-06-28T19:19:19.077Z
+186	5	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	SW	Swinging Strike	1-1	1-2	2026-06-28T19:19:36.662Z
+187	5	bottom	away	44	Jesús Luzardo	home	Eric Wagaman	IP	In Play	1-2	1-2	2026-06-28T19:19:59.945Z
+188	6	top	home	34	Kodai Senga	away	Alec Bohm	B	Ball	0-0	1-0	2026-06-28T19:21:21.387Z
+189	6	top	home	34	Kodai Senga	away	Alec Bohm	C	Called Strike	1-0	1-1	2026-06-28T19:21:22.205Z
+190	6	top	home	34	Kodai Senga	away	Alec Bohm	SW	Swinging Strike	1-1	1-2	2026-06-28T19:21:22.453Z
+191	6	top	home	34	Kodai Senga	away	Alec Bohm	F	Foul	1-2	1-2	2026-06-28T19:21:39.271Z
+192	6	top	home	34	Kodai Senga	away	Alec Bohm	B	Ball	1-2	2-2	2026-06-28T19:21:58.357Z
+193	6	top	home	34	Kodai Senga	away	Alec Bohm	B	Ball	2-2	3-2	2026-06-28T19:22:11.003Z
+194	6	top	home	34	Kodai Senga	away	Alec Bohm	F	Foul	3-2	3-2	2026-06-28T19:22:20.041Z
+195	6	top	home	34	Kodai Senga	away	Alec Bohm	F	Foul	3-2	3-2	2026-06-28T19:22:33.507Z
+196	6	top	home	34	Kodai Senga	away	Alec Bohm	F	Foul	3-2	3-2	2026-06-28T19:22:51.904Z
+197	6	top	home	34	Kodai Senga	away	Alec Bohm	B	Ball	3-2	4-2	2026-06-28T19:22:53.343Z
+198	6	top	home	34	Kodai Senga	away	Brandon Marsh	F	Foul	0-0	0-1	2026-06-28T19:23:41.283Z
+199	6	top	home	34	Kodai Senga	away	Brandon Marsh	B	Ball	0-1	1-1	2026-06-28T19:23:48.589Z
+200	6	top	home	34	Kodai Senga	away	Brandon Marsh	B	Ball	1-1	2-1	2026-06-28T19:24:06.950Z
+201	6	top	home	34	Kodai Senga	away	Brandon Marsh	IP	In Play	2-1	2-1	2026-06-28T19:24:25.339Z
+202	6	top	home	34	Kodai Senga	away	J.T. Realmuto	F	Foul	0-0	0-1	2026-06-28T19:25:20.019Z
+203	6	top	home	34	Kodai Senga	away	J.T. Realmuto	B	Ball	0-1	1-1	2026-06-28T19:25:41.871Z
+204	6	top	home	34	Kodai Senga	away	J.T. Realmuto	SW	Swinging Strike	1-1	1-2	2026-06-28T19:25:54.818Z
+205	6	top	home	34	Kodai Senga	away	J.T. Realmuto	SW	Swinging Strike	1-2	1-3	2026-06-28T19:26:12.636Z
+207	6	top	home	34	Kodai Senga	away	Bryson Stott	F	Foul	0-0	0-1	2026-06-28T19:26:41.603Z
+208	6	top	home	34	Kodai Senga	away	Bryson Stott	B	Ball	0-1	1-1	2026-06-28T19:26:58.930Z
+209	6	top	home	34	Kodai Senga	away	Bryson Stott	IP	In Play	1-1	1-1	2026-06-28T19:27:23.793Z
+210	6	top	home	34	Kodai Senga	away	Derek Hill	C	Called Strike	0-0	0-1	2026-06-28T19:28:05.380Z
+211	6	top	home	34	Kodai Senga	away	Derek Hill	F	Foul	0-1	0-2	2026-06-28T19:28:25.966Z
+212	6	top	home	34	Kodai Senga	away	Derek Hill	B	Ball	0-2	1-2	2026-06-28T19:28:59.652Z
+213	6	top	home	34	Kodai Senga	away	Derek Hill	SW	Swinging Strike	1-2	1-3	2026-06-28T19:29:16.886Z
+214	6	bottom	away	55	Chase Shugart	home	Francisco Alvarez	C	Called Strike	0-0	0-1	2026-06-28T19:30:33.814Z
+215	6	bottom	away	55	Chase Shugart	home	Francisco Alvarez	IP	In Play	0-1	0-1	2026-06-28T19:30:43.527Z
+216	6	bottom	away	55	Chase Shugart	home	Jared Young	B	Ball	0-0	1-0	2026-06-28T19:31:44.003Z
+217	6	bottom	away	55	Chase Shugart	home	Jared Young	B	Ball	1-0	2-0	2026-06-28T19:31:59.866Z
+218	6	bottom	away	55	Chase Shugart	home	Jared Young	C	Called Strike	2-0	2-1	2026-06-28T19:32:20.181Z
+219	6	bottom	away	55	Chase Shugart	home	Jared Young	SW	Swinging Strike	2-1	2-2	2026-06-28T19:32:36.182Z
+220	6	bottom	away	55	Chase Shugart	home	Jared Young	B	Ball	2-2	3-2	2026-06-28T19:32:54.018Z
+221	6	bottom	away	55	Chase Shugart	home	Jared Young	F	Foul	3-2	3-2	2026-06-28T19:33:14.460Z
+222	6	bottom	away	55	Chase Shugart	home	Jared Young	C	Called Strike	3-2	3-3	2026-06-28T19:33:50.146Z
+223	6	bottom	away	55	Chase Shugart	home	A.J. Ewing	IP	In Play	0-0	0-0	2026-06-28T19:35:09.882Z
+224	6	bottom	away	55	Chase Shugart	home	Brett Baty	B	Ball	0-0	1-0	2026-06-28T19:35:56.956Z
+225	6	bottom	away	55	Chase Shugart	home	Brett Baty	B	Ball	1-0	2-0	2026-06-28T19:36:10.375Z
+226	6	bottom	away	55	Chase Shugart	home	Brett Baty	C	Called Strike	2-0	2-1	2026-06-28T19:36:27.644Z
+227	6	bottom	away	55	Chase Shugart	home	Brett Baty	SW	Swinging Strike	2-1	2-2	2026-06-28T19:36:43.330Z
+228	6	bottom	away	55	Chase Shugart	home	Brett Baty	B	Ball	2-2	3-2	2026-06-28T19:37:14.074Z
+229	6	bottom	away	55	Chase Shugart	home	Brett Baty	B	Ball	3-2	4-2	2026-06-28T19:37:58.055Z
+230	6	bottom	away	55	Chase Shugart	home	Luis Torrens	C	Called Strike	0-0	0-1	2026-06-28T19:38:29.907Z
+231	6	bottom	away	55	Chase Shugart	home	Luis Torrens	B	Ball	0-1	1-1	2026-06-28T19:38:45.143Z
+232	6	bottom	away	55	Chase Shugart	home	Luis Torrens	IP	In Play	1-1	1-1	2026-06-28T19:39:04.309Z
+233	6	bottom	away	19	Kyle Backhus	home	Carson Benge	B	Ball	0-0	1-0	2026-06-28T19:42:00.164Z
+234	6	bottom	away	19	Kyle Backhus	home	Carson Benge	IP	In Play	1-0	1-0	2026-06-28T19:42:24.825Z
+235	6	bottom	away	19	Kyle Backhus	home	Carson Benge	IP	In Play	1-0	1-0	2026-06-28T19:42:24.923Z
+236	6	bottom	away	19	Kyle Backhus	home	Juan Soto	F	Foul	0-0	0-1	2026-06-28T19:43:56.813Z
+237	6	bottom	away	19	Kyle Backhus	home	Juan Soto	IP	In Play	0-1	0-1	2026-06-28T19:45:03.184Z
+239	6	bottom	away	19	Kyle Backhus	home	Bo Bichette	B	Ball	0-0	1-0	2026-06-28T19:45:37.917Z
+240	6	bottom	away	19	Kyle Backhus	home	Bo Bichette	IP	In Play	1-0	1-0	2026-06-28T19:45:52.520Z
+241	7	top	home	34	Kodai Senga	away	Justin Crawford	C	Called Strike	0-0	0-1	2026-06-28T19:48:28.430Z
+242	7	top	home	34	Kodai Senga	away	Justin Crawford	IP	In Play	0-1	0-1	2026-06-28T19:49:13.753Z
+243	7	top	home	34	Kodai Senga	away	Trea Turner	SW	Swinging Strike	0-0	0-1	2026-06-28T19:50:20.816Z
+244	7	top	home	34	Kodai Senga	away	Trea Turner	B	Ball	0-1	1-1	2026-06-28T19:50:40.109Z
+245	7	top	home	34	Kodai Senga	away	Trea Turner	F	Foul	1-1	1-2	2026-06-28T19:51:36.699Z
+246	7	top	home	34	Kodai Senga	away	Trea Turner	B	Ball	1-2	2-2	2026-06-28T19:52:10.233Z
+247	7	top	home	34	Kodai Senga	away	Trea Turner	B	Ball	2-2	3-2	2026-06-28T19:52:29.099Z
+248	7	top	home	34	Kodai Senga	away	Trea Turner	IP	In Play	3-2	3-2	2026-06-28T19:52:53.989Z
+249	7	top	home	34	Kodai Senga	away	Trea Turner	F	Foul	3-2	3-2	2026-06-28T19:53:02.463Z
+250	7	top	home	34	Kodai Senga	away	Trea Turner	F	Foul	3-2	3-2	2026-06-28T19:53:35.085Z
+251	7	top	home	34	Kodai Senga	away	Trea Turner	IP	In Play	3-2	3-2	2026-06-28T19:54:02.384Z
+252	7	top	home	34	Kodai Senga	away	Kyle Schwarber	B	Ball	0-0	1-0	2026-06-28T19:54:50.114Z
+253	7	top	home	34	Kodai Senga	away	Kyle Schwarber	SW	Swinging Strike	1-0	1-1	2026-06-28T19:55:10.781Z
+254	7	top	home	34	Kodai Senga	away	Kyle Schwarber	F	Foul	1-1	1-2	2026-06-28T19:55:34.582Z
+255	7	top	home	34	Kodai Senga	away	Kyle Schwarber	F	Foul	1-2	1-2	2026-06-28T19:56:23.090Z
+256	7	top	home	34	Kodai Senga	away	Kyle Schwarber	IP	In Play	1-2	1-2	2026-06-28T19:57:19.850Z
+257	7	top	home	34	Kodai Senga	away	Bryce Harper	B	Ball	0-0	1-0	2026-06-28T19:58:09.949Z
+258	7	top	home	34	Kodai Senga	away	Bryce Harper	B	Ball	1-0	2-0	2026-06-28T19:58:25.348Z
+260	7	top	home	34	Kodai Senga	away	Bryce Harper	C	Called Strike	2-0	2-1	2026-06-28T19:59:20.137Z
+262	7	top	home	34	Kodai Senga	away	Bryce Harper	F	Foul	2-1	2-2	2026-06-28T19:59:23.631Z
+264	7	top	home	34	Kodai Senga	away	Bryce Harper	F	Foul	2-2	2-2	2026-06-28T19:59:48.732Z
+265	7	top	home	34	Kodai Senga	away	Bryce Harper	B	Ball	2-2	3-2	2026-06-28T20:00:01.578Z
+266	7	top	home	34	Kodai Senga	away	Bryce Harper	IP	In Play	3-2	3-2	2026-06-28T20:00:08.930Z
+267	7	top	home	34	Kodai Senga	away	Alec Bohm	C	Called Strike	0-0	0-1	2026-06-28T20:00:44.088Z
+268	7	top	home	34	Kodai Senga	away	Alec Bohm	B	Ball	0-1	1-1	2026-06-28T20:01:01.590Z
+269	7	top	home	34	Kodai Senga	away	Alec Bohm	B	Ball	1-1	2-1	2026-06-28T20:01:21.888Z
+270	7	top	home	34	Kodai Senga	away	Alec Bohm	IP	In Play	2-1	2-1	2026-06-28T20:01:43.853Z
+271	7	bottom	away	46	José Alvarado	home	Ronny Mauricio	B	Ball	0-0	1-0	2026-06-28T20:05:51.337Z
+272	7	bottom	away	46	José Alvarado	home	Ronny Mauricio	B	Ball	1-0	2-0	2026-06-28T20:06:16.007Z
+273	7	bottom	away	46	José Alvarado	home	Ronny Mauricio	B	Ball	2-0	3-0	2026-06-28T20:06:33.492Z
+274	7	bottom	away	46	José Alvarado	home	Ronny Mauricio	C	Called Strike	3-0	3-1	2026-06-28T20:07:13.412Z
+275	7	bottom	away	46	José Alvarado	home	Ronny Mauricio	C	Called Strike	3-1	3-2	2026-06-28T20:07:21.351Z
+276	7	bottom	away	46	José Alvarado	home	Ronny Mauricio	SW	Swinging Strike	3-2	3-3	2026-06-28T20:07:36.459Z
+277	7	bottom	away	46	José Alvarado	home	Francisco Alvarez	B	Ball	0-0	1-0	2026-06-28T20:08:15.295Z
+278	7	bottom	away	46	José Alvarado	home	Francisco Alvarez	B	Ball	1-0	2-0	2026-06-28T20:08:28.655Z
+279	7	bottom	away	46	José Alvarado	home	Francisco Alvarez	B	Ball	2-0	3-0	2026-06-28T20:08:47.084Z
+280	7	bottom	away	46	José Alvarado	home	Francisco Alvarez	C	Called Strike	3-0	3-1	2026-06-28T20:09:07.306Z
+281	7	bottom	away	46	José Alvarado	home	Francisco Alvarez	F	Foul	3-1	3-2	2026-06-28T20:09:27.579Z
+282	7	bottom	away	46	José Alvarado	home	Francisco Alvarez	SW	Swinging Strike	3-2	3-3	2026-06-28T20:09:44.911Z
+283	7	bottom	away	46	José Alvarado	home	Jared Young	C	Called Strike	0-0	0-1	2026-06-28T20:10:16.944Z
+284	7	bottom	away	46	José Alvarado	home	Jared Young	F	Foul	0-1	0-2	2026-06-28T20:10:37.857Z
+285	7	bottom	away	46	José Alvarado	home	Jared Young	HBP	Hit By Pitch	0-2	0-2	2026-06-28T20:11:13.860Z
+287	7	bottom	away	46	José Alvarado	home	A.J. Ewing	C	Called Strike	0-0	0-1	2026-06-28T20:11:58.447Z
+288	7	bottom	away	46	José Alvarado	home	A.J. Ewing	B	Ball	0-1	1-1	2026-06-28T20:12:11.535Z
+289	7	bottom	away	46	José Alvarado	home	A.J. Ewing	IP	In Play	1-1	1-1	2026-06-28T20:12:42.761Z
+290	7	bottom	away	46	José Alvarado	home	Brett Baty	SW	Swinging Strike	0-0	0-1	2026-06-28T20:14:37.288Z
+291	7	bottom	away	46	José Alvarado	home	Brett Baty	C	Called Strike	0-1	0-2	2026-06-28T20:14:37.580Z
+292	7	bottom	away	46	José Alvarado	home	Brett Baty	F	Foul	0-2	0-2	2026-06-28T20:14:58.313Z
+293	7	bottom	away	46	José Alvarado	home	Brett Baty	B	Ball	0-2	1-2	2026-06-28T20:15:20.947Z
+294	7	bottom	away	46	José Alvarado	home	Brett Baty	B	Ball	1-2	2-2	2026-06-28T20:15:54.347Z
+295	7	bottom	away	46	José Alvarado	home	Brett Baty	IP	In Play	2-2	2-2	2026-06-28T20:16:08.536Z
+296	8	top	home	34	Kodai Senga	away	Brandon Marsh	C	Called Strike	0-0	0-1	2026-06-28T20:18:45.073Z
+297	8	top	home	34	Kodai Senga	away	Brandon Marsh	F	Foul	0-1	0-2	2026-06-28T20:19:12.769Z
+298	8	top	home	34	Kodai Senga	away	Brandon Marsh	IP	In Play	0-2	0-2	2026-06-28T20:19:35.771Z
+299	8	top	home	34	Kodai Senga	away	J.T. Realmuto	IP	In Play	0-0	0-0	2026-06-28T20:20:21.734Z
+300	8	top	home	34	Kodai Senga	away	Bryson Stott	C	Called Strike	0-0	0-1	2026-06-28T20:20:53.144Z
+301	8	top	home	34	Kodai Senga	away	Bryson Stott	B	Ball	0-1	1-1	2026-06-28T20:21:19.129Z
+302	8	top	home	34	Kodai Senga	away	Bryson Stott	B	Ball	1-1	2-1	2026-06-28T20:21:35.278Z
+303	8	top	home	34	Kodai Senga	away	Bryson Stott	F	Foul	2-1	2-2	2026-06-28T20:21:57.970Z
+304	8	top	home	34	Kodai Senga	away	Bryson Stott	SW	Swinging Strike	2-2	2-3	2026-06-28T20:22:23.982Z
+305	8	top	home	34	Kodai Senga	away	Derek Hill	B	Ball	0-0	1-0	2026-06-28T20:22:58.271Z
+306	8	top	home	34	Kodai Senga	away	Derek Hill	B	Ball	1-0	2-0	2026-06-28T20:23:42.453Z
+307	8	top	home	34	Kodai Senga	away	Derek Hill	IP	In Play	2-0	2-0	2026-06-28T20:24:09.596Z
+308	8	bottom	away	50	Orion Kerkering	home	Luis Torrens	B	Ball	0-0	1-0	2026-06-28T20:26:54.997Z
+309	8	bottom	away	50	Orion Kerkering	home	Luis Torrens	B	Ball	1-0	2-0	2026-06-28T20:27:13.496Z
+310	8	bottom	away	50	Orion Kerkering	home	Luis Torrens	F	Foul	2-0	2-1	2026-06-28T20:27:26.602Z
+311	8	bottom	away	50	Orion Kerkering	home	Luis Torrens	B	Ball	2-1	3-1	2026-06-28T20:27:55.621Z
+312	8	bottom	away	50	Orion Kerkering	home	Luis Torrens	B	Ball	3-1	4-1	2026-06-28T20:28:40.307Z
+313	8	bottom	away	50	Orion Kerkering	home	Carson Benge	B	Ball	0-0	1-0	2026-06-28T20:28:51.942Z
+314	8	bottom	away	50	Orion Kerkering	home	Carson Benge	C	Called Strike	1-0	1-1	2026-06-28T20:29:10.429Z
+315	8	bottom	away	50	Orion Kerkering	home	Carson Benge	C	Called Strike	1-1	1-2	2026-06-28T20:29:30.996Z
+316	8	bottom	away	50	Orion Kerkering	home	Carson Benge	F	Foul	1-2	1-2	2026-06-28T20:29:31.633Z
+317	8	bottom	away	50	Orion Kerkering	home	Carson Benge	B	Ball	1-2	2-2	2026-06-28T20:29:42.334Z
+318	8	bottom	away	50	Orion Kerkering	home	Carson Benge	F	Foul	2-2	2-2	2026-06-28T20:30:01.836Z
+319	8	bottom	away	50	Orion Kerkering	home	Carson Benge	IP	In Play	2-2	2-2	2026-06-28T20:30:37.677Z
+320	8	bottom	away	50	Orion Kerkering	home	Juan Soto	F	Foul	0-0	0-1	2026-06-28T20:31:11.915Z
+321	8	bottom	away	50	Orion Kerkering	home	Juan Soto	B	Ball	0-1	1-1	2026-06-28T20:31:33.384Z
+322	8	bottom	away	50	Orion Kerkering	home	Juan Soto	B	Ball	1-1	2-1	2026-06-28T20:31:50.748Z
+323	8	bottom	away	50	Orion Kerkering	home	Juan Soto	B	Ball	2-1	3-1	2026-06-28T20:32:09.103Z
+324	8	bottom	away	50	Orion Kerkering	home	Juan Soto	B	Ball	3-1	4-1	2026-06-28T20:32:36.366Z
+325	8	bottom	away	50	Orion Kerkering	home	Bo Bichette	B	Ball	0-0	1-0	2026-06-28T20:33:08.710Z
+326	8	bottom	away	50	Orion Kerkering	home	Bo Bichette	B	Ball	1-0	2-0	2026-06-28T20:33:27.280Z
+327	8	bottom	away	50	Orion Kerkering	home	Bo Bichette	B	Ball	2-0	3-0	2026-06-28T20:34:37.487Z
+328	8	bottom	away	50	Orion Kerkering	home	Bo Bichette	B	Ball	3-0	4-0	2026-06-28T20:34:55.489Z
+329	8	bottom	away	50	Orion Kerkering	home	Ronny Mauricio	B	Ball	0-0	1-0	2026-06-28T20:35:26.308Z
+330	8	bottom	away	50	Orion Kerkering	home	Ronny Mauricio	IP	In Play	1-0	1-0	2026-06-28T20:35:43.528Z
+331	8	bottom	away	50	Orion Kerkering	home	Francisco Alvarez	B	Ball	0-0	1-0	2026-06-28T20:36:23.979Z
+333	8	bottom	away	50	Orion Kerkering	home	Francisco Alvarez	C	Called Strike	1-0	1-1	2026-06-28T20:36:44.892Z
+334	8	bottom	away	50	Orion Kerkering	home	Francisco Alvarez	SW	Swinging Strike	1-1	1-2	2026-06-28T20:36:53.359Z
+335	8	bottom	away	50	Orion Kerkering	home	Francisco Alvarez	SW	Swinging Strike	1-2	1-3	2026-06-28T20:37:22.097Z
+336	9	top	home	34	Kodai Senga	away	Justin Crawford	IP	In Play	0-0	0-0	2026-06-28T20:40:08.126Z
+337	9	top	home	34	Kodai Senga	away	Trea Turner	B	Ball	0-0	1-0	2026-06-28T20:41:02.947Z
+338	9	top	home	34	Kodai Senga	away	Trea Turner	C	Called Strike	1-0	1-1	2026-06-28T20:41:35.764Z
+339	9	top	home	34	Kodai Senga	away	Trea Turner	B	Ball	1-1	2-1	2026-06-28T20:41:38.513Z
+340	9	top	home	34	Kodai Senga	away	Trea Turner	F	Foul	2-1	2-2	2026-06-28T20:41:49.952Z
+341	9	top	home	34	Kodai Senga	away	Trea Turner	IP	In Play	2-2	2-2	2026-06-28T20:42:16.076Z
+342	9	top	home	34	Kodai Senga	away	Kyle Schwarber	F	Foul	0-0	0-1	2026-06-28T20:42:48.692Z
+343	9	top	home	34	Kodai Senga	away	Kyle Schwarber	IP	In Play	0-1	0-1	2026-06-28T20:43:21.707Z
+344	9	bottom	away	59	Jhoan Duran	home	Jared Young	B	Ball	0-0	1-0	2026-06-28T20:46:28.800Z
+345	9	bottom	away	59	Jhoan Duran	home	Jared Young	SW	Swinging Strike	1-0	1-1	2026-06-28T20:46:37.784Z
+346	9	bottom	away	59	Jhoan Duran	home	Jared Young	B	Ball	1-1	2-1	2026-06-28T20:46:53.803Z
+347	9	bottom	away	59	Jhoan Duran	home	Jared Young	B	Ball	2-1	3-1	2026-06-28T20:47:09.567Z
+348	9	bottom	away	59	Jhoan Duran	home	Jared Young	IP	In Play	3-1	3-1	2026-06-28T20:47:28.654Z
+349	9	bottom	away	59	Jhoan Duran	home	A.J. Ewing	B	Ball	0-0	1-0	2026-06-28T20:48:25.613Z
+350	9	bottom	away	59	Jhoan Duran	home	A.J. Ewing	F	Foul	1-0	1-1	2026-06-28T20:48:37.380Z
+351	9	bottom	away	59	Jhoan Duran	home	A.J. Ewing	C	Called Strike	1-1	1-2	2026-06-28T20:48:49.667Z
+352	9	bottom	away	59	Jhoan Duran	home	A.J. Ewing	B	Ball	1-2	2-2	2026-06-28T20:49:01.352Z
+353	9	bottom	away	59	Jhoan Duran	home	A.J. Ewing	B	Ball	2-2	3-2	2026-06-28T20:49:17.133Z
+354	9	bottom	away	59	Jhoan Duran	home	A.J. Ewing	IP	In Play	3-2	3-2	2026-06-28T20:49:37.815Z
+355	9	bottom	away	59	Jhoan Duran	home	Brett Baty	B	Ball	0-0	1-0	2026-06-28T20:50:14.701Z
+356	9	bottom	away	59	Jhoan Duran	home	Brett Baty	F	Foul	1-0	1-1	2026-06-28T20:50:28.251Z
+357	9	bottom	away	59	Jhoan Duran	home	Brett Baty	B	Ball	1-1	2-1	2026-06-28T20:50:54.350Z
+358	9	bottom	away	59	Jhoan Duran	home	Brett Baty	B	Ball	2-1	3-1	2026-06-28T20:51:12.735Z
+359	9	bottom	away	59	Jhoan Duran	home	Brett Baty	SW	Swinging Strike	3-1	3-2	2026-06-28T20:51:31.170Z
+360	9	bottom	away	59	Jhoan Duran	home	Brett Baty	B	Ball	3-2	4-2	2026-06-28T20:51:47.696Z
+361	9	bottom	away	59	Jhoan Duran	home	Luis Torrens	F	Foul	0-0	0-1	2026-06-28T20:52:49.619Z
+362	9	bottom	away	59	Jhoan Duran	home	Luis Torrens	B	Ball	0-1	1-1	2026-06-28T20:52:52.456Z
+363	9	bottom	away	59	Jhoan Duran	home	Luis Torrens	IP	In Play	1-1	1-1	2026-06-28T20:53:11.540Z

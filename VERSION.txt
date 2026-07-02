@@ -1,2 +1,2 @@
 Version 34 — Duplex PDF and Expanded Pitching Layout
-Release 34.0.1 Revision 6 — Corrected the balls/strikes-to-completed-batter handoff, locked pitch input after a ball is put in play, made pending completion explicit, completed home runs immediately with runners aboard, synchronized the scorecard/stat fields after the final save, and preserved all Revision 5 PDF and substitution fixes.
+Release 34.0.0 Revision 11 — Preserves Revision 9 scoring and recovery behavior while adding a compact sticky top dock, an integrated live pitcher selector, a full defensive field, offense-only named base runners, abbreviated defensive positions, and larger ball-strike totals, and a compact On Deck / In the Hole strip beneath the live field in place of the example area.

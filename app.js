@@ -186,6 +186,7 @@ const gameFieldCache = new Map();
 let deferredInstallPrompt = null;
 let dialogErrorRoster = [];
 let pendingExportKind = "";
+let baseDiamondPaintToken = 0;
 
 function emptyBases(){ return {1:null,2:null,3:null}; }
 function initialCount(){ return {balls:0,strikes:0,pitches:0,history:[],pendingStrikeout:false,inPlay:false,sessionId:""}; }
@@ -459,6 +460,32 @@ function availableBenchPlayers(team){
   return (data[team]?.bench||[]).map((player,index)=>({...player,benchIndex:index,key:playerIdentity(player,team,"bench")})).filter(player=>(player.name||player.num)&&!used.has(player.key)&&!active.has(player.key));
 }
 function currentDefensivePlayers(team){return Array.from({length:LINEUP_ROWS},(_,lineupIndex)=>{const player=activeBatter(team,lineupIndex);return {...player,lineupIndex,key:playerIdentity(player,team,"fielder")};}).filter(player=>player.name||player.num);}
+function liveDefensiveAlignment(){
+  ensureScoringState();
+  const battingTeam=currentBattingTeam(),defensiveTeam=defensiveTeamForBattingTeam(battingTeam),players=currentDefensivePlayers(defensiveTeam),byPosition={};
+  for(const player of players){const number=positionNumber(player.pos);if(number&&number!=="1"&&!byPosition[number])byPosition[number]=player;}
+  const pitcher=activePitcherInfo(battingTeam);
+  byPosition["1"]={name:pitcher.name||`${teamName(defensiveTeam)} pitcher`,num:pitcher.number||"",pos:"P"};
+  return {battingTeam,defensiveTeam,byPosition};
+}
+function currentOffensiveRunner(base){
+  ensureScoringState();
+  const runner=scoring.bases?.[base]||null;if(!runner)return null;
+  const battingTeam=currentBattingTeam();
+  return !runner.team||runner.team===battingTeam?runner:null;
+}
+function renderLiveDefensiveField(){
+  const field=$("liveDefensiveField");if(!field)return;
+  const {battingTeam,defensiveTeam,byPosition}=liveDefensiveAlignment();
+  for(const position of FIELD_POSITIONS){
+    const player=byPosition[position.number]||{},nameNode=$(`defenseName${position.number}`),marker=nameNode?.closest?.(".field-defense-marker");
+    const displayName=player.name||"—";
+    if(nameNode){nameNode.textContent=displayName;nameNode.title=[player.num?`#${String(player.num).replace(/^#/,"")}`:"",displayName,position.code].filter(Boolean).join(" • ");}
+    if(marker){marker.classList.toggle("is-unfilled",!player.name);marker.setAttribute("aria-label",`${position.code}: ${player.name||"not entered"}`);}
+  }
+  field.dataset.battingTeam=battingTeam;field.dataset.defensiveTeam=defensiveTeam;
+  field.setAttribute("aria-label",`${teamName(defensiveTeam)} defense with ${teamName(battingTeam)} batting`);
+}
 function rosterPlayersForError(team,existingErrors=[]){
   const players=[...currentDefensivePlayers(team)];
   for(const error of existingErrors||[]){if(error?.fielderKey&&!players.some(player=>player.key===error.fielderKey))players.push({...playerSnapshot(error.fielder),key:error.fielderKey,lineupIndex:error.lineupIndex});}
@@ -632,6 +659,7 @@ function renderLiveMatchup(){
   const pitcherDetails=[season.num?`#${String(season.num).replace(/^#/,"")}`:"",season.throws?`Throws ${String(season.throws).replace(/HP$/i,"")}`:"",season.record?`Record ${season.record}`:"",season.era?`${season.era} ERA`:"",season.k?`${season.k} K`:""].filter(Boolean);
   $("currentPitcherDetails").textContent=pitcherDetails.join(" • ")||"Pitcher details not yet available.";
   $("currentPitcherGameStats").textContent=tracking?`${tracking.pitches} P • ${tracking.strikes} Str • ${tracking.balls} B • ${tracking.battersFaced} BF • ${tracking.strikeouts} K • ${tracking.walks+tracking.intentionalWalks} BB • ${tracking.hits} H`:`0 pitches • 0 BF`;
+  renderLiveDefensiveField();
 }
 function renderQuickResults(){
   const wrap=$("quickResultGrid");
@@ -652,12 +680,12 @@ function renderPitchConsole(message=""){
   if(status){
     const sequence=pitchSequenceLabel(count.history);
     const correctionMessage=correctionPlay?`${correctionPlay.outcome==="KL"?"Looking":"Swinging"} strikeout recorded. Use “Third strike not caught” only if the catcher did not legally catch strike three.`:"";
-    status.textContent=message || correctionMessage || (count.inPlay?"Ball is in play. Choose the completed result below. If the detail window opens, review the runners and tap ‘Save & Complete Batter’; the scorecard and totals update only after that final save.":sequence?`Pitch sequence: ${sequence}`:"Ready for the first pitch.");
+    status.textContent=message || correctionMessage || (count.inPlay?"Ball is in play. Choose the result code below.":sequence?`Pitch sequence: ${sequence}`:"Ready for the first pitch.");
   }
   if($("strikeoutChooser"))$("strikeoutChooser").hidden=!correctionPlay;
   if($("undoPitchBtn"))$("undoPitchBtn").disabled=!count.history.length;
   if($("resetCountBtn"))$("resetCountBtn").disabled=!(count.history.length||count.balls||count.strikes||count.inPlay);
-  document.querySelectorAll("[data-pitch]").forEach(button=>{button.disabled=Boolean(count.inPlay);button.setAttribute("aria-disabled",String(Boolean(count.inPlay)));});
+  document.querySelectorAll("[data-pitch]").forEach(button=>button.disabled=Boolean(count.inPlay));
 }
 function resetCurrentCount(message="Count reset to 0-0."){
   removeCurrentPitchSessionEvents();
@@ -703,7 +731,7 @@ function appendPitch(type,{allowAutomaticOutcome=true}={}){
 }
 function addPitch(type){
   if(gameIsFinal()){alert("This game is final. Use Undo Last Play if the ending needs correction.");return;}
-  if(scoring.count.inPlay){renderPitchConsole("The ball is already in play. Choose the result below, then complete the batter before recording another pitch.");return;}
+  if(scoring.count.inPlay){renderPitchConsole("Ball is already in play. Choose the completed result before recording another pitch.");return;}
   if(!appendPitch(type))return;
   const count=scoring.count;
   if(type==="ball"&&count.balls>=4){recordQuickOutcome("BB",true,true);return;}
@@ -818,8 +846,9 @@ function prepareTerminalPitch(outcomeId){
 }
 function outcomeCanQuickSave(outcomeId){
   const basesOccupied=Boolean(scoring.bases[1]||scoring.bases[2]||scoring.bases[3]);
-  if(["BB","IBB","HBP","K","KL","HR"].includes(outcomeId))return true;
-  return !basesOccupied&&["1B","2B","3B","GO","FO","LO","PO"].includes(outcomeId);
+  if(outcomeId==="HR")return true;
+  if(["BB","IBB","HBP","K","KL"].includes(outcomeId))return true;
+  return !basesOccupied&&["1B","2B","3B","HR","GO","FO","LO","PO"].includes(outcomeId);
 }
 function recordQuickOutcome(outcomeId,forceDirect=false,skipPitchPreparation=false,fieldLocation="",fieldingSequence=""){
   if(gameIsFinal()){alert("This game is final. Use Undo Last Play if the ending needs correction.");return null;}
@@ -832,7 +861,6 @@ function recordQuickOutcome(outcomeId,forceDirect=false,skipPitchPreparation=fal
   fieldLocation=normalizeFieldingSequence(normalizedPath)[0]||"";fieldingSequence=normalizedPath;
   if(outcomeId==="D3K"||outcomeId==="OTHER"||(!forceDirect&&!outcomeCanQuickSave(outcomeId))){
     openPlayDialog(team,playerIndex,paIndex,outcomeId,null,{fieldLocation,fieldingSequence});
-    renderPitchConsole(`${OUTCOME_MAP[outcomeId]?.label||"Result"} selected. Review every runner, then tap “Save & Complete Batter” to populate the scorecard and totals below.`);
     return null;
   }
   const defaults=defaultDetails(outcomeId,team,playerIndex).d;
@@ -1314,6 +1342,39 @@ function renderScoring(){
   renderCurrentScorecardPreview();
   setScoringView(scoringViewMode,{persist:false});
 }
+function baseRunnerLabel(runner,base){
+  if(!runner)return `Base ${base} empty`;
+  const name=runner.name||runner.player?.name||runner.playerName||`Runner on base ${base}`;
+  return `${name} on ${base===1?"first":base===2?"second":"third"} base`;
+}
+function paintBaseRunnerDiamond(token=baseDiamondPaintToken){
+  if(token!==baseDiamondPaintToken)return;
+  ensureScoringState();
+  const occupied=[];
+  for(const base of [1,2,3]){
+    const marker=$(`base${base}`);if(!marker)continue;
+    const rawRunner=scoring.bases?.[base]||null,runner=currentOffensiveRunner(base),isOccupied=Boolean(runner),teamMismatch=Boolean(rawRunner&&!runner);
+    marker.classList.toggle("occupied",isOccupied);
+    marker.classList.toggle("runner-team-mismatch",teamMismatch);
+    marker.dataset.occupied=isOccupied?"true":"false";
+    marker.setAttribute("aria-label",baseRunnerLabel(runner,base));
+    marker.title=baseRunnerLabel(runner,base);
+    const runnerTag=$(`liveRunner${base}`),runnerName=$(`liveRunnerName${base}`);
+    if(runnerTag){runnerTag.hidden=!isOccupied;runnerTag.classList.toggle("runner-team-mismatch",teamMismatch);runnerTag.setAttribute("aria-label",baseRunnerLabel(runner,base));}
+    if(runnerName)runnerName.textContent=isOccupied?(runner.name||runner.player?.name||runner.playerName||`Runner ${base}`):"—";
+    if(isOccupied)occupied.push(base);
+  }
+  const diamond=document.querySelector(".broadcast-bases, .live-defensive-field");
+  if(diamond){
+    diamond.dataset.occupiedBases=occupied.join(",");
+    diamond.setAttribute("data-offensive-team",currentBattingTeam());
+  }
+}
+function renderBaseRunnerDiamond(){
+  const token=++baseDiamondPaintToken;
+  paintBaseRunnerDiamond(token);
+  if(typeof requestAnimationFrame==="function")requestAnimationFrame(()=>paintBaseRunnerDiamond(token));
+}
 function renderScoreboard(){
   const totals=computeGameTotals();
   $("scoreAwayName").textContent=teamName("away"); $("scoreHomeName").textContent=teamName("home");
@@ -1322,8 +1383,9 @@ function renderScoreboard(){
   $("inningLabel").textContent=compactInningLabel(); $("outsLabel").textContent=gameIsFinal()?scoring.gameStatus.reason:`${scoring.outs} ${scoring.outs===1?"out":"outs"}`;
   const statusLabel=$("gameStatusLabel");if(statusLabel){statusLabel.textContent=gameStatusText();statusLabel.classList.toggle("is-final",gameIsFinal());statusLabel.classList.toggle("is-extra",!gameIsFinal()&&scoring.inning>=10);}
   document.body.classList.toggle("game-final",gameIsFinal());
-  [1,2,3].forEach(base=>$(base===1?"base1":base===2?"base2":"base3").classList.toggle("occupied",Boolean(scoring.bases[base])));
+  renderBaseRunnerDiamond();
   renderLiveMatchup();
+  renderLiveDefensiveField();
 }
 function fillDestinationSelect(id,options){ $(id).innerHTML=options.map(([v,l])=>`<option value="${v}">${l}</option>`).join(""); }
 function defaultDetails(outcomeId,team,playerIndex,beforeBasesOverride=null,beforeOutsOverride=null){
@@ -1457,10 +1519,7 @@ function openPlayDialog(team,playerIndex,paIndex,outcomeId,existing=null,prefill
   const selectedOutcome=v.outcome||outcomeId;updatePlayFieldLocationVisibility(selectedOutcome,v.fieldLocation||prefill.fieldLocation||"",v.fieldingSequence||prefill.fieldingSequence||"");$("droppedThirdStrikePanel").hidden=selectedOutcome!=="D3K";$("droppedThirdStrikeCause").value=v.droppedThirdStrikeCause||"unclassified";
   if((v.fieldingErrors||[]).length||selectedOutcome==="ROE")showErrorAssignmentPanel(v.fieldingErrors||[],v.errorDetails||"");
   if(v.interferenceType||["INT","CI"].includes(selectedOutcome))showInterferencePanel(v,selectedOutcome==="CI"?"catcher":"batter");
-  $("deletePlayBtn").hidden=!existing;
-  if($("savePlayBtn")){$("savePlayBtn").textContent=existing?"Save Changes":"Save & Complete Batter";$("savePlayBtn").setAttribute("aria-label",existing?"Save changes to this completed plate appearance":"Save and complete this batter, then update the scorecard");}
-  if($("playCompletionNotice"))$("playCompletionNotice").textContent=existing?"Saving applies every correction to the scorecard, team totals, pitcher totals, and play log.":"This batter is not complete until you save. Confirm the result, runs, RBI, outs, and every runner destination; then the fields below will populate together.";
-  $("playDialog").showModal();
+  $("deletePlayBtn").hidden=!existing; $("playDialog").showModal();
 }
 function handlePlayOutcomeChange(){
   const team=$("dialogTeam").value,idx=num($("dialogPlayerIndex").value),existing=scoring.plays.find(play=>play.id===$("dialogPlayId").value),outcome=$("playOutcome").value,def=defaultDetails($("playOutcome").value,team,idx,existing?.beforeState?.bases||null,existing?.beforeState?.outs??null).d;
@@ -1696,7 +1755,7 @@ function rebuildDerivedGameState(){
   scoring.inning=finalStatus.status==="final"?finalStatus.inning:state.inning;scoring.half=finalStatus.status==="final"?finalStatus.half:state.half;scoring.outs=state.outs;scoring.bases=deepClone(state.bases);scoring.battingIndexes=deepClone(state.battingIndexes);
   scoring.nextSeq=Math.max(1,...ordered.map(play=>num(play.seq)+1));
   if(scoring.lastAutoStrikeoutPlayId&&!ordered.some(play=>play.id===scoring.lastAutoStrikeoutPlayId))scoring.lastAutoStrikeoutPlayId="";
-  synchronizeCurrentPitchSession();ensureScoringState();
+  synchronizeCurrentPitchSession();ensureScoringState();renderBaseRunnerDiamond();
 }
 function syncCurrentToLastPlay(){ rebuildDerivedGameState(); }
 function deletePlay(id){
@@ -1972,7 +2031,12 @@ function initializePersistentStartup(){
   return false;
 }
 function stabilizeRestoredGameFields(sourceLabel="Mobile fields restored"){
-  const restore=()=>{const count=rehydrateGameFieldsFromCache();if(count){refreshAll();updateAutosaveStatus(`${sourceLabel} • ${count} field${count===1?"":"s"} protected`);}};
+  const restore=()=>{
+    const count=rehydrateGameFieldsFromCache();
+    rebuildDerivedGameState();
+    if(count)refreshAll();else{renderScoreboard();renderPitchConsole();}
+    if(count)updateAutosaveStatus(`${sourceLabel} • ${count} field${count===1?"":"s"} protected`);
+  };
   if(typeof requestAnimationFrame==="function")requestAnimationFrame(restore);else restore();
   setTimeout(restore,120);setTimeout(restore,700);
 }
@@ -2400,6 +2464,6 @@ function init(){
   window.addEventListener("beforeunload",()=>persistAutosaveNow("Saved before closing",{force:true}));
   document.addEventListener("freeze",()=>persistAutosaveNow("Saved before mobile suspension",{force:true}));
   document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")persistAutosaveNow("Saved while app moved to background",{force:true});else stabilizeRestoredGameFields("Game fields restored from background");});
-  if("serviceWorker" in navigator)navigator.serviceWorker.register("service-worker.js?v=34-pa-sync-r6",{updateViaCache:"none"}).catch(console.warn);
+  if("serviceWorker" in navigator)navigator.serviceWorker.register("service-worker.js?v=34-live-field-r11",{updateViaCache:"none"}).catch(console.warn);
 }
 init();

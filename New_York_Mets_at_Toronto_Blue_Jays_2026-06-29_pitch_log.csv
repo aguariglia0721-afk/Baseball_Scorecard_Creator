@@ -1,0 +1,249 @@
+﻿Pitch #,Inning,Half,Pitching Team,Pitcher #,Pitcher,Batting Team,Batter,Pitch Code,Pitch Type,Count Before,Count After,Recorded At
+1,1,top,home,39,Trey Yesavage,away,Carson Benge,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:08:16.073Z
+2,1,top,home,39,Trey Yesavage,away,Carson Benge,C,Called Strike,"=""1-0""","=""1-1""",2026-06-29T23:08:28.021Z
+3,1,top,home,39,Trey Yesavage,away,Carson Benge,SW,Swinging Strike,"=""1-1""","=""1-2""",2026-06-29T23:08:44.876Z
+4,1,top,home,39,Trey Yesavage,away,Carson Benge,SW,Swinging Strike,"=""1-2""","=""1-3""",2026-06-29T23:09:01.888Z
+5,1,top,home,39,Trey Yesavage,away,Juan Soto,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:09:29.766Z
+6,1,top,home,39,Trey Yesavage,away,Juan Soto,B,Ball,"=""1-0""","=""2-0""",2026-06-29T23:09:43.805Z
+7,1,top,home,39,Trey Yesavage,away,Juan Soto,F,Foul,"=""2-0""","=""2-1""",2026-06-29T23:09:59.791Z
+8,1,top,home,39,Trey Yesavage,away,Juan Soto,IP,In Play,"=""2-1""","=""2-1""",2026-06-29T23:10:16.099Z
+9,1,top,home,39,Trey Yesavage,away,Bo Bichette,C,Called Strike,"=""0-0""","=""0-1""",2026-06-29T23:11:17.893Z
+10,1,top,home,39,Trey Yesavage,away,Bo Bichette,IP,In Play,"=""0-1""","=""0-1""",2026-06-29T23:11:33.910Z
+16,1,top,home,39,Trey Yesavage,away,Francisco Lindor,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:13:52.833Z
+17,1,top,home,39,Trey Yesavage,away,Francisco Lindor,SW,Swinging Strike,"=""1-0""","=""1-1""",2026-06-29T23:13:53.880Z
+18,1,top,home,39,Trey Yesavage,away,Francisco Lindor,B,Ball,"=""1-1""","=""2-1""",2026-06-29T23:13:57.350Z
+19,1,top,home,39,Trey Yesavage,away,Francisco Lindor,SW,Swinging Strike,"=""2-1""","=""2-2""",2026-06-29T23:13:58.368Z
+20,1,top,home,39,Trey Yesavage,away,Francisco Lindor,B,Ball,"=""2-2""","=""3-2""",2026-06-29T23:14:01.513Z
+21,1,top,home,39,Trey Yesavage,away,Francisco Lindor,IP,In Play,"=""3-2""","=""3-2""",2026-06-29T23:14:03.845Z
+22,1,bottom,away,59,Sean Manaea,home,George Springer,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:16:30.710Z
+23,1,bottom,away,59,Sean Manaea,home,George Springer,SW,Swinging Strike,"=""1-0""","=""1-1""",2026-06-29T23:16:35.448Z
+24,1,bottom,away,59,Sean Manaea,home,George Springer,SW,Swinging Strike,"=""1-1""","=""1-2""",2026-06-29T23:16:43.442Z
+25,1,bottom,away,59,Sean Manaea,home,George Springer,SW,Swinging Strike,"=""1-2""","=""1-3""",2026-06-29T23:17:15.697Z
+26,1,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:22:04.884Z
+27,1,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,B,Ball,"=""1-0""","=""2-0""",2026-06-29T23:22:05.391Z
+28,1,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,B,Ball,"=""2-0""","=""3-0""",2026-06-29T23:22:05.923Z
+29,1,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,C,Called Strike,"=""3-0""","=""3-1""",2026-06-29T23:22:20.833Z
+30,1,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,HBP,Hit By Pitch,"=""3-1""","=""3-1""",2026-06-29T23:22:39.806Z
+31,1,bottom,away,59,Sean Manaea,home,Ernie Clement,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:22:48.721Z
+32,1,bottom,away,59,Sean Manaea,home,Ernie Clement,B,Ball,"=""1-0""","=""2-0""",2026-06-29T23:22:49.099Z
+33,1,bottom,away,59,Sean Manaea,home,Ernie Clement,B,Ball,"=""2-0""","=""3-0""",2026-06-29T23:22:49.865Z
+34,1,bottom,away,59,Sean Manaea,home,Ernie Clement,SW,Swinging Strike,"=""3-0""","=""3-1""",2026-06-29T23:22:50.305Z
+35,1,bottom,away,59,Sean Manaea,home,Ernie Clement,C,Called Strike,"=""3-1""","=""3-2""",2026-06-29T23:22:51.572Z
+36,1,bottom,away,59,Sean Manaea,home,Ernie Clement,IP,In Play,"=""3-2""","=""3-2""",2026-06-29T23:22:53.456Z
+37,1,bottom,away,59,Sean Manaea,home,Brandon Valenzuela,C,Called Strike,"=""0-0""","=""0-1""",2026-06-29T23:24:14.272Z
+38,1,bottom,away,59,Sean Manaea,home,Brandon Valenzuela,IP,In Play,"=""0-1""","=""0-1""",2026-06-29T23:24:23.580Z
+42,2,top,home,39,Trey Yesavage,away,Jared Young,IP,In Play,"=""0-0""","=""0-0""",2026-06-29T23:28:35.643Z
+43,2,top,home,39,Trey Yesavage,away,A.J. Ewing,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:30:01.231Z
+44,2,top,home,39,Trey Yesavage,away,A.J. Ewing,B,Ball,"=""1-0""","=""2-0""",2026-06-29T23:30:01.558Z
+45,2,top,home,39,Trey Yesavage,away,A.J. Ewing,B,Ball,"=""2-0""","=""3-0""",2026-06-29T23:30:01.828Z
+46,2,top,home,39,Trey Yesavage,away,A.J. Ewing,SW,Swinging Strike,"=""3-0""","=""3-1""",2026-06-29T23:30:02.869Z
+47,2,top,home,39,Trey Yesavage,away,A.J. Ewing,IP,In Play,"=""3-1""","=""3-1""",2026-06-29T23:30:04.070Z
+48,2,top,home,39,Trey Yesavage,away,Mark Vientos,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:30:35.399Z
+50,2,top,home,39,Trey Yesavage,away,Mark Vientos,SW,Swinging Strike,"=""1-0""","=""1-1""",2026-06-29T23:31:29.576Z
+51,2,top,home,39,Trey Yesavage,away,Mark Vientos,IP,In Play,"=""1-1""","=""1-1""",2026-06-29T23:31:31.481Z
+52,2,top,home,39,Trey Yesavage,away,Brett Baty,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-29T23:31:59.206Z
+53,2,top,home,39,Trey Yesavage,away,Brett Baty,C,Called Strike,"=""0-1""","=""0-2""",2026-06-29T23:32:29.743Z
+54,2,top,home,39,Trey Yesavage,away,Brett Baty,B,Ball,"=""0-2""","=""1-2""",2026-06-29T23:32:41.964Z
+55,2,top,home,39,Trey Yesavage,away,Brett Baty,B,Ball,"=""1-2""","=""2-2""",2026-06-29T23:33:21.109Z
+56,2,top,home,39,Trey Yesavage,away,Brett Baty,SW,Swinging Strike,"=""2-2""","=""2-3""",2026-06-29T23:34:33.791Z
+60,2,bottom,away,59,Sean Manaea,home,Luis Urías,C,Called Strike,"=""0-0""","=""0-1""",2026-06-29T23:36:37.298Z
+61,2,bottom,away,59,Sean Manaea,home,Luis Urías,B,Ball,"=""0-1""","=""1-1""",2026-06-29T23:36:37.730Z
+62,2,bottom,away,59,Sean Manaea,home,Luis Urías,B,Ball,"=""1-1""","=""2-1""",2026-06-29T23:36:41.459Z
+63,2,bottom,away,59,Sean Manaea,home,Luis Urías,B,Ball,"=""2-1""","=""3-1""",2026-06-29T23:36:54.345Z
+64,2,bottom,away,59,Sean Manaea,home,Luis Urías,F,Foul,"=""3-1""","=""3-2""",2026-06-29T23:37:12.950Z
+65,2,bottom,away,59,Sean Manaea,home,Luis Urías,B,Ball,"=""3-2""","=""4-2""",2026-06-29T23:37:25.354Z
+66,2,bottom,away,59,Sean Manaea,home,Yohendrick Piñango,F,Foul,"=""0-0""","=""0-1""",2026-06-29T23:37:52.487Z
+67,2,bottom,away,59,Sean Manaea,home,Yohendrick Piñango,F,Foul,"=""0-1""","=""0-2""",2026-06-29T23:38:11.607Z
+68,2,bottom,away,59,Sean Manaea,home,Yohendrick Piñango,B,Ball,"=""0-2""","=""1-2""",2026-06-29T23:38:29.440Z
+69,2,bottom,away,59,Sean Manaea,home,Yohendrick Piñango,B,Ball,"=""1-2""","=""2-2""",2026-06-29T23:39:23.225Z
+70,2,bottom,away,59,Sean Manaea,home,Yohendrick Piñango,SW,Swinging Strike,"=""2-2""","=""2-3""",2026-06-29T23:40:03.640Z
+71,2,bottom,away,59,Sean Manaea,home,Myles Straw,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:40:36.399Z
+72,2,bottom,away,59,Sean Manaea,home,Myles Straw,IP,In Play,"=""1-0""","=""1-0""",2026-06-29T23:40:37.692Z
+73,3,top,home,39,Trey Yesavage,away,Francisco Alvarez,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:41:49.108Z
+74,3,top,home,39,Trey Yesavage,away,Francisco Alvarez,SW,Swinging Strike,"=""1-0""","=""1-1""",2026-06-29T23:42:32.497Z
+75,3,top,home,39,Trey Yesavage,away,Francisco Alvarez,IP,In Play,"=""1-1""","=""1-1""",2026-06-29T23:42:42.924Z
+76,3,top,home,39,Trey Yesavage,away,Carson Benge,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:45:23.307Z
+77,3,top,home,39,Trey Yesavage,away,Carson Benge,B,Ball,"=""1-0""","=""2-0""",2026-06-29T23:45:23.479Z
+78,3,top,home,39,Trey Yesavage,away,Carson Benge,SW,Swinging Strike,"=""2-0""","=""2-1""",2026-06-29T23:45:24.002Z
+79,3,top,home,39,Trey Yesavage,away,Carson Benge,SW,Swinging Strike,"=""2-1""","=""2-2""",2026-06-29T23:45:24.178Z
+80,3,top,home,39,Trey Yesavage,away,Carson Benge,B,Ball,"=""2-2""","=""3-2""",2026-06-29T23:45:52.823Z
+81,3,top,home,39,Trey Yesavage,away,Carson Benge,IP,In Play,"=""3-2""","=""3-2""",2026-06-29T23:45:55.023Z
+82,3,top,home,39,Trey Yesavage,away,Juan Soto,F,Foul,"=""0-0""","=""0-1""",2026-06-29T23:46:31.906Z
+83,3,top,home,39,Trey Yesavage,away,Juan Soto,B,Ball,"=""0-1""","=""1-1""",2026-06-29T23:47:35.878Z
+84,3,top,home,39,Trey Yesavage,away,Juan Soto,SW,Swinging Strike,"=""1-1""","=""1-2""",2026-06-29T23:47:37.279Z
+85,3,top,home,39,Trey Yesavage,away,Juan Soto,B,Ball,"=""1-2""","=""2-2""",2026-06-29T23:47:54.348Z
+86,3,top,home,39,Trey Yesavage,away,Juan Soto,IP,In Play,"=""2-2""","=""2-2""",2026-06-29T23:48:26.914Z
+87,3,top,home,39,Trey Yesavage,away,Bo Bichette,IP,In Play,"=""0-0""","=""0-0""",2026-06-29T23:49:05.709Z
+93,3,bottom,away,59,Sean Manaea,home,George Springer,C,Called Strike,"=""0-0""","=""0-1""",2026-06-29T23:51:49.047Z
+94,3,bottom,away,59,Sean Manaea,home,George Springer,B,Ball,"=""0-1""","=""1-1""",2026-06-29T23:51:49.533Z
+95,3,bottom,away,59,Sean Manaea,home,George Springer,C,Called Strike,"=""1-1""","=""1-2""",2026-06-29T23:51:50.034Z
+96,3,bottom,away,59,Sean Manaea,home,George Springer,SW,Swinging Strike,"=""1-2""","=""1-3""",2026-06-29T23:51:56.453Z
+97,3,bottom,away,59,Sean Manaea,home,Nathan Lukes,C,Called Strike,"=""0-0""","=""0-1""",2026-06-29T23:52:40.347Z
+98,3,bottom,away,59,Sean Manaea,home,Nathan Lukes,C,Called Strike,"=""0-1""","=""0-2""",2026-06-29T23:52:48.945Z
+99,3,bottom,away,59,Sean Manaea,home,Nathan Lukes,B,Ball,"=""0-2""","=""1-2""",2026-06-29T23:53:19.152Z
+100,3,bottom,away,59,Sean Manaea,home,Nathan Lukes,F,Foul,"=""1-2""","=""1-2""",2026-06-29T23:53:20.034Z
+101,3,bottom,away,59,Sean Manaea,home,Nathan Lukes,B,Ball,"=""1-2""","=""2-2""",2026-06-29T23:53:35.621Z
+102,3,bottom,away,59,Sean Manaea,home,Nathan Lukes,B,Ball,"=""2-2""","=""3-2""",2026-06-29T23:53:51.383Z
+103,3,bottom,away,59,Sean Manaea,home,Nathan Lukes,IP,In Play,"=""3-2""","=""3-2""",2026-06-29T23:54:11.170Z
+104,3,bottom,away,59,Sean Manaea,home,Vladimir Guerrero Jr.,B,Ball,"=""0-0""","=""1-0""",2026-06-29T23:54:38.288Z
+105,3,bottom,away,59,Sean Manaea,home,Vladimir Guerrero Jr.,SW,Swinging Strike,"=""1-0""","=""1-1""",2026-06-29T23:54:59.959Z
+106,3,bottom,away,59,Sean Manaea,home,Vladimir Guerrero Jr.,IP,In Play,"=""1-1""","=""1-1""",2026-06-29T23:55:07.991Z
+107,4,top,home,39,Trey Yesavage,away,Francisco Lindor,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-30T00:00:11.674Z
+108,4,top,home,39,Trey Yesavage,away,Francisco Lindor,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:00:12.150Z
+109,4,top,home,39,Trey Yesavage,away,Francisco Lindor,IP,In Play,"=""1-1""","=""1-1""",2026-06-30T00:00:29.976Z
+110,4,top,home,39,Trey Yesavage,away,Jared Young,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-30T00:00:39.134Z
+111,4,top,home,39,Trey Yesavage,away,Jared Young,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:00:39.717Z
+112,4,top,home,39,Trey Yesavage,away,Jared Young,IP,In Play,"=""1-1""","=""1-1""",2026-06-30T00:00:44.896Z
+113,4,top,home,39,Trey Yesavage,away,A.J. Ewing,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-30T00:00:54.118Z
+114,4,top,home,39,Trey Yesavage,away,A.J. Ewing,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:00:54.602Z
+115,4,top,home,39,Trey Yesavage,away,A.J. Ewing,SW,Swinging Strike,"=""1-1""","=""1-2""",2026-06-30T00:00:55.285Z
+116,4,top,home,39,Trey Yesavage,away,A.J. Ewing,IP,In Play,"=""1-2""","=""1-2""",2026-06-30T00:00:56.371Z
+117,4,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T00:03:12.147Z
+118,4,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,C,Called Strike,"=""0-1""","=""0-2""",2026-06-30T00:03:16.126Z
+119,4,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,B,Ball,"=""0-2""","=""1-2""",2026-06-30T00:03:27.648Z
+120,4,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,F,Foul,"=""1-2""","=""1-2""",2026-06-30T00:03:45.923Z
+121,4,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,F,Foul,"=""1-2""","=""1-2""",2026-06-30T00:03:55.903Z
+122,4,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,F,Foul,"=""1-2""","=""1-2""",2026-06-30T00:03:56.441Z
+123,4,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,SW,Swinging Strike,"=""1-2""","=""1-3""",2026-06-30T00:04:14.338Z
+124,4,bottom,away,59,Sean Manaea,home,Ernie Clement,F,Foul,"=""0-0""","=""0-1""",2026-06-30T00:04:37.536Z
+125,4,bottom,away,59,Sean Manaea,home,Ernie Clement,SW,Swinging Strike,"=""0-1""","=""0-2""",2026-06-30T00:04:55.391Z
+126,4,bottom,away,59,Sean Manaea,home,Ernie Clement,IP,In Play,"=""0-2""","=""0-2""",2026-06-30T00:05:10.575Z
+127,4,bottom,away,59,Sean Manaea,home,Brandon Valenzuela,F,Foul,"=""0-0""","=""0-1""",2026-06-30T00:05:43.589Z
+128,4,bottom,away,59,Sean Manaea,home,Brandon Valenzuela,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:06:14.241Z
+129,4,bottom,away,59,Sean Manaea,home,Brandon Valenzuela,B,Ball,"=""1-1""","=""2-1""",2026-06-30T00:06:27.688Z
+130,4,bottom,away,59,Sean Manaea,home,Brandon Valenzuela,IP,In Play,"=""2-1""","=""2-1""",2026-06-30T00:06:46.188Z
+131,5,top,home,39,Trey Yesavage,away,Mark Vientos,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:09:13.851Z
+132,5,top,home,39,Trey Yesavage,away,Mark Vientos,B,Ball,"=""1-0""","=""2-0""",2026-06-30T00:09:25.399Z
+133,5,top,home,39,Trey Yesavage,away,Mark Vientos,B,Ball,"=""2-0""","=""3-0""",2026-06-30T00:09:39.344Z
+134,5,top,home,39,Trey Yesavage,away,Mark Vientos,C,Called Strike,"=""3-0""","=""3-1""",2026-06-30T00:09:55.651Z
+135,5,top,home,39,Trey Yesavage,away,Mark Vientos,SW,Swinging Strike,"=""3-1""","=""3-2""",2026-06-30T00:10:08.786Z
+136,5,top,home,39,Trey Yesavage,away,Mark Vientos,SW,Swinging Strike,"=""3-2""","=""3-3""",2026-06-30T00:10:34.248Z
+137,5,top,home,39,Trey Yesavage,away,Brett Baty,IP,In Play,"=""0-0""","=""0-0""",2026-06-30T00:11:01.687Z
+138,5,top,home,39,Trey Yesavage,away,Francisco Alvarez,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:11:38.160Z
+139,5,top,home,39,Trey Yesavage,away,Francisco Alvarez,B,Ball,"=""1-0""","=""2-0""",2026-06-30T00:11:52.230Z
+140,5,top,home,39,Trey Yesavage,away,Francisco Alvarez,SW,Swinging Strike,"=""2-0""","=""2-1""",2026-06-30T00:12:14.128Z
+141,5,top,home,39,Trey Yesavage,away,Francisco Alvarez,B,Ball,"=""2-1""","=""3-1""",2026-06-30T00:12:32.098Z
+142,5,top,home,39,Trey Yesavage,away,Francisco Alvarez,IP,In Play,"=""3-1""","=""3-1""",2026-06-30T00:12:46.097Z
+143,5,bottom,away,59,Sean Manaea,home,Luis Urías,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:15:35.072Z
+144,5,bottom,away,59,Sean Manaea,home,Luis Urías,IP,In Play,"=""1-0""","=""1-0""",2026-06-30T00:15:36.936Z
+145,5,bottom,away,59,Sean Manaea,home,Yohendrick Piñango,IP,In Play,"=""0-0""","=""0-0""",2026-06-30T00:16:26.734Z
+146,5,bottom,away,59,Sean Manaea,home,Myles Straw,F,Foul,"=""0-0""","=""0-1""",2026-06-30T00:17:57.156Z
+147,5,bottom,away,59,Sean Manaea,home,Myles Straw,F,Foul,"=""0-1""","=""0-2""",2026-06-30T00:18:02.165Z
+148,5,bottom,away,59,Sean Manaea,home,Myles Straw,F,Foul,"=""0-2""","=""0-2""",2026-06-30T00:18:27.347Z
+149,5,bottom,away,59,Sean Manaea,home,Myles Straw,SW,Swinging Strike,"=""0-2""","=""0-3""",2026-06-30T00:18:46.714Z
+150,5,bottom,away,59,Sean Manaea,home,George Springer,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T00:18:47.346Z
+151,5,bottom,away,59,Sean Manaea,home,George Springer,IP,In Play,"=""0-1""","=""0-1""",2026-06-30T00:18:47.997Z
+158,6,top,home,39,Trey Yesavage,away,Carson Benge,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T00:24:08.338Z
+159,6,top,home,39,Trey Yesavage,away,Carson Benge,SW,Swinging Strike,"=""0-1""","=""0-2""",2026-06-30T00:24:08.787Z
+160,6,top,home,39,Trey Yesavage,away,Carson Benge,B,Ball,"=""0-2""","=""1-2""",2026-06-30T00:24:12.471Z
+161,6,top,home,39,Trey Yesavage,away,Carson Benge,B,Ball,"=""1-2""","=""2-2""",2026-06-30T00:24:29.102Z
+162,6,top,home,39,Trey Yesavage,away,Carson Benge,C,Called Strike,"=""2-2""","=""2-3""",2026-06-30T00:24:48.303Z
+163,6,top,home,39,Trey Yesavage,away,Juan Soto,F,Foul,"=""0-0""","=""0-1""",2026-06-30T00:25:16.839Z
+164,6,top,home,39,Trey Yesavage,away,Juan Soto,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:25:32.236Z
+165,6,top,home,39,Trey Yesavage,away,Juan Soto,B,Ball,"=""1-1""","=""2-1""",2026-06-30T00:25:47.423Z
+166,6,top,home,39,Trey Yesavage,away,Juan Soto,IP,In Play,"=""2-1""","=""2-1""",2026-06-30T00:26:10.375Z
+167,6,top,home,39,Trey Yesavage,away,Bo Bichette,IP,In Play,"=""0-0""","=""0-0""",2026-06-30T00:26:36.829Z
+168,6,bottom,away,59,Sean Manaea,home,Nathan Lukes,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-30T00:30:50.305Z
+169,6,bottom,away,59,Sean Manaea,home,Nathan Lukes,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:30:50.746Z
+170,6,bottom,away,59,Sean Manaea,home,Nathan Lukes,IP,In Play,"=""1-1""","=""1-1""",2026-06-30T00:30:59.287Z
+171,6,bottom,away,59,Sean Manaea,home,Vladimir Guerrero Jr.,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-30T00:31:01.990Z
+172,6,bottom,away,59,Sean Manaea,home,Vladimir Guerrero Jr.,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:31:02.505Z
+173,6,bottom,away,59,Sean Manaea,home,Vladimir Guerrero Jr.,IP,In Play,"=""1-1""","=""1-1""",2026-06-30T00:31:06.803Z
+177,6,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:31:28.934Z
+178,6,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,B,Ball,"=""1-0""","=""2-0""",2026-06-30T00:31:29.466Z
+179,6,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,F,Foul,"=""2-0""","=""2-1""",2026-06-30T00:31:30.454Z
+180,6,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,F,Foul,"=""2-1""","=""2-2""",2026-06-30T00:31:45.909Z
+181,6,bottom,away,59,Sean Manaea,home,Kazuma Okamoto,IP,In Play,"=""2-2""","=""2-2""",2026-06-30T00:31:52.296Z
+182,6,bottom,away,59,Sean Manaea,home,Ernie Clement,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:32:44.710Z
+183,6,bottom,away,59,Sean Manaea,home,Ernie Clement,B,Ball,"=""1-0""","=""2-0""",2026-06-30T00:32:47.770Z
+184,6,bottom,away,59,Sean Manaea,home,Ernie Clement,B,Ball,"=""2-0""","=""3-0""",2026-06-30T00:33:53.229Z
+185,6,bottom,away,59,Sean Manaea,home,Ernie Clement,C,Called Strike,"=""3-0""","=""3-1""",2026-06-30T00:34:04.435Z
+186,6,bottom,away,59,Sean Manaea,home,Ernie Clement,B,Ball,"=""3-1""","=""4-1""",2026-06-30T00:34:19.751Z
+187,6,bottom,away,44,Austin Warren,home,Brandon Valenzuela,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:37:35.286Z
+188,6,bottom,away,44,Austin Warren,home,Brandon Valenzuela,B,Ball,"=""1-0""","=""2-0""",2026-06-30T00:37:40.914Z
+189,6,bottom,away,44,Austin Warren,home,Brandon Valenzuela,F,Foul,"=""2-0""","=""2-1""",2026-06-30T00:38:02.828Z
+190,6,bottom,away,44,Austin Warren,home,Brandon Valenzuela,C,Called Strike,"=""2-1""","=""2-2""",2026-06-30T00:38:38.950Z
+191,6,bottom,away,44,Austin Warren,home,Brandon Valenzuela,F,Foul,"=""2-2""","=""2-2""",2026-06-30T00:38:56.221Z
+192,6,bottom,away,44,Austin Warren,home,Brandon Valenzuela,B,Ball,"=""2-2""","=""3-2""",2026-06-30T00:39:27.609Z
+193,6,bottom,away,44,Austin Warren,home,Brandon Valenzuela,B,Ball,"=""3-2""","=""4-2""",2026-06-30T00:40:00.846Z
+194,6,bottom,away,44,Austin Warren,home,Luis Urías,F,Foul,"=""0-0""","=""0-1""",2026-06-30T00:41:07.666Z
+195,6,bottom,away,44,Austin Warren,home,Luis Urías,F,Foul,"=""0-1""","=""0-2""",2026-06-30T00:41:11.716Z
+196,6,bottom,away,44,Austin Warren,home,Luis Urías,SW,Swinging Strike,"=""0-2""","=""0-3""",2026-06-30T00:41:29.502Z
+197,7,top,home,39,Trey Yesavage,away,Francisco Lindor,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:45:24.093Z
+198,7,top,home,39,Trey Yesavage,away,Francisco Lindor,IP,In Play,"=""1-0""","=""1-0""",2026-06-30T00:45:37.492Z
+199,7,top,home,39,Trey Yesavage,away,Jared Young,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T00:46:17.879Z
+200,7,top,home,39,Trey Yesavage,away,Jared Young,B,Ball,"=""0-1""","=""1-1""",2026-06-30T00:46:28.229Z
+201,7,top,home,39,Trey Yesavage,away,Jared Young,F,Foul,"=""1-1""","=""1-2""",2026-06-30T00:47:02.733Z
+202,7,top,home,39,Trey Yesavage,away,Jared Young,IP,In Play,"=""1-2""","=""1-2""",2026-06-30T00:47:15.849Z
+203,7,top,home,39,Trey Yesavage,away,A.J. Ewing,B,Ball,"=""0-0""","=""1-0""",2026-06-30T00:48:15.767Z
+204,7,top,home,39,Trey Yesavage,away,A.J. Ewing,B,Ball,"=""1-0""","=""2-0""",2026-06-30T00:48:18.658Z
+205,7,top,home,39,Trey Yesavage,away,A.J. Ewing,B,Ball,"=""2-0""","=""3-0""",2026-06-30T00:48:19.158Z
+206,7,top,home,39,Trey Yesavage,away,A.J. Ewing,C,Called Strike,"=""3-0""","=""3-1""",2026-06-30T00:48:32.430Z
+207,7,top,home,39,Trey Yesavage,away,A.J. Ewing,HBP,Hit By Pitch,"=""3-1""","=""3-1""",2026-06-30T00:48:57.392Z
+208,7,top,home,39,Trey Yesavage,away,Mark Vientos,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T00:49:55.331Z
+209,7,top,home,39,Trey Yesavage,away,Mark Vientos,SW,Swinging Strike,"=""0-1""","=""0-2""",2026-06-30T00:50:31.949Z
+210,7,top,home,39,Trey Yesavage,away,Mark Vientos,B,Ball,"=""0-2""","=""1-2""",2026-06-30T00:50:51.757Z
+211,7,top,home,39,Trey Yesavage,away,Mark Vientos,IP,In Play,"=""1-2""","=""1-2""",2026-06-30T00:51:48.281Z
+212,7,bottom,away,44,Austin Warren,home,Yohendrick Piñango,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-30T00:55:00.551Z
+213,7,bottom,away,44,Austin Warren,home,Yohendrick Piñango,IP,In Play,"=""0-1""","=""0-1""",2026-06-30T00:57:42.303Z
+214,7,bottom,away,44,Austin Warren,home,Myles Straw,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T00:58:09.165Z
+215,7,bottom,away,44,Austin Warren,home,Myles Straw,C,Called Strike,"=""0-1""","=""0-2""",2026-06-30T00:58:23.199Z
+216,7,bottom,away,44,Austin Warren,home,Myles Straw,B,Ball,"=""0-2""","=""1-2""",2026-06-30T00:58:37.237Z
+217,7,bottom,away,44,Austin Warren,home,Myles Straw,IP,In Play,"=""1-2""","=""1-2""",2026-06-30T00:59:00.506Z
+218,7,bottom,away,44,Austin Warren,home,George Springer,B,Ball,"=""0-0""","=""1-0""",2026-06-30T01:00:10.588Z
+219,7,bottom,away,44,Austin Warren,home,George Springer,C,Called Strike,"=""1-0""","=""1-1""",2026-06-30T01:00:11.254Z
+220,7,bottom,away,44,Austin Warren,home,George Springer,C,Called Strike,"=""1-1""","=""1-2""",2026-06-30T01:00:21.535Z
+221,7,bottom,away,44,Austin Warren,home,George Springer,B,Ball,"=""1-2""","=""2-2""",2026-06-30T01:00:37.259Z
+222,7,bottom,away,44,Austin Warren,home,George Springer,C,Called Strike,"=""2-2""","=""2-3""",2026-06-30T01:00:52.408Z
+223,8,top,home,68,Mason Fluharty,away,Ronny Mauricio,IP,In Play,"=""0-0""","=""0-0""",2026-06-30T01:04:48.842Z
+225,8,top,home,68,Mason Fluharty,away,Francisco Alvarez,F,Foul,"=""0-0""","=""0-1""",2026-06-30T01:05:06.669Z
+226,8,top,home,68,Mason Fluharty,away,Francisco Alvarez,F,Foul,"=""0-1""","=""0-2""",2026-06-30T01:05:18.016Z
+227,8,top,home,68,Mason Fluharty,away,Francisco Alvarez,B,Ball,"=""0-2""","=""1-2""",2026-06-30T01:05:29.188Z
+228,8,top,home,68,Mason Fluharty,away,Francisco Alvarez,B,Ball,"=""1-2""","=""2-2""",2026-06-30T01:05:42.518Z
+229,8,top,home,68,Mason Fluharty,away,Francisco Alvarez,IP,In Play,"=""2-2""","=""2-2""",2026-06-30T01:05:59.276Z
+230,8,top,home,68,Mason Fluharty,away,Carson Benge,SW,Swinging Strike,"=""0-0""","=""0-1""",2026-06-30T01:07:20.717Z
+231,8,top,home,68,Mason Fluharty,away,Carson Benge,B,Ball,"=""0-1""","=""1-1""",2026-06-30T01:07:21.186Z
+232,8,top,home,68,Mason Fluharty,away,Carson Benge,IP,In Play,"=""1-1""","=""1-1""",2026-06-30T01:07:22.186Z
+233,8,top,home,68,Mason Fluharty,away,Bo Bichette,IP,In Play,"=""0-0""","=""0-0""",2026-06-30T01:08:22.789Z
+234,8,bottom,away,44,Austin Warren,home,Nathan Lukes,B,Ball,"=""0-0""","=""1-0""",2026-06-30T01:11:04.358Z
+235,8,bottom,away,44,Austin Warren,home,Nathan Lukes,B,Ball,"=""1-0""","=""2-0""",2026-06-30T01:11:05.006Z
+236,8,bottom,away,44,Austin Warren,home,Nathan Lukes,F,Foul,"=""2-0""","=""2-1""",2026-06-30T01:11:15.919Z
+237,8,bottom,away,44,Austin Warren,home,Nathan Lukes,B,Ball,"=""2-1""","=""3-1""",2026-06-30T01:11:36.937Z
+238,8,bottom,away,44,Austin Warren,home,Nathan Lukes,B,Ball,"=""3-1""","=""4-1""",2026-06-30T01:11:55.933Z
+239,8,bottom,away,44,Austin Warren,home,Vladimir Guerrero Jr.,B,Ball,"=""0-0""","=""1-0""",2026-06-30T01:12:37.780Z
+240,8,bottom,away,44,Austin Warren,home,Vladimir Guerrero Jr.,C,Called Strike,"=""1-0""","=""1-1""",2026-06-30T01:12:47.820Z
+241,8,bottom,away,44,Austin Warren,home,Vladimir Guerrero Jr.,B,Ball,"=""1-1""","=""2-1""",2026-06-30T01:13:05.737Z
+242,8,bottom,away,44,Austin Warren,home,Vladimir Guerrero Jr.,C,Called Strike,"=""2-1""","=""2-2""",2026-06-30T01:13:47.846Z
+243,8,bottom,away,44,Austin Warren,home,Vladimir Guerrero Jr.,IP,In Play,"=""2-2""","=""2-2""",2026-06-30T01:14:11.572Z
+244,8,bottom,away,56,Joey Gerber,home,Kazuma Okamoto,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T01:17:44.357Z
+245,8,bottom,away,56,Joey Gerber,home,Kazuma Okamoto,SW,Swinging Strike,"=""0-1""","=""0-2""",2026-06-30T01:17:46.954Z
+246,8,bottom,away,56,Joey Gerber,home,Kazuma Okamoto,B,Ball,"=""0-2""","=""1-2""",2026-06-30T01:18:06.518Z
+247,8,bottom,away,56,Joey Gerber,home,Kazuma Okamoto,C,Called Strike,"=""1-2""","=""1-3""",2026-06-30T01:18:17.937Z
+248,8,bottom,away,56,Joey Gerber,home,Ernie Clement,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T01:18:52.453Z
+249,8,bottom,away,56,Joey Gerber,home,Ernie Clement,IP,In Play,"=""0-1""","=""0-1""",2026-06-30T01:19:06.607Z
+250,8,bottom,away,56,Joey Gerber,home,Brandon Valenzuela,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T01:19:48.924Z
+251,8,bottom,away,56,Joey Gerber,home,Brandon Valenzuela,F,Foul,"=""0-1""","=""0-2""",2026-06-30T01:20:08.939Z
+252,8,bottom,away,56,Joey Gerber,home,Brandon Valenzuela,SW,Swinging Strike,"=""0-2""","=""0-3""",2026-06-30T01:20:34.945Z
+253,9,top,home,68,Mason Fluharty,away,Francisco Lindor,B,Ball,"=""0-0""","=""1-0""",2026-06-30T01:23:06.252Z
+255,9,top,home,68,Mason Fluharty,away,Francisco Lindor,C,Called Strike,"=""1-0""","=""1-1""",2026-06-30T01:23:30.117Z
+256,9,top,home,68,Mason Fluharty,away,Francisco Lindor,B,Ball,"=""1-1""","=""2-1""",2026-06-30T01:23:39.298Z
+257,9,top,home,68,Mason Fluharty,away,Francisco Lindor,B,Ball,"=""2-1""","=""3-1""",2026-06-30T01:23:55.112Z
+258,9,top,home,68,Mason Fluharty,away,Francisco Lindor,C,Called Strike,"=""3-1""","=""3-2""",2026-06-30T01:24:09.415Z
+259,9,top,home,68,Mason Fluharty,away,Francisco Lindor,F,Foul,"=""3-2""","=""3-2""",2026-06-30T01:24:24.402Z
+260,9,top,home,68,Mason Fluharty,away,Francisco Lindor,IP,In Play,"=""3-2""","=""3-2""",2026-06-30T01:24:41.086Z
+261,9,top,home,68,Mason Fluharty,away,Jared Young,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T01:25:16.239Z
+262,9,top,home,68,Mason Fluharty,away,Jared Young,IP,In Play,"=""0-1""","=""0-1""",2026-06-30T01:25:26.803Z
+265,9,top,home,77,Louis Varland,away,A.J. Ewing,B,Ball,"=""0-0""","=""1-0""",2026-06-30T01:27:00.041Z
+266,9,top,home,77,Louis Varland,away,A.J. Ewing,B,Ball,"=""1-0""","=""2-0""",2026-06-30T01:27:00.267Z
+267,9,top,home,77,Louis Varland,away,A.J. Ewing,B,Ball,"=""2-0""","=""3-0""",2026-06-30T01:27:06.131Z
+268,9,top,home,77,Louis Varland,away,A.J. Ewing,C,Called Strike,"=""3-0""","=""3-1""",2026-06-30T01:27:25.753Z
+269,9,top,home,77,Louis Varland,away,A.J. Ewing,C,Called Strike,"=""3-1""","=""3-2""",2026-06-30T01:27:49.200Z
+270,9,top,home,77,Louis Varland,away,A.J. Ewing,B,Ball,"=""3-2""","=""4-2""",2026-06-30T01:28:20.879Z
+271,9,top,home,77,Louis Varland,away,Mark Vientos,B,Ball,"=""0-0""","=""1-0""",2026-06-30T01:29:47.154Z
+272,9,top,home,77,Louis Varland,away,Mark Vientos,C,Called Strike,"=""1-0""","=""1-1""",2026-06-30T01:30:01.723Z
+273,9,top,home,77,Louis Varland,away,Mark Vientos,F,Foul,"=""1-1""","=""1-2""",2026-06-30T01:30:35.019Z
+275,9,top,home,77,Louis Varland,away,Mark Vientos,B,Ball,"=""1-2""","=""2-2""",2026-06-30T01:31:16.813Z
+276,9,top,home,77,Louis Varland,away,Mark Vientos,SW,Swinging Strike,"=""2-2""","=""2-3""",2026-06-30T01:31:22.530Z
+277,9,top,home,77,Louis Varland,away,Ronny Mauricio,C,Called Strike,"=""0-0""","=""0-1""",2026-06-30T01:32:09.550Z
+278,9,top,home,77,Louis Varland,away,Ronny Mauricio,SW,Swinging Strike,"=""0-1""","=""0-2""",2026-06-30T01:32:22.035Z
+279,9,top,home,77,Louis Varland,away,Ronny Mauricio,SW,Swinging Strike,"=""0-2""","=""0-3""",2026-06-30T01:32:46.199Z

@@ -89,7 +89,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--orange);box-shadow:0 
 .inning-state span{color:#f4dfbb}
 .bases{position:relative;width:72px;height:50px;margin-top:.3rem}
 .base{position:absolute;width:20px;height:20px;border:2px solid #efd49c;background:transparent;transform:rotate(45deg);border-radius:3px}
-.base.occupied{background:var(--gold);box-shadow:0 0 12px rgba(255,210,104,.5)}
+.base.occupied,.base[data-occupied="true"]{background:var(--gold);box-shadow:0 0 12px rgba(255,210,104,.5)}
 #base2{left:26px;top:0}#base3{left:4px;top:22px}#base1{right:4px;top:22px}
 .scoring-help{margin-top:.75rem;background:#fff0ca;border-left:6px solid var(--gold);font-size:.82rem;line-height:1.45}
 .game-control-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;margin-top:.8rem;padding-top:.8rem;border-top:1px solid #dec89e}.game-control-row button{min-width:0;white-space:normal}
@@ -480,7 +480,7 @@ input,select,textarea{max-width:100%;min-width:0}
 .broadcast-inning-row{display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:.65rem;padding:.5rem .8rem;border-bottom:3px solid #d9c49a;background:#5a3928}
 .broadcast-inning{font-size:clamp(1.15rem,2.6vw,1.8rem);white-space:nowrap}.broadcast-outs{font-size:.84rem;font-weight:850;color:#f8e7c9;white-space:nowrap}.broadcast-inning-row .game-status-label{justify-self:end;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#f4dcae;font-size:.72rem}
 .broadcast-diamond-and-count{display:grid;grid-template-columns:minmax(120px,1fr) minmax(125px,.82fr);align-items:center;min-height:96px}
-.broadcast-bases{justify-self:center;margin:0;transform:scale(1.2)}.broadcast-bases .base{border-color:#fff;background:#3d2519}.broadcast-bases .base.occupied{background:#d9a441;border-color:#fff;box-shadow:0 0 12px rgba(217,164,65,.65)}
+.broadcast-bases{justify-self:center;margin:0;transform:scale(1.2)}.broadcast-bases .base{border-color:#fff;background:#3d2519}.broadcast-bases .base.occupied,.broadcast-bases .base[data-occupied="true"]{background:#d9a441;border-color:#fff;box-shadow:0 0 12px rgba(217,164,65,.65)}
 .broadcast-count.count-display{min-width:0;align-self:stretch;border:0;border-left:3px solid #d9c49a;border-radius:0;padding:.45rem .65rem;background:#3d2519;box-shadow:none;display:grid;place-content:center}
 .broadcast-count.count-display small{order:0;margin:0 0 .28rem;font-size:.58rem;letter-spacing:.12em;color:#f4dcae}.broadcast-count.count-display>div{order:1;gap:.32rem}.broadcast-count.count-display strong{font-size:clamp(1.55rem,3vw,2.2rem);line-height:1}.broadcast-count.count-display span{font-size:1rem;color:#fff}
 .broadcast-matchup-card.live-matchup-card{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;padding:0;border-top:3px solid #d9c49a;background:#fff9e9;color:#3d2519}
@@ -522,7 +522,7 @@ input,select,textarea{max-width:100%;min-width:0}
 .broadcast-outs,.broadcast-inning-row .game-status-label{color:#f8e7c9}
 .broadcast-diamond-and-count{background:rgba(61,37,25,.42)}
 .broadcast-bases .base{border-color:#fff4d6;background:var(--brown)}
-.broadcast-bases .base.occupied{background:var(--gold);border-color:#fff8e9;box-shadow:0 0 12px rgba(217,164,65,.65)}
+.broadcast-bases .base.occupied,.broadcast-bases .base[data-occupied="true"]{background:var(--gold);border-color:#fff8e9;box-shadow:0 0 12px rgba(217,164,65,.65)}
 .broadcast-count.count-display{
   border-color:rgba(255,248,233,.42);
   background:rgba(61,37,25,.76);
@@ -1084,7 +1084,473 @@ html,body{overflow-x:clip}
 .field-ball-path-stop{fill:#fff8e9;stroke:#6f3519;stroke-width:.65}
 .field-ball-current{fill:#f7d77e;stroke:#4c2b1b;stroke-width:.8;filter:drop-shadow(0 1px 1px rgba(0,0,0,.45))}
 
+/* Version 34 Revision 10 — compact sticky app dock and live defensive field */
+.visually-hidden{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+.app-top-dock{
+  position:sticky;
+  top:0;
+  z-index:200;
+  width:100%;
+  background:#fff8e9;
+  border-bottom:2px solid var(--gold);
+  box-shadow:0 7px 22px rgba(61,37,25,.18);
+  isolation:isolate;
+}
+.app-top-dock .hero.compact-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:.7rem;
+  padding:max(.42rem,env(safe-area-inset-top)) max(.72rem,env(safe-area-inset-right)) .42rem max(.72rem,env(safe-area-inset-left));
+  border:0;
+  box-shadow:none;
+  background:linear-gradient(120deg,var(--brown) 0,var(--orange-dark) 62%,var(--orange) 100%);
+}
+.app-top-dock .hero-brand{
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr);
+  gap:.62rem;
+  align-items:center;
+}
+.app-top-dock .brand-mark-wrap{
+  width:42px;
+  height:42px;
+  aspect-ratio:1;
+  padding:.16rem;
+  border-width:2px;
+  border-radius:10px;
+  background:#fff9e7;
+}
+.app-top-dock .brand-mark{object-fit:contain}
+.app-top-dock .hero-copy h1{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(.98rem,2vw,1.28rem);
+  line-height:1.08;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.app-top-dock .eyebrow{font-size:.53rem;line-height:1.1;margin:0 0 .12rem}
+.app-top-dock .subtitle{font-size:.68rem;line-height:1.2;margin:.12rem 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-top-dock .hero-actions{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  justify-content:flex-end;
+  gap:.34rem;
+  width:auto;
+  max-width:none;
+}
+.app-top-dock .hero-actions button,
+.app-top-dock .hero-actions .button{
+  width:auto;
+  min-width:0;
+  min-height:34px;
+  padding:.37rem .58rem;
+  border-radius:8px;
+  font-size:.68rem;
+  line-height:1;
+  white-space:nowrap;
+}
+.app-top-dock .autosave-bar{
+  position:static;
+  z-index:auto;
+  padding:.22rem max(.65rem,env(safe-area-inset-right)) .22rem max(.65rem,env(safe-area-inset-left));
+  border-top:1px solid rgba(217,164,65,.45);
+  border-bottom:1px solid #d7bd74;
+  font-size:.66rem;
+  line-height:1.2;
+}
+.app-top-dock .step-nav{
+  position:static;
+  z-index:auto;
+  display:flex;
+  flex-wrap:nowrap;
+  gap:.32rem;
+  max-width:1500px;
+  margin:0 auto;
+  padding:.3rem max(.55rem,env(safe-area-inset-right)) .36rem max(.55rem,env(safe-area-inset-left));
+  overflow-x:auto;
+  overflow-y:hidden;
+  background:#fff8e9;
+  scrollbar-width:thin;
+  overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;
+}
+.app-top-dock .step{
+  flex:1 0 auto;
+  min-height:34px;
+  padding:.34rem .56rem;
+  border-radius:8px;
+  font-size:.68rem;
+  box-shadow:none;
+}
+.app-top-dock .step span{
+  width:20px;
+  height:20px;
+  font-size:.62rem;
+}
+.app-shell{padding-top:.65rem}
 
-/* Version 34 Revision 6: make pending plate-appearance completion unmistakable. */
-.play-completion-notice{margin:0 0 14px;padding:10px 12px;border:1px solid color-mix(in srgb,var(--gold) 58%,var(--brown));border-radius:10px;background:color-mix(in srgb,var(--gold) 18%,white);color:var(--brown);font-weight:700;line-height:1.4}
-.pitch-button:disabled{cursor:not-allowed;filter:saturate(.55);opacity:.58}
+/* Expanded live field: defense is always the fielding team; runner tags are always the batting team. */
+.broadcast-score-main{
+  grid-template-columns:minmax(245px,.72fr) minmax(480px,1.28fr);
+}
+.broadcast-field-and-count{
+  display:grid;
+  grid-template-columns:minmax(330px,1fr) minmax(118px,.28fr);
+  align-items:stretch;
+  min-height:300px;
+  background:rgba(61,37,25,.42);
+}
+.live-defensive-field{
+  position:relative;
+  min-width:0;
+  aspect-ratio:6/5;
+  overflow:hidden;
+  background:#315f2c;
+  border-right:3px solid #d9c49a;
+  isolation:isolate;
+}
+.live-field-art{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.field-defense-marker{
+  position:absolute;
+  z-index:3;
+  display:grid;
+  justify-items:center;
+  width:clamp(52px,8vw,88px);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.field-position-code{
+  display:grid;
+  place-items:center;
+  width:clamp(31px,4.2vw,46px);
+  height:clamp(31px,4.2vw,46px);
+  border:2px solid #fff8e9;
+  border-radius:50%;
+  background:var(--brown);
+  color:#fff8e9;
+  box-shadow:0 4px 8px rgba(45,25,15,.34);
+  font-size:clamp(.72rem,1.3vw,1rem);
+  font-weight:950;
+  line-height:1;
+}
+.field-defense-marker strong{
+  display:block;
+  max-width:100%;
+  margin-top:.15rem;
+  padding:.16rem .38rem;
+  border:1px solid #cda65e;
+  border-radius:999px;
+  background:#fff9ea;
+  color:var(--brown);
+  box-shadow:0 3px 7px rgba(45,25,15,.2);
+  font-size:clamp(.48rem,.82vw,.7rem);
+  font-weight:900;
+  line-height:1.1;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.field-defense-marker.is-unfilled strong{opacity:.72}
+.live-pos-7{left:15%;top:26%}.live-pos-8{left:50%;top:13%}.live-pos-9{left:85%;top:26%}
+.live-pos-6{left:36%;top:49%}.live-pos-4{left:64%;top:49%}
+.live-pos-5{left:21%;top:69%}.live-pos-3{left:79%;top:69%}
+.live-pos-1{left:50%;top:67%}.live-pos-2{left:50%;top:90%}
+.live-field-base{
+  z-index:2;
+  width:18px;
+  height:18px;
+  border:2px solid #fff8e9;
+  background:#fff9e9;
+  box-shadow:0 2px 5px rgba(61,37,25,.25);
+}
+.live-field-base.occupied,.live-field-base[data-occupied="true"]{background:var(--gold);border-color:#fff8e9;box-shadow:0 0 11px rgba(217,164,65,.78)}
+.live-field-base-2{left:calc(50% - 9px)!important;top:40%!important}
+.live-field-base-3{left:calc(25.7% - 9px)!important;top:66%!important}
+.live-field-base-1{left:auto!important;right:calc(25.7% - 9px)!important;top:66%!important}
+.live-base-runner{
+  position:absolute;
+  z-index:6;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:center;
+  gap:.24rem;
+  max-width:36%;
+  padding:.2rem .38rem .2rem .22rem;
+  border:2px solid #fff4d5;
+  border-radius:999px;
+  background:linear-gradient(180deg,var(--orange),var(--orange-dark));
+  color:#fff;
+  box-shadow:0 4px 11px rgba(61,37,25,.34);
+  transform:translate(-50%,-50%);
+}
+.live-base-runner[hidden]{display:none!important}
+.live-base-runner span{
+  display:grid;
+  place-items:center;
+  min-width:26px;
+  height:26px;
+  border-radius:50%;
+  background:var(--gold);
+  color:var(--brown);
+  font-size:.63rem;
+  font-weight:950;
+}
+.live-base-runner strong{
+  min-width:0;
+  font-size:clamp(.52rem,.9vw,.74rem);
+  line-height:1.05;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.live-runner-2{left:50%;top:41%}.live-runner-3{left:25.5%;top:63%}.live-runner-1{left:74.5%;top:63%}
+.prominent-count.broadcast-count.count-display{
+  display:grid;
+  grid-template-columns:1fr 1px 1fr;
+  place-content:center;
+  align-items:center;
+  gap:.55rem;
+  min-width:0;
+  padding:.65rem .55rem;
+  border:0;
+  border-radius:0;
+  background:linear-gradient(180deg,rgba(61,37,25,.92),rgba(90,57,40,.92));
+}
+.prominent-count .count-column{
+  display:grid!important;
+  justify-items:center;
+  align-content:center;
+  gap:.18rem!important;
+  min-width:0;
+}
+.prominent-count .count-column small{
+  order:initial!important;
+  margin:0!important;
+  font-size:clamp(.58rem,1vw,.78rem)!important;
+  letter-spacing:.08em!important;
+  font-weight:950;
+}
+.prominent-count .count-column strong{
+  font-size:clamp(3.1rem,6.4vw,5.5rem)!important;
+  line-height:.86!important;
+  font-weight:950;
+}
+.prominent-count .balls-column small,.prominent-count .balls-column strong{color:#8fd178}
+.prominent-count .strikes-column small,.prominent-count .strikes-column strong{color:#ff725f}
+.prominent-count .count-divider{width:1px;height:72%;background:#d9c49a;color:transparent}
+
+/* Pitching change now lives where the current pitcher is displayed. */
+.live-pitcher-selector{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:center;
+  gap:.5rem;
+  margin:.12rem 0 .3rem;
+}
+.live-pitcher-selector>span{
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--orange-dark);
+  white-space:nowrap;
+}
+.live-pitcher-selector select{
+  min-height:38px;
+  padding:.38rem 2rem .38rem .55rem;
+  border:2px solid #bf8b39;
+  border-radius:9px;
+  background:#fffdf7;
+  color:var(--brown);
+  font-size:clamp(.82rem,1.5vw,1.05rem);
+  font-weight:900;
+}
+
+@media (max-width:1050px){
+  .broadcast-score-main{grid-template-columns:minmax(220px,.62fr) minmax(430px,1.38fr)}
+  .broadcast-field-and-count{grid-template-columns:minmax(300px,1fr) 112px;min-height:280px}
+  .field-defense-marker{width:66px}
+  .field-defense-marker strong{font-size:.55rem}
+}
+@media (max-width:760px){
+  .app-top-dock .hero.compact-hero{grid-template-columns:1fr;gap:.34rem;padding-bottom:.36rem}
+  .app-top-dock .hero-brand{grid-template-columns:34px minmax(0,1fr);gap:.48rem}
+  .app-top-dock .brand-mark-wrap{width:34px;height:34px;border-radius:8px}
+  .app-top-dock .hero-copy h1{font-size:.92rem}
+  .app-top-dock .eyebrow{font-size:.47rem}
+  .app-top-dock .subtitle{display:none}
+  .app-top-dock .hero-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;gap:.28rem}
+  .app-top-dock .hero-actions button,.app-top-dock .hero-actions .button{width:100%;min-height:31px;padding:.31rem .28rem;font-size:.62rem}
+  .app-top-dock .autosave-bar{font-size:.6rem;padding:.18rem .45rem}
+  .app-top-dock .step-nav{padding:.25rem .42rem .3rem;gap:.25rem}
+  .app-top-dock .step{flex:0 0 auto;min-height:32px;padding:.3rem .48rem;font-size:.64rem}
+  .app-top-dock .step span{display:none}
+  .broadcast-score-main{grid-template-columns:1fr}
+  .broadcast-field-and-count{grid-template-columns:minmax(0,1fr) 104px;min-height:0}
+  .live-defensive-field{border-right-width:2px;aspect-ratio:6/5}
+  .field-defense-marker{width:clamp(44px,15vw,66px)}
+  .field-position-code{width:clamp(27px,8vw,37px);height:clamp(27px,8vw,37px);font-size:clamp(.58rem,2.7vw,.78rem)}
+  .field-defense-marker strong{font-size:clamp(.42rem,1.7vw,.58rem);padding:.12rem .25rem}
+  .live-base-runner{max-width:42%;gap:.15rem;padding:.12rem .25rem .12rem .15rem;border-width:1.5px}
+  .live-base-runner span{min-width:22px;height:22px;font-size:.54rem}
+  .live-base-runner strong{font-size:clamp(.43rem,1.8vw,.58rem)}
+  .prominent-count.broadcast-count.count-display{gap:.3rem;padding:.38rem .22rem}
+  .prominent-count .count-column strong{font-size:clamp(2.35rem,12vw,3.6rem)!important}
+  .prominent-count .count-column small{font-size:.5rem!important;letter-spacing:.04em!important}
+  .live-pitcher-selector{grid-template-columns:1fr;gap:.18rem}
+  .live-pitcher-selector>span{font-size:.56rem}
+  .live-pitcher-selector select{font-size:16px;min-height:42px}
+}
+@media (max-width:430px){
+  .app-top-dock .hero-copy h1{font-size:.82rem}
+  .app-top-dock .eyebrow{display:none}
+  .app-top-dock .hero-actions button,.app-top-dock .hero-actions .button{font-size:.58rem}
+  .app-top-dock .step{font-size:.6rem;padding:.28rem .4rem}
+  .broadcast-field-and-count{grid-template-columns:minmax(0,1fr) 88px}
+  .field-defense-marker{width:48px}
+  .field-defense-marker strong{font-size:.41rem;max-width:48px}
+  .field-position-code{width:27px;height:27px;font-size:.57rem}
+  .live-base-runner{max-width:46%}
+  .live-base-runner strong{font-size:.43rem}
+  .prominent-count .count-column strong{font-size:2.55rem!important}
+  .prominent-count .count-column small{font-size:.43rem!important}
+  .prominent-count .count-divider{height:62%}
+}
+@media (max-width:360px){
+  .app-top-dock .hero-brand{grid-template-columns:30px minmax(0,1fr)}
+  .app-top-dock .brand-mark-wrap{width:30px;height:30px}
+  .app-top-dock .hero-copy h1{font-size:.75rem}
+  .app-top-dock .hero-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .broadcast-field-and-count{grid-template-columns:1fr 78px}
+  .field-defense-marker{width:42px}
+  .field-defense-marker strong{max-width:42px;font-size:.36rem}
+  .field-position-code{width:24px;height:24px;font-size:.52rem}
+  .live-base-runner strong{font-size:.39rem}
+  .prominent-count .count-column strong{font-size:2.2rem!important}
+}
+
+/* Revision 10 count-label clarity refinement */
+.prominent-count.broadcast-count.count-display{grid-template-columns:minmax(0,1fr) 2px minmax(0,1fr);column-gap:.7rem}
+.prominent-count .count-column small{display:block;width:100%;text-align:center;white-space:nowrap}
+.prominent-count .count-divider{width:2px;border-radius:999px;background:#d9c49a}
+@media (max-width:430px){
+  .prominent-count.broadcast-count.count-display{
+    grid-template-columns:1fr;
+    grid-template-rows:minmax(0,1fr) 2px minmax(0,1fr);
+    row-gap:.2rem;
+    column-gap:0;
+    padding:.28rem .18rem;
+  }
+  .prominent-count .count-divider{width:72%;height:2px;justify-self:center}
+  .prominent-count .count-column strong{font-size:2.25rem!important}
+  .prominent-count .count-column small{font-size:.45rem!important}
+}
+
+/* Revision 10 final count treatment: stack the count vertically for clarity at every width. */
+.prominent-count.broadcast-count.count-display{
+  grid-template-columns:1fr;
+  grid-template-rows:minmax(0,1fr) 2px minmax(0,1fr);
+  row-gap:.45rem;
+  column-gap:0;
+  padding:.8rem .45rem;
+}
+.prominent-count .count-divider{
+  width:72%;
+  height:2px;
+  justify-self:center;
+  align-self:center;
+}
+.prominent-count .count-column small{
+  font-size:clamp(.64rem,1vw,.82rem)!important;
+  letter-spacing:.06em!important;
+}
+.prominent-count .count-column strong{
+  font-size:clamp(3.15rem,6.2vw,5.35rem)!important;
+}
+@media (max-width:760px){
+  .prominent-count.broadcast-count.count-display{row-gap:.28rem;padding:.42rem .2rem}
+  .prominent-count .count-column small{font-size:.5rem!important}
+  .prominent-count .count-column strong{font-size:clamp(2.4rem,10vw,3.4rem)!important}
+}
+@media (max-width:430px){
+  .prominent-count.broadcast-count.count-display{row-gap:.2rem;padding:.28rem .14rem}
+  .prominent-count .count-column small{font-size:.43rem!important;letter-spacing:.03em!important}
+  .prominent-count .count-column strong{font-size:2.35rem!important}
+}
+@media (max-width:360px){
+  .prominent-count .count-column strong{font-size:2.05rem!important}
+}
+
+
+/* Version 34 Revision 11 — upcoming batters replace the live-field example strip. */
+.broadcast-situation{
+  grid-template-rows:auto minmax(0,1fr) auto;
+}
+.broadcast-upcoming-strip.broadcast-batting-order{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:2px solid #d9c49a;
+  border-bottom:0;
+  background:linear-gradient(180deg,#fffdf8,#fff5dd);
+}
+.broadcast-upcoming-strip>div{
+  grid-template-columns:auto minmax(0,1fr);
+  min-height:48px;
+  padding:.48rem .78rem;
+}
+.broadcast-upcoming-strip span{
+  align-self:center;
+  font-size:.68rem;
+}
+.broadcast-upcoming-strip strong{
+  align-self:center;
+  font-size:clamp(.9rem,1.4vw,1.08rem);
+}
+.broadcast-upcoming-strip small{
+  font-size:.67rem;
+}
+@media (max-width:760px){
+  .broadcast-upcoming-strip.broadcast-batting-order{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .broadcast-upcoming-strip>div{
+    min-height:44px;
+    padding:.4rem .5rem;
+  }
+  .broadcast-upcoming-strip>div+div{
+    border-left:1px solid #d9c49a;
+    border-top:0;
+  }
+  .broadcast-upcoming-strip span{font-size:.58rem}
+  .broadcast-upcoming-strip strong{font-size:.82rem}
+  .broadcast-upcoming-strip small{font-size:.58rem}
+}
+@media (max-width:430px){
+  .broadcast-upcoming-strip>div{
+    grid-template-columns:1fr;
+    align-content:center;
+    gap:.12rem;
+    min-height:42px;
+    padding:.34rem .42rem;
+  }
+  .broadcast-upcoming-strip strong,
+  .broadcast-upcoming-strip small{
+    grid-column:1;
+  }
+  .broadcast-upcoming-strip span{font-size:.52rem}
+  .broadcast-upcoming-strip strong{font-size:.76rem}
+  .broadcast-upcoming-strip small{font-size:.52rem}
+}

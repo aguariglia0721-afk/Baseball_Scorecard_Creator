@@ -1,7 +1,7 @@
 {
   "name": "Guariglia Baseball Scorecard Builder Version 34",
   "short_name": "Scorecard V34",
-  "description": "Version 34 expands the PDF scorecard with full-width pitching tables, a dedicated duplex notes and review page, and clear Replay/ABS status summaries while preserving Version 33 scoring behavior.",
+  "description": "Version 34 Revision 11 with the compact sticky app dock, integrated live pitcher selector, full defensive field, offense-only base runners, synchronized live scoring, duplex PDFs, and automatic On Deck and In the Hole panels for the team currently batting.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fff8e9",
